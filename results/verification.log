@@ -1,0 +1,45 @@
+1. Uniaxial tension, nominal stress [MPa]: FE vs exact incompressible
+   neo-Hookean  lambda = 1.10   FE   0.05469   exact   0.05471   error -0.037 %   (4 it, converged True)
+   neo-Hookean  lambda = 1.25   FE   0.12195   exact   0.12200   error -0.044 %   (4 it, converged True)
+   neo-Hookean  lambda = 1.50   FE   0.21099   exact   0.21111   error -0.057 %   (4 it, converged True)
+   neo-Hookean  lambda = 2.00   FE   0.34967   exact   0.35000   error -0.094 %   (5 it, converged True)
+   neo-Hookean  lambda = 2.50   FE   0.46733   exact   0.46800   error -0.143 %   (5 it, converged True)
+   neo-Hookean  lambda = 3.00   FE   0.57661   exact   0.57778   error -0.202 %   (5 it, converged True)
+   Yeoh         lambda = 1.10   FE   0.05500   exact   0.05502   error -0.038 %   (4 it, converged True)
+   Yeoh         lambda = 1.25   FE   0.12610   exact   0.12616   error -0.048 %   (4 it, converged True)
+   Yeoh         lambda = 1.50   FE   0.23986   exact   0.24005   error -0.080 %   (4 it, converged True)
+   Yeoh         lambda = 2.00   FE   0.57243   exact   0.57400   error -0.273 %   (5 it, converged True)
+   Yeoh         lambda = 2.50   FE   1.29586   exact   1.30766   error -0.902 %   (5 it, converged True)
+   Yeoh         lambda = 3.00   FE   2.81575   exact   2.88889   error -2.532 %   (6 it, converged True)
+
+2. Thick-walled tube (A = 4, B = 10 mm), plane strain: pressure at the FE inner radius
+   P/mu = 0.1   a/A = 1.0643   exact P/mu at that radius 0.10001   error +0.010 %   (3 it, converged True)
+   P/mu = 0.2   a/A = 1.1400   exact P/mu at that radius 0.20003   error +0.016 %   (3 it, converged True)
+   P/mu = 0.3   a/A = 1.2309   exact P/mu at that radius 0.30006   error +0.021 %   (3 it, converged True)
+   P/mu = 0.4   a/A = 1.3428   exact P/mu at that radius 0.40010   error +0.026 %   (3 it, converged True)
+   P/mu = 0.5   a/A = 1.4858   exact P/mu at that radius 0.50016   error +0.031 %   (4 it, converged True)
+   P/mu = 0.6   a/A = 1.6786   exact P/mu at that radius 0.60023   error +0.038 %   (4 it, converged True)
+   P/mu = 0.7   a/A = 1.9644   exact P/mu at that radius 0.70034   error +0.049 %   (4 it, converged True)
+
+3. Small-pressure bending of the bare actuator: mid-span curvature / Tier 1 curvature
+   (Tier 1 = F e / (E Izz) with E = 2 mu (1 + nu); exact linear elasticity gives 1 - 2 nu)
+   nu = 0.0000   FE  1.0000   exact  1.0000   tip angle / Tier 1  1.0184   (3 it, converged True)
+   nu = 0.2000   FE  0.6001   exact  0.6000   tip angle / Tier 1  0.6386   (3 it, converged True)
+   nu = 0.3000   FE  0.4001   exact  0.4000   tip angle / Tier 1  0.4467   (3 it, converged True)
+   nu = 0.4000   FE  0.2002   exact  0.2000   tip angle / Tier 1  0.2535   (3 it, converged True)
+   nu = 0.4500   FE  0.1002   exact  0.1000   tip angle / Tier 1  0.1565   (3 it, converged True)
+   nu = 0.4995   FE  0.0012   exact  0.0010   tip angle / Tier 1  0.0602   (3 it, converged True)
+
+4. Mesh convergence, bare actuator, neo-Hookean, P/mu = 0.30 and 0.45
+   coarse    224 elements   P/mu = 0.30: delta   5.840 mm, theta   6.82 deg   P/mu = 0.45: delta  21.719 mm, theta  25.07 deg   (21 s)
+   medium    588 elements   P/mu = 0.30: delta   5.912 mm, theta   6.89 deg   P/mu = 0.45: delta  21.895 mm, theta  25.25 deg   (87 s)
+   fine     1664 elements   P/mu = 0.30: delta   5.940 mm, theta   6.91 deg   P/mu = 0.45: delta  21.944 mm, theta  25.30 deg   (437 s)
+   coarse vs fine: delta differs by -1.67 %, -1.03 %
+   medium vs fine: delta differs by -0.46 %, -0.22 %
+
+Summary (largest deviation from the reference in each test)
+   1 uniaxial stress        2.532 %   (grows with stretch: the bulk modulus is finite, nu = 0.4995)
+   2 tube inflation         0.049 %
+   3 (1 - 2 nu) law         0.0002    (absolute, in units of the Tier 1 curvature)
+   4 mesh, last refinement  0.22 %   in delta at P/mu = 0.45
+total time 584 s
