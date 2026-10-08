@@ -46,7 +46,7 @@ if __name__ == "__main__":
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.6))
     panels = [("theta_deg", "theta", "tip angle θ [deg]"), ("delta_mm", "delta", "tip deflection δ [mm]")]
     for ax, (col, key, label) in zip(axes, panels):
-        ax.plot(beam["P"], beam["t1_" + key], color=BEAM_LIN, lw=2, label="beam model, Tier 1-2 (notes)")
+        ax.plot(beam["P"], beam["t1_" + key], color=BEAM_LIN, lw=2, label="beam model, Tier 1-2")
         ax.plot(beam["t3_P"], beam["t3_" + key], color=BEAM_HYP, lw=2, label="beam model, Tier 3")
         if sleeve is not None:
             ax.plot(sleeve["P_kPa"], sleeve[col], color=FE_SLEEVE, lw=2, marker="o", ms=4, label="FE, hoop-fibre sleeve")
