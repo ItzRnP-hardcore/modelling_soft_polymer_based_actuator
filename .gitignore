@@ -1,7 +1,13 @@
-# Byte-compiled / optimized / DLL files
+﻿# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
-*$py.class
+*.class
+*.class
+
+# COMSOL transient lock/status files
+*.lock
+*.status
+*.log
 
 # Virtual environments
 .venv/

@@ -73,22 +73,24 @@ It bends because of **ballooning** (a large-deformation, nonlinear effect):
 ```
 modelling_soft_polymer_based_actuator/
 │
-├── BTP_260825_144004.pdf      # Original handwritten mathematical notes & derivations.
-├── modeling_guideline.md       # Comprehensive scientific report: math, FEA findings, and corrections.
-├── actuator_guideline.html     # HTML version of the modeling guideline for easy reading in browsers.
+├── README.md                  # Quickstart, installation, and CLI reference.
+├── EXPLANATION.md             # Intuitive overview of the physics and simulation findings.
+├── ARCHITECTURE_GRAPH.md      # Full dependency graph & agent context lookup table.
 │
 ├── actuator_model.py          # Fast beam-theory models (Tiers 1, 2, 3: closed-form math for the sleeved actuator).
 ├── actuator_fea.py            # Custom 3D nonlinear Finite Element (FEA) solver in Python (simulates true rubber mechanics).
 ├── fea_verify.py              # Benchmark script verifying the FEA solver against exact analytical solutions.
 ├── fea_compare.py             # Generates comparison plots between beam theory and FEA simulations.
 ├── fea_viewer.py              # Generates interactive 3D HTML animations of the actuator bending.
-│
 ├── actuator_response.png      # Analytical model response curves.
 ├── fea_comparison.png         # Comparison figure: FEA vs. Beam Model.
 │
-└── results/                   # Simulation outputs:
-    ├── bare/viewer.html       # Open in browser: interactive 3D slider showing the bare actuator ballooning & bending.
-    └── sleeve/viewer.html     # Open in browser: interactive 3D slider showing the sleeved actuator bending linearly.
+├── ansys/                     # ANSYS Mechanical APDL verification scripts (.mac) and exporter.
+├── comsol/                    # COMSOL Multiphysics 6.4 models (bare, sleeved, tapered, tapered_4cavity, benched).
+├── docs/                      # Original handwritten derivation notes (PDF), scientific guidelines & HTML.
+├── grasp/                     # Soft continuum arm grasping mechanics, 2D/3D contact models & animations.
+├── report/                    # LaTeX manuscript, slides, figures, and publication documents.
+└── results/                   # Simulation databases from FEA sweeps and grasping studies.
 ```
 
 ---

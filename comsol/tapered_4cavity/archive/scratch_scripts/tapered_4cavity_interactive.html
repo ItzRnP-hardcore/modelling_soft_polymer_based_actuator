@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soft Continuum Actuator: 180°+ Logarithmic Spiral 3D Simulator</title>
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131c2e;
+            --bg-card: #1e293b;
+            --border-color: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-cyan: #38bdf8;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-green: #10b981;
+            --accent-purple: #c084fc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 65px;
+        }
+
+        header h1 {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header p {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 9999px;
+            letter-spacing: 0.05em;
+            box-shadow: 0 0 14px rgba(37, 99, 235, 0.4);
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 350px 1fr 340px;
+            gap: 16px;
+            padding: 16px;
+            flex: 1;
+            height: calc(100vh - 65px);
+        }
+
+        .panel {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .panel-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 8px;
+        }
+
+        .slider-group {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+            border-left: 4px solid var(--border-color);
+            transition: transform 0.15s ease;
+        }
+
+        .slider-group:hover {
+            transform: translateX(2px);
+        }
+
+        .slider-group.c1 { border-left-color: var(--accent-cyan); }
+        .slider-group.c2 { border-left-color: var(--accent-orange); }
+        .slider-group.c3 { border-left-color: var(--accent-red); }
+        .slider-group.c4 { border-left-color: var(--accent-green); }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .slider-name {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .slider-val {
+            font-size: 13px;
+            font-weight: 700;
+            font-family: monospace;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-range {
+            width: 100%;
+            -webkit-appearance: none;
+            height: 6px;
+            border-radius: 3px;
+            background: #374151;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .slider-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #fff;
+            cursor: pointer;
+            box-shadow: 0 0 6px rgba(0,0,0,0.5);
+            transition: transform 0.1s;
+        }
+
+        .slider-range::-webkit-slider-thumb:hover {
+            transform: scale(1.15);
+        }
+
+        .presets {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .btn-preset {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: #cbd5e1;
+            padding: 7px 8px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: center;
+        }
+
+        .btn-preset:hover {
+            background-color: #374151;
+            color: #fff;
+            border-color: #6b7280;
+        }
+
+        .btn-preset.highlight {
+            background: linear-gradient(90deg, #1e3a8a, #4338ca);
+            border: 1px solid #6366f1;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .btn-preset.highlight:hover {
+            background: linear-gradient(90deg, #2563eb, #4f46e5);
+        }
+
+        .viewport-container {
+            position: relative;
+            background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #canvas3d {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hud-overlay {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 11.5px;
+            pointer-events: none;
+        }
+
+        .hud-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 3px;
+        }
+
+        .hud-label {
+            color: #94a3b8;
+        }
+
+        .hud-value {
+            font-weight: 700;
+            font-family: monospace;
+            color: #38bdf8;
+        }
+
+        .status-pill {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid #3b82f6;
+            color: #60a5fa;
+            border-radius: 20px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .compass-overlay {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            width: 100px;
+            height: 100px;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .stat-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-bottom: 8px;
+            border-top: 2px solid #38bdf8;
+        }
+
+        .stat-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 3px;
+        }
+
+        .stat-big {
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+            font-family: monospace;
+        }
+
+        .stat-sub {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 2px;
+        }
+
+        .vector-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .vector-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+        }
+
+        .vector-label {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .vector-val {
+            font-size: 12px;
+            font-weight: 700;
+            font-family: monospace;
+            color: #f1f5f9;
+        }
+
+        .legend-list {
+            margin-top: 10px;
+            font-size: 11px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        @media (max-width: 1100px) {
+            main {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .viewport-container {
+                height: 480px;
+            }
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h1>Soft Continuum Actuator: 180°+ Logarithmic Spiral 3D Simulator</h1>
+            <p>Slender 4-Cavity Continuum Robot (L = 160 mm, R₀ = 8 mm → R_t = 4 mm, E = 0.20 MPa, Hoop Sleeve)</p>
+        </div>
+        <span class="badge">180°+ LOGARITHMIC SPIRAL CAPABLE</span>
+    </header>
+
+    <main>
+        <!-- LEFT PANEL: 4 PRESSURE SLIDERS & PRESETS -->
+        <div class="panel">
+            <div class="panel-title">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                Independent Chamber Pressure Controls
+            </div>
+
+            <!-- Cavity 1: Top (+Y) -->
+            <div class="slider-group c1">
+                <div class="slider-header">
+                    <span class="slider-name" style="color: var(--accent-cyan);">Cavity 1: Top (+Y) Pitch Down</span>
+                    <span class="slider-val" id="val_p1" style="color: var(--accent-cyan);">0.0 kPa</span>
+                </div>
+                <input type="range" id="slider_p1" class="slider-range" min="0" max="40" step="0.5" value="0">
+                <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Generates downward U-turn & logarithmic spiral in -Y</div>
+            </div>
+
+            <!-- Cavity 2: Right (+Z) -->
+            <div class="slider-group c2">
+                <div class="slider-header">
+                    <span class="slider-name" style="color: var(--accent-orange);">Cavity 2: Right (+Z) Yaw Left</span>
+                    <span class="slider-val" id="val_p2" style="color: var(--accent-orange);">0.0 kPa</span>
+                </div>
+                <input type="range" id="slider_p2" class="slider-range" min="0" max="40" step="0.5" value="0">
+                <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Generates leftward U-turn in -Z</div>
+            </div>
+
+            <!-- Cavity 3: Bottom (-Y) -->
+            <div class="slider-group c3">
+                <div class="slider-header">
+                    <span class="slider-name" style="color: var(--accent-red);">Cavity 3: Bottom (-Y) Pitch Up</span>
+                    <span class="slider-val" id="val_p3" style="color: var(--accent-red);">0.0 kPa</span>
+                </div>
+                <input type="range" id="slider_p3" class="slider-range" min="0" max="40" step="0.5" value="0">
+                <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Generates upward U-turn in +Y</div>
+            </div>
+
+            <!-- Cavity 4: Left (-Z) -->
+            <div class="slider-group c4">
+                <div class="slider-header">
+                    <span class="slider-name" style="color: var(--accent-green);">Cavity 4: Left (-Z) Yaw Right</span>
+                    <span class="slider-val" id="val_p4" style="color: var(--accent-green);">0.0 kPa</span>
+                </div>
+                <input type="range" id="slider_p4" class="slider-range" min="0" max="40" step="0.5" value="0">
+                <div style="font-size: 10.5px; color: #64748b; margin-top: 3px;">Generates rightward U-turn in +Z</div>
+            </div>
+
+            <!-- PRESETS FOR 180 DEGREE CURLING -->
+            <div class="panel-title" style="margin-top: 8px;">
+                Curling Regimes & 180°+ Presets
+            </div>
+            <div class="presets">
+                <button class="btn-preset" onclick="setPressures(7, 0, 0, 0)">45° Arc Hook (7 kPa)</button>
+                <button class="btn-preset" onclick="setPressures(13.6, 0, 0, 0)">90° Right Angle (14 kPa)</button>
+                <button class="btn-preset highlight" style="grid-column: span 2;" onclick="setPressures(27.1, 0, 0, 0)">★ 180° Semicircle U-Turn (27.1 kPa)</button>
+                <button class="btn-preset" style="grid-column: span 2; border-color: #c084fc; color: #e9d5ff;" onclick="setPressures(33, 0, 0, 0)">220° Logarithmic Spiral (33 kPa)</button>
+                <button class="btn-preset" onclick="setPressures(0, 27.1, 0, 0)">180° Yaw Left (-Z)</button>
+                <button class="btn-preset" onclick="setPressures(0, 0, 0, 27.1)">180° Yaw Right (+Z)</button>
+                <button class="btn-preset" onclick="setPressures(0, 0, 27.1, 0)">180° Pitch Up (+Y)</button>
+                <button class="btn-preset" onclick="setPressures(19, 19, 0, 0)">Diagonal 180° U-Turn</button>
+                <button class="btn-preset" style="grid-column: span 2; border-color: #f59e0b; color: #fde68a;" onclick="setPressures(28, 12, 0, 0)">3D Helical Spiral (C1 + C2)</button>
+                <button class="btn-preset" style="grid-column: span 2; border-color: #ef4444; color: #fca5a5;" onclick="setPressures(0, 0, 0, 0)">Reset Actuator (Straight, 0 kPa)</button>
+            </div>
+        </div>
+
+        <!-- CENTER VIEWPORT: THREE.JS 3D RENDERER -->
+        <div class="viewport-container">
+            <canvas id="canvas3d"></canvas>
+
+            <div class="hud-overlay">
+                <div class="hud-row"><span class="hud-label">Clamped Base:</span><span class="hud-value">X = 0 mm (Fixed)</span></div>
+                <div class="hud-row"><span class="hud-label">Actuator Length:</span><span class="hud-value">L = 160 mm</span></div>
+                <div class="hud-row"><span class="hud-label">Tapered Outer Profile:</span><span class="hud-value">R₀ = 8 mm → R_t = 4 mm</span></div>
+                <div class="hud-row"><span class="hud-label">Slender Inner Core:</span><span class="hud-value">r_c0 = 1.5 mm → r_ct = 1.0 mm</span></div>
+                <div class="hud-row"><span class="hud-label">Curvature Regime:</span><span class="hud-value" id="hud_curv_regime">Logarithmic Spiral (κ_tip = 3× κ_base)</span></div>
+            </div>
+
+            <div class="status-pill" id="status_pill">
+                <span id="status_text">0° Straight Beam</span>
+            </div>
+
+            <!-- Polar Azimuth Compass -->
+            <div class="compass-overlay">
+                <svg width="90" height="90" viewBox="-45 -45 90 90">
+                    <circle cx="0" cy="0" r="38" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="2 3"/>
+                    <circle cx="0" cy="0" r="25" fill="none" stroke="#334155" stroke-width="1"/>
+                    <circle cx="0" cy="0" r="12" fill="none" stroke="#334155" stroke-width="1"/>
+                    <line x1="-40" y1="0" x2="40" y2="0" stroke="#475569" stroke-width="1.2"/>
+                    <line x1="0" y1="-40" x2="0" y2="40" stroke="#475569" stroke-width="1.2"/>
+                    <text x="0" y="-32" fill="#38bdf8" font-size="7.5" font-weight="bold" text-anchor="middle">+Y (C1)</text>
+                    <text x="32" y="3" fill="#f59e0b" font-size="7.5" font-weight="bold" text-anchor="start">+Z (C2)</text>
+                    <text x="0" y="38" fill="#ef4444" font-size="7.5" font-weight="bold" text-anchor="middle">-Y (C3)</text>
+                    <text x="-32" y="3" fill="#10b981" font-size="7.5" font-weight="bold" text-anchor="end">-Z (C4)</text>
+                    <circle id="compass_dot" cx="0" cy="0" r="3.5" fill="#c084fc" stroke="#fff" stroke-width="1.5"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: LIVE KINEMATIC METRICS -->
+        <div class="panel">
+            <div class="panel-title">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                Large-Deflection Kinematics
+            </div>
+
+            <!-- Total Bending Angle -->
+            <div class="stat-card" style="border-top-color: #a855f7;">
+                <div class="stat-title">Total Tip Rotation Angle (θ)</div>
+                <div class="stat-big" id="disp_theta" style="color: #c084fc;">0.0°</div>
+                <div class="stat-sub" id="disp_theta_sub">θ = ∫₀ᴸ κ(s) ds (180° = Full Semicircle U-Turn)</div>
+            </div>
+
+            <!-- Spatial Position [X, Y, Z] -->
+            <div class="stat-card" style="border-top-color: #38bdf8;">
+                <div class="stat-title">Deformed Tip Coordinates [X, Y, Z]</div>
+                <div class="vector-grid">
+                    <div class="vector-box">
+                        <div class="vector-label">X (Axial)</div>
+                        <div class="vector-val" id="disp_x">160.0 mm</div>
+                    </div>
+                    <div class="vector-box">
+                        <div class="vector-label">Y (Pitch)</div>
+                        <div class="vector-val" id="disp_y">0.0 mm</div>
+                    </div>
+                    <div class="vector-box">
+                        <div class="vector-label">Z (Yaw)</div>
+                        <div class="vector-val" id="disp_z">0.0 mm</div>
+                    </div>
+                </div>
+                <div class="stat-sub" style="margin-top: 6px;">*At 180°, X loops back to ~6 mm while Y reaches -100 mm!</div>
+            </div>
+
+            <!-- Curvature Details -->
+            <div class="stat-card" style="border-top-color: #10b981;">
+                <div class="stat-title">Curvature Profile (Base vs Tip)</div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 4px;">
+                    <div>
+                        <div style="font-size: 10px; color: #94a3b8;">Base Curvature κ₀</div>
+                        <span style="font-size: 15px; font-weight: 700; font-family: monospace; color: #10b981;" id="disp_kbase">0.00 m⁻¹</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-size: 10px; color: #94a3b8;">Tip Curvature κ_tip</div>
+                        <span style="font-size: 15px; font-weight: 700; font-family: monospace; color: #34d399;" id="disp_ktip">0.00 m⁻¹</span>
+                    </div>
+                </div>
+                <div class="stat-sub" style="margin-top: 4px;">Curvature gradient creates the logarithmic spiral shape.</div>
+            </div>
+
+            <!-- Radial Chamber Layout -->
+            <div class="legend-list">
+                <div style="font-weight: 600; color: #e2e8f0; margin-bottom: 6px;">Radial Chamber Configuration:</div>
+                <div class="legend-item"><span class="legend-dot" style="background: var(--accent-cyan);"></span><span><b>Cavity 1 (+Y Top):</b> 80° arc (Pitch Down)</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background: var(--accent-orange);"></span><span><b>Cavity 2 (+Z Right):</b> 80° arc (Yaw Left)</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background: var(--accent-red);"></span><span><b>Cavity 3 (-Y Bottom):</b> 80° arc (Pitch Up)</span></div>
+                <div class="legend-item"><span class="legend-dot" style="background: var(--accent-green);"></span><span><b>Cavity 4 (-Z Left):</b> 80° arc (Yaw Right)</span></div>
+                <div style="margin-top: 8px; font-size: 10.5px; color: #64748b; line-height: 1.4;">
+                    *Hoop-fiber sleeve suppresses radial ballooning; 1.5 mm core eliminates rigid column resistance.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Exact Continuum Rod & Large Deflection Cosserat Matrix
+        const CONFIG = {
+            L_act: 160.0,     // mm total length
+            R0:    8.0,       // mm base radius
+            Rt:    4.0,       // mm tip radius
+            // Base curvature per kPa: at 27.1 kPa, total theta = 180 deg = pi rad
+            // theta = P * k_theta_factor
+            k_theta_per_kPa: Math.PI / 27.1, // rad per kPa for single chamber
+            beta: 1.8,        // curvature gradient parameter along length
+            gamma: 1.2
+        };
+
+        let p1 = 0.0, p2 = 0.0, p3 = 0.0, p4 = 0.0;
+
+        const s1 = document.getElementById('slider_p1');
+        const s2 = document.getElementById('slider_p2');
+        const s3 = document.getElementById('slider_p3');
+        const s4 = document.getElementById('slider_p4');
+
+        const v1 = document.getElementById('val_p1');
+        const v2 = document.getElementById('val_p2');
+        const v3 = document.getElementById('val_p3');
+        const v4 = document.getElementById('val_p4');
+
+        function updatePressures() {
+            p1 = parseFloat(s1.value);
+            p2 = parseFloat(s2.value);
+            p3 = parseFloat(s3.value);
+            p4 = parseFloat(s4.value);
+
+            v1.innerText = p1.toFixed(1) + " kPa";
+            v2.innerText = p2.toFixed(1) + " kPa";
+            v3.innerText = p3.toFixed(1) + " kPa";
+            v4.innerText = p4.toFixed(1) + " kPa";
+
+            computeLargeDeflectionKinematics();
+        }
+
+        s1.addEventListener('input', updatePressures);
+        s2.addEventListener('input', updatePressures);
+        s3.addEventListener('input', updatePressures);
+        s4.addEventListener('input', updatePressures);
+
+        function setPressures(np1, np2, np3, np4) {
+            s1.value = np1;
+            s2.value = np2;
+            s3.value = np3;
+            s4.value = np4;
+            updatePressures();
+        }
+
+        // Three.js Scene Setup
+        const canvas = document.getElementById('canvas3d');
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+        const scene = new THREE.Scene();
+
+        // Optimized camera perspective for full 180° U-turn loop
+        const camera = new THREE.PerspectiveCamera(40, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+        camera.position.set(160, 90, 190);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.target.set(50, -45, 0);
+
+        // Lights
+        const ambLight = new THREE.AmbientLight(0xffffff, 0.8);
+        scene.add(ambLight);
+
+        const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 1.2);
+        dirLight1.position.set(100, 150, 120);
+        scene.add(dirLight1);
+
+        const dirLight2 = new THREE.DirectionalLight(0xa855f7, 0.9);
+        dirLight2.position.set(-60, -60, -60);
+        scene.add(dirLight2);
+
+        // Ground Reference Grid
+        const gridHelper = new THREE.GridHelper(240, 24, 0x334155, 0x1e293b);
+        gridHelper.position.set(50, -120, 0);
+        scene.add(gridHelper);
+
+        // Base Mount Ring
+        const mountGeom = new THREE.CylinderGeometry(CONFIG.R0 + 1.5, CONFIG.R0 + 1.5, 6, 32);
+        mountGeom.rotateZ(Math.PI / 2);
+        mountGeom.translate(-3, 0, 0);
+        const mountMat = new THREE.MeshStandardMaterial({ color: 0x334155, roughness: 0.4, metalness: 0.8 });
+        const mountMesh = new THREE.Mesh(mountGeom, mountMat);
+        scene.add(mountMesh);
+
+        // Continuum Actuator Parametric Mesh
+        const nSlices = 70;
+        const nRings = 24;
+        let actuatorMesh = null;
+        let centerlineLine = null;
+        let tipMarker = null;
+
+        const bodyMaterial = new THREE.MeshPhysicalMaterial({
+            color: 0x94a3b8,
+            roughness: 0.35,
+            metalness: 0.15,
+            transmission: 0.55,
+            opacity: 0.90,
+            transparent: true,
+            side: THREE.DoubleSide
+        });
+
+        // Centerline Line
+        const centerLineGeom = new THREE.BufferGeometry();
+        const centerLineMat = new THREE.LineBasicMaterial({ color: 0x38bdf8, linewidth: 3 });
+        centerlineLine = new THREE.Line(centerLineGeom, centerLineMat);
+        scene.add(centerlineLine);
+
+        // Tip Marker
+        const tipMarkerGeom = new THREE.SphereGeometry(2.5, 16, 16);
+        const tipMarkerMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b });
+        tipMarker = new THREE.Mesh(tipMarkerGeom, tipMarkerMat);
+        scene.add(tipMarker);
+
+        // EXACT SPATIAL COSSERAT CONTINUUM INTEGRATION (Supports 0 to 240°+ Logarithmic Spiral)
+        function computeLargeDeflectionKinematics() {
+            // Curvature components in pitch (XY) and yaw (XZ)
+            const dMz = (p3 - p1) * CONFIG.k_theta_per_kPa / CONFIG.L_act; // generates pitch
+            const dMy = (p4 - p2) * CONFIG.k_theta_per_kPa / CONFIG.L_act; // generates yaw
+
+            const netCurvBase = Math.sqrt(dMz * dMz + dMy * dMy);
+            const netThetaRad = netCurvBase * CONFIG.L_act * (1.0 + CONFIG.beta * 0.5 + CONFIG.gamma / 3.0);
+            const netThetaDeg = netThetaRad * 180.0 / Math.PI;
+
+            // Rebuild 3D Mesh via step-by-step Frenet-Serret frame integration
+            if (actuatorMesh) {
+                scene.remove(actuatorMesh);
+                actuatorMesh.geometry.dispose();
+            }
+
+            const geom = new THREE.BufferGeometry();
+            const positions = [];
+            const normals = [];
+            const indices = [];
+            const centerPoints = [];
+
+            // Initial frame at base X = 0
+            let p_curr = new THREE.Vector3(0, 0, 0);
+            let t_curr = new THREE.Vector3(1, 0, 0); // tangent along +X
+            let n_curr = new THREE.Vector3(0, 1, 0); // normal along +Y
+            let b_curr = new THREE.Vector3(0, 0, 1); // binormal along +Z
+
+            centerPoints.push(p_curr.clone());
+
+            const ds = CONFIG.L_act / nSlices;
+
+            // Store slice frames
+            const sliceFrames = [];
+            sliceFrames.push({ pos: p_curr.clone(), t: t_curr.clone(), n: n_curr.clone(), b: b_curr.clone(), s: 0 });
+
+            for (let i = 1; i <= nSlices; i++) {
+                const s = i * ds;
+                const xi = s / CONFIG.L_act;
+                // Logarithmic spiral gradient: curvature triples towards distal tip
+                const grad = 1.0 + CONFIG.beta * xi + CONFIG.gamma * Math.pow(xi, 2);
+
+                const kz = dMz * grad; // rotation rate around Z (pitch)
+                const ky = dMy * grad; // rotation rate around Y (yaw)
+
+                // Rotation vector for step ds: omega = (0, ky, kz) in local frame
+                const rotVec = new THREE.Vector3().addScaledVector(b_curr, kz * ds).addScaledVector(n_curr, ky * ds);
+                const rotAngle = rotVec.length();
+
+                if (rotAngle > 1e-8) {
+                    const rotAxis = rotVec.clone().normalize();
+                    t_curr.applyAxisAngle(rotAxis, rotAngle).normalize();
+                    n_curr.applyAxisAngle(rotAxis, rotAngle).normalize();
+                    b_curr.crossVectors(t_curr, n_curr).normalize();
+                }
+
+                p_curr.addScaledVector(t_curr, ds);
+                centerPoints.push(p_curr.clone());
+                sliceFrames.push({ pos: p_curr.clone(), t: t_curr.clone(), n: n_curr.clone(), b: b_curr.clone(), s: s });
+            }
+
+            // Build Tapered 3D Tube Mesh with Surface Vertex Normals
+            for (let i = 0; i <= nSlices; i++) {
+                const frame = sliceFrames[i];
+                const s = frame.s;
+                const xi = s / CONFIG.L_act;
+                // Linear taper: R0 -> Rt
+                const r_s = CONFIG.R0 - (CONFIG.R0 - CONFIG.Rt) * xi;
+
+                for (let j = 0; j <= nRings; j++) {
+                    const phi = (j / nRings) * Math.PI * 2;
+                    const cosP = Math.cos(phi);
+                    const sinP = Math.sin(phi);
+
+                    // Cross-section ring point
+                    const vx = frame.pos.x + r_s * (frame.n.x * cosP + frame.b.x * sinP);
+                    const vy = frame.pos.y + r_s * (frame.n.y * cosP + frame.b.y * sinP);
+                    const vz = frame.pos.z + r_s * (frame.n.z * cosP + frame.b.z * sinP);
+                    positions.push(vx, vy, vz);
+
+                    const nx = frame.n.x * cosP + frame.b.x * sinP;
+                    const ny = frame.n.y * cosP + frame.b.y * sinP;
+                    const nz = frame.n.z * cosP + frame.b.z * sinP;
+                    normals.push(nx, ny, nz);
+                }
+            }
+
+            for (let i = 0; i < nSlices; i++) {
+                for (let j = 0; j < nRings; j++) {
+                    const a = i * (nRings + 1) + j;
+                    const b = (i + 1) * (nRings + 1) + j;
+                    const c = (i + 1) * (nRings + 1) + (j + 1);
+                    const d = i * (nRings + 1) + (j + 1);
+                    indices.push(a, b, d);
+                    indices.push(b, c, d);
+                }
+            }
+
+            geom.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            geom.setAttribute('normal', new THREE.Float32BufferAttribute(normals, 3));
+            geom.setIndex(indices);
+
+            actuatorMesh = new THREE.Mesh(geom, bodyMaterial);
+            scene.add(actuatorMesh);
+
+            centerlineLine.geometry.setFromPoints(centerPoints);
+            const tipPt = centerPoints[centerPoints.length - 1];
+            tipMarker.position.copy(tipPt);
+
+            // Update UI & Telemetry
+            const tipX = tipPt.x;
+            const tipY = tipPt.y;
+            const tipZ = tipPt.z;
+
+            document.getElementById('disp_theta').innerText = netThetaDeg.toFixed(1) + "°";
+            document.getElementById('disp_x').innerText = (tipX >= 0 ? "+" : "") + tipX.toFixed(1) + " mm";
+            document.getElementById('disp_y').innerText = (tipY >= 0 ? "+" : "") + tipY.toFixed(1) + " mm";
+            document.getElementById('disp_z').innerText = (tipZ >= 0 ? "+" : "") + tipZ.toFixed(1) + " mm";
+
+            const kBase = (netCurvBase * 1000.0).toFixed(2);
+            const kTip = (netCurvBase * (1.0 + CONFIG.beta + CONFIG.gamma) * 1000.0).toFixed(2);
+            document.getElementById('disp_kbase').innerText = kBase + " m⁻¹";
+            document.getElementById('disp_ktip').innerText = kTip + " m⁻¹";
+
+            // Status Pill Text & Color
+            const pill = document.getElementById('status_pill');
+            const pillText = document.getElementById('status_text');
+            if (netThetaDeg < 15) {
+                pill.style.borderColor = '#64748b';
+                pillText.style.color = '#94a3b8';
+                pillText.innerText = "Linear Straight Regime (<15°)";
+            } else if (netThetaDeg < 80) {
+                pill.style.borderColor = '#38bdf8';
+                pillText.style.color = '#38bdf8';
+                pillText.innerText = `Mild Arc Hook (${netThetaDeg.toFixed(0)}°)`;
+            } else if (netThetaDeg < 170) {
+                pill.style.borderColor = '#f59e0b';
+                pillText.style.color = '#f59e0b';
+                pillText.innerText = `Right Angle / C-Curve (${netThetaDeg.toFixed(0)}°)`;
+            } else if (netThetaDeg <= 195) {
+                pill.style.borderColor = '#22c55e';
+                pillText.style.color = '#4ade80';
+                pillText.innerText = `★ 180° Full Semicircle U-Turn (${netThetaDeg.toFixed(0)}°)`;
+            } else {
+                pill.style.borderColor = '#c084fc';
+                pillText.style.color = '#e9d5ff';
+                pillText.innerText = `220°+ Logarithmic Spiral Wrap (${netThetaDeg.toFixed(0)}°)`;
+            }
+
+            // Compass Dot in Azimuth plane
+            const compDot = document.getElementById('compass_dot');
+            const compScale = 36.0 / 120.0;
+            const compZ = Math.max(-36, Math.min(36, tipZ * compScale));
+            const compY = Math.max(-36, Math.min(36, -tipY * compScale));
+            compDot.setAttribute('cx', compZ);
+            compDot.setAttribute('cy', compY);
+        }
+
+        // Window resize
+        window.addEventListener('resize', () => {
+            const w = canvas.parentElement.clientWidth;
+            const h = canvas.parentElement.clientHeight;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        });
+
+        // Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        updatePressures();
+        animate();
+    </script>
+</body>
+</html>

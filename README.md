@@ -8,16 +8,22 @@ Units everywhere: mm, N, MPa (1 MPa = 1000 kPa).
 
 ## Files
 
-| File | What it is |
+| Path | What it is |
 |---|---|
-| `BTP_260825_144004.pdf` | Handwritten derivation (the "notes") |
-| `modeling_guideline.md`, `actuator_guideline.html` | Review of the notes, model tiers, FE findings, workflow |
+| `docs/BTP_260825_144004.pdf` | Handwritten derivation (the "notes") |
+| `docs/modeling_guideline.md`, `docs/actuator_guideline.html` | Review of the notes, model tiers, FE findings, workflow |
+| `EXPLANATION.md` | Plain-language physical and mathematical guide |
+| `ARCHITECTURE_GRAPH.md` | Complete dependency graph & context routing lookup table |
 | `actuator_model.py` | Beam model, Tiers 1–3 (closed form and hyperelastic section) |
 | `actuator_fea.py` | Tier 4: nonlinear 3-D finite-element model with a pressure sweep |
 | `fea_verify.py` | Verification of the FE solver against exact solutions |
 | `fea_viewer.py` | Builds the interactive viewer for a finished FE run |
 | `fea_compare.py` | Report figure: FE against the beam model |
-| `results/` | One folder per FE run |
+| `grasp/` | Soft robotic contact, multi-finger grasping mechanics & animations |
+| `ansys/` | ANSYS Mechanical APDL (.mac) batch models & APDL exporter |
+| `comsol/` | COMSOL Multiphysics 6.4 FEA models, comparison scripts & dashboards |
+| `report/` | LaTeX report, presentation slides, and animation figures |
+| `results/` | Output databases from FEA sweeps and grasping studies |
 
 ## Requirements
 
