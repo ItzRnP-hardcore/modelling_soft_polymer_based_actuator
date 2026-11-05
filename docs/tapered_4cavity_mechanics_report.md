@@ -460,11 +460,91 @@ comsol/
 | Actuator Model | Model Path | Image Subfolder | Key Renders & Purpose |
 | :--- | :--- | :--- | :--- |
 | **Tapered 4-Cavity ($180^\circ$ Solved)** | [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph) | `tapered_4cavity/images/180deg_verified/` | `comsol_pitch_down_disp.png`, `comsol_pitch_down_stress.png`, `comsol_pitch_down_sec2d_stress.png`, `comsol_yaw_left_*.png`, `comsol_diagonal_45deg_*.png` — Visualizes $180^\circ$ circular bending, peak stress concentrations ($122.7\text{ kPa}$), and intact $34^\circ$ radial ribs under all 3 steering axes. |
+| **Contact Grasp Study (Cylinder Radii Sweep)** | [`contact_grasp/`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/) | `contact_grasp/images/` | `contact_force_vs_pressure_multiradius.png`, `peak_grasp_force_vs_cylinder_radius.png`, `contact_grasp_R*mm_*.png` — Documents normal contact force ($F_N$) and Coulomb friction force ($F_f$) scaling across target radii $R_{\text{cyl}} \in [12, 15, 18, 22]\text{ mm}$. |
 | **Tapered 4-Cavity (Legacy Multiaxial)** | [`tapered_4cavity/archive/models/`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/archive/models/) | `tapered_4cavity/images/legacy_multiaxial/` | `comsol_cavity_1_top_*.png`, `comsol_cavity_2_right_*.png`, `comsol_cavity_3_bottom_*.png`, `comsol_cavity_4_left_*.png`, `comsol_all_4_cavities_*.png` — Documents individual chamber inflation and axial stiffening responses. |
 | **Tapered 4-Cavity (Legacy Ribbed/Sleeved)** | [`tapered_4cavity/archive/models/`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/archive/models/) | `tapered_4cavity/images/legacy_ribbed_sleeved/` | `comsol_tapered_sleeved_*.png`, `crop_bulge.png`, `test_*.png` — Documents the failure mechanisms of severed radial ribs and surface penalty locking. |
 | **Tapered 1-Cavity ($215^\circ$)** | [`tapered/actuator_tapered_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered/actuator_tapered_solved.mph) | `tapered/images/` | `comsol_tapered_disp.png`, `comsol_tapered_stress.png`, `tapered_dashboard.png` — Proves single-eccentric lumen achieves $215^\circ$ curling. |
 | **Braided Sleeve (Straight)** | [`sleeved/actuator_sleeve_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/sleeved/actuator_sleeve_solved.mph) | `sleeved/images/` | `comsol_sleeve_disp_P0.png`, `comsol_sleeve_disp_P50.png`, `comsol_sleeve_disp_P110.png`, `sleeve_dashboard.png` — Documents hoop-restraining physics up to $110\text{ kPa}$. |
 | **Bare Silicone (Unreinforced)** | [`bare/actuator_bare_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/actuator_bare_solved.mph) | `bare/images/` | `comsol_bare_deformed_stress.png`, `comsol_dashboard.png`, `comsol_verification.png` — Baseline aneurysm and blowout failure mode. |
+
+---
+
+## 11. Contact Mechanics & Grasping Performance Against Cylindrical Objects
+
+To establish the functional grasping and object-manipulation capability of the verified $180^\circ$ tapered 4-cavity soft actuator, a complete 3D nonlinear continuum contact simulation was conducted in COMSOL Multiphysics 6.4 ([`comsol/contact_grasp/`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/)).
+
+### 11.1 Problem Formulation & Contact Mechanics Architecture
+
+1. **Continuum Contact Pair Formulation**:
+   - The geometry is modeled as a two-domain assembly (`FormAssembly`):
+     - **Domain 1**: 3D tapered 4-cavity silicone body ($L = 140\text{ mm}$, $R_0 = 9.5\text{ mm} \to R_t = 3.8\text{ mm}$, Neo-Hookean hyperelastic matrix, $E = 0.40\text{ MPa}$, $\nu = 0.45$).
+     - **Domain 2**: Rigid cylindrical object aligned along the Z-axis, centered at $(X_c, Y_c) = (30.0, -28.0)\text{ mm}$ with length $L_{\text{cyl}} = 40.0\text{ mm}$.
+   - Contact pair `p1` is explicitly defined:
+     $$\text{Source (Master)}: \partial\Omega_{\text{cyl}}, \quad \text{Destination (Slave)}: \partial\Omega_{\text{act,outer}}$$
+   - Non-penetration constraint enforced via the **Penalty formulation**:
+     $$T_n = p_n \langle -g_n \rangle, \quad p_n = 1.0 \times 10^6 \, \text{N/m}^3$$
+     where $g_n$ is the clearance gap distance and $\langle \cdot \rangle$ denotes Macaulay brackets.
+   - **Coulomb Static Friction** ($\mu = 0.50$ for silicone on rigid polymers/metals):
+     $$\|\mathbf{T}_t\| \le \mu T_n, \quad p_t = 1.0 \times 10^6 \, \text{N/m}^3$$
+
+2. **Total Contact Force & Friction Capacity Extraction**:
+   - The net normal force $F_N$ exerted by the actuator on the cylinder is evaluated by surface integration of reaction forces on the cylinder constraint:
+     $$F_{Nx} = -\iint_{\partial\Omega_{\text{cyl}}} \text{solid.RFx} \, dA, \quad F_{Ny} = -\iint_{\partial\Omega_{\text{cyl}}} \text{solid.RFy} \, dA$$
+     $$F_N = \sqrt{F_{Nx}^2 + F_{Ny}^2}$$
+   - Verified against direct destination contact traction integral:
+     $$F_{N,\text{pair}} = \iint_{\partial\Omega_{\text{act,outer}}} \text{solid.cnt1.Tn} \, dA$$
+   - The maximum tangential friction holding capacity preventing axial slippage (along Z) is:
+     $$F_f = \mu_{\text{fric}} \cdot F_N = 0.50 \cdot F_N$$
+
+---
+
+### 11.2 Multi-Radius Sweep Results ($R_{\text{cyl}} \in [12, 15, 18, 22]\text{ mm}$)
+
+A full Design of Experiments (DoE) comprising 36 solved states across 4 cylinder radii ($12, 15, 18, 22\text{ mm}$) and 9 continuation pressure steps ($0\text{ to }40\text{ kPa}$) was executed to convergence.
+
+| Cylinder Radius $R_{\text{cyl}}$ | Peak Normal Force $F_{N,\max}$ | Holding Friction $F_{f,\max}$ | Optimal Pressure $P_{\text{opt}}$ | Tip Angle at Peak $\theta_{\text{tip}}$ | Peak Contact Pressure $T_{n,\max}$ | Max Payload Capacity $m_{\text{load}}$ ($\mu=0.5$) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **$12.0\text{ mm}$** | **$0.0126\text{ N}$** | **$0.0063\text{ N}$** | $15.0\text{ kPa}$ | $116.7^\circ$ | $0.54\text{ kPa}$ | $0.64\text{ g}$ |
+| **$15.0\text{ mm}$** | **$0.1496\text{ N}$** | **$0.0748\text{ N}$** | $15.0\text{ kPa}$ | $112.7^\circ$ | $1.59\text{ kPa}$ | $7.63\text{ g}$ |
+| **$18.0\text{ mm}$** | **$0.3390\text{ N}$** | **$0.1695\text{ N}$** | $15.0\text{ kPa}$ | $107.9^\circ$ | $2.25\text{ kPa}$ | $17.28\text{ g}$ |
+| **$22.0\text{ mm}$** | **$0.7068\text{ N}$** | **$0.3534\text{ N}$** | $15.0\text{ kPa}$ | $101.3^\circ$ | $3.06\text{ kPa}$ | **$36.02\text{ g}$** |
+
+---
+
+### 11.3 Grasp Performance & Contact Evolution Curves
+
+````carousel
+![Normal Contact Force and Coulomb Friction Force vs Pressure](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/contact_force_vs_pressure_multiradius.png)
+<!-- slide -->
+![Peak Grasping Force Scaling vs Cylinder Radius](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/peak_grasp_force_vs_cylinder_radius.png)
+<!-- slide -->
+![3D Contact Grasp Deformation & Contact Pressure at R=22mm (Peak Fn = 0.707 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/contact_grasp_R22mm_disp_p.png)
+<!-- slide -->
+![3D Contact Grasp Deformation & Contact Pressure at R=18mm (Peak Fn = 0.339 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/contact_grasp_R18mm_disp_p.png)
+<!-- slide -->
+![3D Contact Grasp Deformation & Contact Pressure at R=15mm (Peak Fn = 0.150 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/contact_grasp_R15mm_disp_p.png)
+<!-- slide -->
+![3D Contact Grasp Deformation & Contact Pressure at R=12mm](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/contact_grasp_R12mm_disp_p.png)
+````
+
+---
+
+### 11.4 Key Mechanics Insights
+
+1. **Optimal Grasp Pressure Synchronization ($P = 15\text{ kPa}$)**:
+   - For all target radii ($12\text{ to }22\text{ mm}$), the peak normal contact force consistently peaks at **$P = 15.0\text{ kPa}$**.
+   - At $P = 15\text{ kPa}$, the actuator's mid-body and distal segments achieve maximal circumferential conformal wrapping ($\theta_{\text{tip}} \approx 101^\circ\text{--}117^\circ$), directly pressing normal to the cylinder surface.
+   - At higher pressures ($P > 25\text{ kPa}$), the actuator's distal tip continues curling towards its terminal $180^\circ$ trajectory, transforming the grasp from an orthogonal clamping mode into a circumferential envelope mode.
+
+2. **Nonlinear Force Scaling with Object Diameter**:
+   - The peak normal force scales nonlinearly with cylinder radius:
+     $$\frac{F_{N,\max}(R=22\text{ mm})}{F_{N,\max}(R=12\text{ mm})} = \frac{0.707 \, \text{N}}{0.013 \, \text{N}} \approx 56.1 \times$$
+   - A larger object diameter intersects a broader arc of the actuator's pre-curling path, engaging an increased contact patch area ($\approx 230\text{ mm}^2$ for $R=22\text{ mm}$) and mobilizing high hyperelastic reaction stresses ($\sigma_{\text{vm}} = 63.3\text{ kPa}$ at peak grasp).
+
+3. **Frictional Holding & Anti-Slip Capacity**:
+   - Assuming a conservative dry static friction coefficient of $\mu = 0.50$, the maximum tangential holding force reaches **$0.353\text{ N}$** for a $44\text{ mm}$ diameter cylinder.
+   - This provides sufficient frictional resistance to hold a vertical payload of **$36.0\text{ grams}$** with a single actuator, or $> 72\text{ grams}$ in a two-finger opposing gripper configuration, operating at a safe low pressure of only $15\text{ kPa}$ ($0.15\text{ bar}$).
+
 
 
 
