@@ -15,6 +15,13 @@ This registry documents all intermediate diagnostic scripts developed during the
 | `PrintAllBoundaries.java` | Boundary Inspection | Verified boundary areas and detected that curved quarter-cone outer skin patches have centroid radius $r_m \approx 0.90 R(x)$ ($6.29\text{ mm}$ vs $7.06\text{ mm}$), enabling robust boundary identification. |
 | `TestActuatorCylinderContactSingle.java` | Benchmark Solver | Successfully solved the single-radius benchmark ($R = 15\text{ mm}$) across all 9 continuation steps ($P = 0\text{ to }40\text{ kPa}$), demonstrating robust penalty convergence without singular Jacobian issues. |
 | `InspectContactVariables.java` | Postprocessing Test | Tested evaluation of contact pressure (`solid.cnt1.Tn`) and gap (`solid.cnt1.gap`) on destination boundaries. |
+| `InspectPhysicsFeatures.java` | Physics Reflection | Probed root `SolidMechanics` feature space; proved `SpringFoundation` cannot be placed at root 3D domain level without a rigid domain wrapper. |
+| `ListSolidFeatures.java` | Reflection & Metadata | Scanned all available 3D feature types in `SolidMechanics`; discovered `RigidDomain` at dimension 3. |
+| `InspectRigidDomain.java` | Feature Inspection | Evaluated `RigidDomain` property tags and center of mass settings. |
+| `InspectRigidSpring.java` | Subfeature Discovery | Discovered that `RigidDomain` supports subfeatures `SpringFoundation` and `AppliedForce`, identifying `SpringType` (`ku`) and `RotSpringType` (`kth`). |
+| `TestRigidOptions.java` | Parameter Syntax Probe | Validated 3-vector setting for translational `ku` and rotational `kth` spring constants. |
+| `TestFloatingCylinderAPI.java` | Geometry & Model Setup | Formulated assembly of unanchored floating cylinder domain with actuator. |
+| `TestFloatingCylinderContact.java` | Solver Benchmark | Verified convergence of floating rigid cylinder with $k_{\text{float}} = 20\text{ N/m}$ and $k_{\theta,\text{float}} = 0.01\text{ N}\cdot\text{m/rad}$ up to $40\text{ kPa}$. |
 
 ---
 
@@ -24,3 +31,4 @@ The canonical production runner for this study is:
 - [`comsol/contact_grasp/BuildActuatorCylinderContactSweep.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/BuildActuatorCylinderContactSweep.java)
 - Plotting utility: [`comsol/contact_grasp/plot_contact_grasp_curves.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/plot_contact_grasp_curves.py)
 - Summary dataset: [`comsol/contact_grasp/contact_grasp_multiradius_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/contact_grasp_multiradius_summary.csv)
+

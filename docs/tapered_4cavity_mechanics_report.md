@@ -545,6 +545,107 @@ A full Design of Experiments (DoE) comprising 36 solved states across 4 cylinder
    - Assuming a conservative dry static friction coefficient of $\mu = 0.50$, the maximum tangential holding force reaches **$0.353\text{ N}$** for a $44\text{ mm}$ diameter cylinder.
    - This provides sufficient frictional resistance to hold a vertical payload of **$36.0\text{ grams}$** with a single actuator, or $> 72\text{ grams}$ in a two-finger opposing gripper configuration, operating at a safe low pressure of only $15\text{ kPa}$ ($0.15\text{ bar}$).
 
+---
+
+### 11.5 Floating Object Grasp Dynamics & Spatial Location Sweep
+
+In real-world robotic grasping, target objects are rarely rigidly anchored to the ground; they float, translate, roll, and re-orient under the closing kinematics of soft fingers. To uncover the optimal spatial envelope where the actuator exerts the maximum normal contact force, an extensive 60-state Design of Experiments was executed in COMSOL Multiphysics 6.4 with an **unanchored 6-DOF compliant rigid cylinder** (`RigidDomain` with 3D `SpringFoundation`: translational compliance $k_{\text{float}} = 20\text{ N/m}$ in $X$ and $Y$; rotational compliance $k_{\theta,\text{float}} = 0.01\text{ N}\cdot\text{m/rad}$ in $Z$).
+
+Three candidate spatial grasp locations were evaluated across all four cylinder radii ($R_{\text{cyl}} = 12, 15, 18, 22\text{ mm}$):
+1. **Proximal Grasp** ($X_c = 25.0\text{ mm}$): Positioned near the actuator base within the primary curl loop.
+2. **Central Grasp** ($X_c = 33.0\text{ mm}$): Intermediate core position.
+3. **Distal Grasp** ($X_c = 42.0\text{ mm}$): Positioned further out along the actuator span directly within the maximum sweep arc.
+
+#### 11.5.1 Multi-Radius Spatial Grasp Summary Table
+
+| Cylinder Radius $R_{\text{cyl}}$ | Spatial Location | Initial $(X_c, Y_c)$ | Peak Normal Force $F_{N,\max}$ | Holding Friction $F_{f,\max}$ ($\mu=0.5$) | Pressure at Peak $P_{\text{opt}}$ | Max Float Displacement $\Delta r_{\max}$ | Grasping Mechanics & Kinematic Behavior |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **$12.0\text{ mm}$** | **Proximal** | $(25.0, -25.0)\text{ mm}$ | $0.0034\text{ N}$ | $0.0017\text{ N}$ | $20\text{ kPa}$ | $0.19\text{ mm}$ | Glancing contact; curled tip loops past the small cylinder. |
+| | **Central** | $(33.0, -25.0)\text{ mm}$ | $0.0569\text{ N}$ | $0.0285\text{ N}$ | $20\text{ kPa}$ | $2.83\text{ mm}$ | Moderate grasp; object displaced by $2.8\text{ mm}$ before tip clears. |
+| | **Distal** | $(42.0, -25.0)\text{ mm}$ | **$0.1274\text{ N}$** | **$0.0637\text{ N}$** | $20\text{ kPa}$ | **$6.33\text{ mm}$** | **Global Optimum**: Deep envelope wrap-around; pushes cylinder $6.33\text{ mm}$. |
+| **$15.0\text{ mm}$** | **Proximal** | $(25.0, -28.0)\text{ mm}$ | $0.0075\text{ N}$ | $0.0037\text{ N}$ | $20\text{ kPa}$ | $0.42\text{ mm}$ | Glancing contact near base. |
+| | **Central** | $(33.0, -28.0)\text{ mm}$ | $0.0667\text{ N}$ | $0.0333\text{ N}$ | $20\text{ kPa}$ | $3.30\text{ mm}$ | Moderate grasp; steady normal force. |
+| | **Distal** | $(42.0, -28.0)\text{ mm}$ | **$0.1390\text{ N}$** | **$0.0695\text{ N}$** | $20\text{ kPa}$ | **$6.87\text{ mm}$** | **Global Optimum**: Deep envelope wrap-around; pushes cylinder $6.87\text{ mm}$. |
+| **$18.0\text{ mm}$** | **Proximal** | $(25.0, -31.0)\text{ mm}$ | $0.0130\text{ N}$ | $0.0065\text{ N}$ | $20\text{ kPa}$ | $0.72\text{ mm}$ | Weak secondary contact. |
+| | **Central** | $(33.0, -31.0)\text{ mm}$ | $0.0777\text{ N}$ | $0.0389\text{ N}$ | $20\text{ kPa}$ | $3.80\text{ mm}$ | Strong grasp; object displaced by $3.80\text{ mm}$. |
+| | **Distal** | $(42.0, -31.0)\text{ mm}$ | **$0.1510\text{ N}$** | **$0.0755\text{ N}$** | $20\text{ kPa}$ | **$7.43\text{ mm}$** | **Global Optimum**: $15.1\times 10^{-2}\text{ N}$ clamping force; pushes cylinder $7.43\text{ mm}$. |
+| **$22.0\text{ mm}$** | **Proximal** | $(25.0, -35.0)\text{ mm}$ | $0.0871\text{ N}$ | $0.0435\text{ N}$ | $40\text{ kPa}$ | $2.95\text{ mm}$ | Late-stage contact as full $180^\circ$ curl compresses base. |
+| | **Central** | $(33.0, -35.0)\text{ mm}$ | $0.2555\text{ N}$ | $0.1277\text{ N}$ | $40\text{ kPa}$ | $4.57\text{ mm}$ | Very strong dual-sided clamping between base and curling tip. |
+| | **Distal** | $(42.0, -35.0)\text{ mm}$ | **$0.3236\text{ N}$** | **$0.1618\text{ N}$** | $40\text{ kPa}$ | **$8.24\text{ mm}$** | **Global Optimum**: Full circumferential pinch; cylinder displaced by $7.88\text{ mm}$. |
+
+---
+
+#### 11.5.2 Spatial Grasp Analysis Dashboards
+
+````carousel
+![Normal Contact Force vs Pressure Across Locations](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/floating_grasp_fn_vs_pressure_locations.png)
+<!-- slide -->
+![Peak Grasping Normal Force vs Initial Cylinder Location Xc](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/floating_grasp_peak_force_vs_location.png)
+<!-- slide -->
+![Floating Cylinder Kinematic Displacement Trajectories (ux, uy)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/floating_grasp_cylinder_displacements.png)
+<!-- slide -->
+![Optimal Location Tangential Friction Capacity vs Pressure](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/floating_grasp_optimal_friction_capacity.png)
+````
+
+---
+
+#### 11.5.3 3D Optimal Grasp Deformation & Contact Stress Renders
+
+````carousel
+![R=22mm Distal Grasp 3D Total Displacement (Peak Fn = 0.324 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R22mm_distal_disp.png)
+<!-- slide -->
+![R=22mm Distal Grasp 3D von Mises Stress (Peak Fn = 0.324 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R22mm_distal_stress.png)
+<!-- slide -->
+![R=18mm Distal Grasp 3D Total Displacement (Peak Fn = 0.151 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R18mm_distal_disp.png)
+<!-- slide -->
+![R=18mm Distal Grasp 3D von Mises Stress (Peak Fn = 0.151 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R18mm_distal_stress.png)
+<!-- slide -->
+![R=15mm Distal Grasp 3D Total Displacement (Peak Fn = 0.139 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R15mm_distal_disp.png)
+<!-- slide -->
+![R=15mm Distal Grasp 3D von Mises Stress (Peak Fn = 0.139 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R15mm_distal_stress.png)
+<!-- slide -->
+![R=12mm Distal Grasp 3D Total Displacement (Peak Fn = 0.127 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R12mm_distal_disp.png)
+<!-- slide -->
+![R=12mm Distal Grasp 3D von Mises Stress (Peak Fn = 0.127 N)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_floating_R12mm_distal_stress.png)
+````
+
+---
+
+#### 11.5.4 Key Physical Discoveries from Floating Location Mechanics
+
+1. **Unanimous Global Optimum at Distal Location ($X_c = 42.0\text{ mm}$)**:
+   - Across all four tested cylinder radii ($12, 15, 18, 22\text{ mm}$), the **Distal location ($X_c = 42.0\text{ mm}$)** delivers the highest normal clamping force:
+     - For $R = 12\text{ mm}$: $F_N$ reaches **$0.1274\text{ N}$** (a **$37.3\times$ increase** over Proximal).
+     - For $R = 15\text{ mm}$: $F_N$ reaches **$0.1390\text{ N}$** (an **$18.6\times$ increase** over Proximal).
+     - For $R = 18\text{ mm}$: $F_N$ reaches **$0.1510\text{ N}$** (an **$11.6\times$ increase** over Proximal).
+     - For $R = 22\text{ mm}$: $F_N$ reaches **$0.3236\text{ N}$** (a **$3.7\times$ increase** over Proximal).
+   - *Physical Explanation*: The actuator's greatest swept volume and bending stroke occurs along its distal mid-span. Positioning the object at $X_c = 42\text{ mm}$ places it directly in the path of the curling finger, enabling full contact engagement rather than glancing contact.
+
+2. **Self-Centering Kinematics of Floating Objects**:
+   - Unlike rigid fixed targets where peak contact stresses can cause localized pinning, the floating compliant object actively translates:
+     - For $R=12\text{ mm}$, the cylinder displaces by **$\Delta r = 6.33\text{ mm}$** ($\Delta X = -4.53\text{ mm}, \Delta Y = -4.42\text{ mm}$).
+     - For $R=22\text{ mm}$, the cylinder displaces by **$\Delta r = 7.88\text{ mm}$** ($\Delta X = -7.88\text{ mm}, \Delta Y = +0.17\text{ mm}$).
+   - This proves that soft continuum fingers act as self-centering grippers: as the finger closes, it pushes the object backward toward the base and cradles it stably within the concave bend pocket.
+
+3. **Pressure Mode Transition: Wrap-Around vs. Clamping**:
+   - For small-to-medium cylinders ($R \le 18\text{ mm}$), peak normal clamping force occurs at **$P = 20\text{ kPa}$**. At higher pressures ($30\text{--}40\text{ kPa}$), the distal tip curls completely around the object into its $180^\circ$ loop, transforming normal clamping pressure into gentle circumferential encapsulation.
+   - For large cylinders ($R = 22\text{ mm}$), the object diameter ($44\text{ mm}$) bridges the entire grasp loop. As pressure reaches $40\text{ kPa}$, both the actuator base and curling tip press inward simultaneously, driving the normal force to its global maximum of **$0.3236\text{ N}$** with a friction capacity of **$0.1618\text{ N}$** ($16.5\text{ grams}$ vertical payload).
+
+---
+
+## 12. Master Synthesis & Gripper Design Guidelines
+
+| Metric | Uniform Cylinder (Bare) | Sleeved Cylinder | Tapered 1-Cavity | Tapered 4-Cavity (Pitch Down) | Tapered 4-Cavity (Grasp R=22mm Distal) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Max Bending Angle** | $3.2^\circ$ (at $40\text{ kPa}$) | $8.4^\circ$ (at $110\text{ kPa}$) | $215.9^\circ$ (at $19.3\text{ kPa}$) | **$182.4^\circ$ (at $40\text{ kPa}$)** | **$178.6^\circ$ (enveloped)** |
+| **Tip Displacement $\Delta Y$** | $-2.8\text{ mm}$ | $-18.6\text{ mm}$ | $-58.1\text{ mm}$ | **$-52.8\text{ mm}$** | **$-44.6\text{ mm}$** |
+| **Peak Von Mises Stress** | $145\text{ kPa}$ (aneurysm) | $68\text{ kPa}$ | $88\text{ kPa}$ | **$122.7\text{ kPa}$** | **$68.4\text{ kPa}$** |
+| **Multiaxial Steering DOFs** | 0 (pure elongation) | 0 (passive straight) | 1 (planar pitch only) | **3 (Pitch, Yaw, Diagonal)** | **3 + Contact Clamping** |
+| **Peak Clamping Force $F_N$**| $0\text{ N}$ | $0\text{ N}$ | N/A | N/A | **$0.3236\text{ N}$** |
+| **Frictional Holding Capacity** | $0\text{ N}$ | $0\text{ N}$ | N/A | N/A | **$0.1618\text{ N}$** ($\mu=0.50$) |
+| **Optimal Object Location** | N/A | N/A | N/A | N/A | **Distal ($X_c = 42\text{ mm}$)** |
+| **Structural Integrity Status** | Blowout / Failure | Stiff / No Bending | Intact | **Intact (4 Ribs Preserved)** | **Intact (Self-Centering Grasp)** |
+
 
 
 
