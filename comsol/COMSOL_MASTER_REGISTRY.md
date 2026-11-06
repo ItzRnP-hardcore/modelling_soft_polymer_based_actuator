@@ -120,6 +120,16 @@ comsol/
 │   │       ├── actuator_vortex_R10mm_Vortex_Xc50_Yc-55_disp_P40.png # 3D displacement render at 40 kPa
 │   │       ├── actuator_vortex_R12mm_Vortex_Xc48_Yc-52_disp_P40.png # 3D displacement render at 40 kPa
 │   │       └── actuator_vortex_R12mm_Baseline_Xc42_Yc-25_disp_P40.png # 3D render showing slip-off at 40 kPa
+│   ├── maximum_force_full_surround/               # MAXIMUM GRASP FORCE & FULL-SURROUND (360°) OPTIMIZATION
+│   │   ├── actuator_surround_Std140mm_R10mm_HighPressure_solved.mph # 140mm model at 100 kPa (Wrap angle saturation at 229.6°)
+│   │   ├── BuildFullSurroundMaxForceStudy.java     # Parametric batch generator
+│   │   ├── run_full_surround_study.py             # Orchestrator & executive dashboard plotter
+│   │   ├── plot_comprehensive_full_surround.py    # Master 4-panel executive dashboard generator
+│   │   ├── full_surround_max_force_summary.csv    # Continuation dataset up to 100 kPa
+│   │   └── images/
+│   │       ├── master_full_surround_and_max_force.png # Master 4-panel executive dashboard
+│   │       ├── actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png # 3D displacement at 100 kPa
+│   │       └── actuator_surround_Std140mm_R10mm_HighPressure_stress_P100.png # 3D von Mises stress at 100 kPa
 │   └── archive/                                  # Diagnostic API tests & boundary inspectors
 │
 └── benched/                            # Deprecated early prototypes
@@ -212,6 +222,20 @@ When writing reports, referencing findings, or inspecting simulation results, us
   - `actuator_vortex_R10mm_Vortex_Xc50_Yc-55_disp_P40.png`: 3D render at $40\text{ kPa}$ showing $R=10\text{ mm}$ optimal vortex grasp.
   - `actuator_vortex_R12mm_Vortex_Xc48_Yc-52_disp_P40.png`: 3D render at $40\text{ kPa}$ showing $R=12\text{ mm}$ vortex wrap.
   - `actuator_vortex_R12mm_Baseline_Xc42_Yc-25_disp_P40.png`: 3D render showing slip-off at $40\text{ kPa}$ under proximal baseline placement.
+
+### A.4 Maximum Grasp Force & Full-Surround Optimization (`contact_grasp/maximum_force_full_surround/`)
+* **Solved MPH Models**:
+  - [`contact_grasp/maximum_force_full_surround/actuator_surround_Std140mm_R10mm_HighPressure_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/maximum_force_full_surround/actuator_surround_Std140mm_R10mm_HighPressure_solved.mph) (140mm model solved up to 100 kPa proving wrap angle saturation at 229.6°)
+* **Generators & Batch Runners**:
+  - [`contact_grasp/maximum_force_full_surround/BuildFullSurroundMaxForceStudy.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/maximum_force_full_surround/BuildFullSurroundMaxForceStudy.java) (Java parametric generator)
+  - [`contact_grasp/maximum_force_full_surround/run_full_surround_study.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/maximum_force_full_surround/run_full_surround_study.py) (Batch orchestrator)
+  - [`contact_grasp/maximum_force_full_surround/plot_comprehensive_full_surround.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/maximum_force_full_surround/plot_comprehensive_full_surround.py) (Master 4-panel executive dashboard generator)
+* **Dataset**:
+  - [`contact_grasp/maximum_force_full_surround/full_surround_max_force_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/maximum_force_full_surround/full_surround_max_force_summary.csv) (Continuation dataset up to 100 kPa)
+* **Images (`contact_grasp/maximum_force_full_surround/images/`)**:
+  - `master_full_surround_and_max_force.png`: Master 4-panel executive dashboard (Wrap angle progression, force scaling law up to 100 kPa, burst safety factors, inward self-centering).
+  - `actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png`: 3D displacement render at 100 kPa showing wrap saturation.
+  - `actuator_surround_Std140mm_R10mm_HighPressure_stress_P100.png`: 3D von Mises stress render at 100 kPa.
 
 ### B. Tapered 4-Cavity Model (Canonical $180^\circ$ Solved Model)
 * **Model File**: [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph)
