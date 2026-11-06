@@ -130,6 +130,17 @@ comsol/
 │   │       ├── master_full_surround_and_max_force.png # Master 4-panel executive dashboard
 │   │       ├── actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png # 3D displacement at 100 kPa
 │   │       └── actuator_surround_Std140mm_R10mm_HighPressure_stress_P100.png # 3D von Mises stress at 100 kPa
+│   ├── proper_grasp_and_sleeve_optimization/      # PROPER GRASP CAGING & COMMERCIAL MATERIAL SLEEVE RULES
+│   │   ├── actuator_proper_ProperGrasp_R12mm_CagingLoop_solved.mph # 356.6° loop closure at 80 kPa, cinch at 100 kPa
+│   │   ├── actuator_proper_ProperGrasp_R16mm_Enclosure_solved.mph  # 354.7° loop closure at 80 kPa
+│   │   ├── actuator_proper_ProperGrasp_R20mm_FullSurround_solved.mph # 353.0° loop closure at 80 kPa
+│   │   ├── BuildProperGraspStudy.java             # Parametric caging study generator
+│   │   ├── run_proper_grasp_study.py              # Batch runner & mechanics plotter
+│   │   ├── proper_grasp_summary.csv               # 18-point caging dataset up to 100 kPa
+│   │   └── images/
+│   │       ├── proper_grasp_mechanics.png         # Publication 2-panel comparison chart
+│   │       ├── actuator_proper_*_disp_P100.png    # 3D displacement renders at peak cinch
+│   │       └── actuator_proper_*_stress_P100.png  # 3D von Mises stress renders at peak cinch
 │   └── archive/                                  # Diagnostic API tests & boundary inspectors
 │
 └── benched/                            # Deprecated early prototypes
@@ -236,6 +247,21 @@ When writing reports, referencing findings, or inspecting simulation results, us
   - `master_full_surround_and_max_force.png`: Master 4-panel executive dashboard (Wrap angle progression, force scaling law up to 100 kPa, burst safety factors, inward self-centering).
   - `actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png`: 3D displacement render at 100 kPa showing wrap saturation.
   - `actuator_surround_Std140mm_R10mm_HighPressure_stress_P100.png`: 3D von Mises stress render at 100 kPa.
+
+### A.5 Proper Grasp Caging & Commercial Material Sleeve Rules (`contact_grasp/proper_grasp_and_sleeve_optimization/`)
+* **Solved MPH Models**:
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R12mm_CagingLoop_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R12mm_CagingLoop_solved.mph) (356.6° loop closure at 80 kPa, cinch at 100 kPa)
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R16mm_Enclosure_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R16mm_Enclosure_solved.mph) (354.7° loop closure at 80 kPa)
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R20mm_FullSurround_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/actuator_proper_ProperGrasp_R20mm_FullSurround_solved.mph) (353.0° loop closure at 80 kPa)
+* **Generators & Batch Runners**:
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/BuildProperGraspStudy.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/BuildProperGraspStudy.java) (Java parametric generator)
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/run_proper_grasp_study.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/run_proper_grasp_study.py) (Batch orchestrator & plotter)
+* **Dataset**:
+  - [`contact_grasp/proper_grasp_and_sleeve_optimization/proper_grasp_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/proper_grasp_summary.csv) (18-point caging dataset up to 100 kPa)
+* **Images (`contact_grasp/proper_grasp_and_sleeve_optimization/images/`)**:
+  - `proper_grasp_mechanics.png`: Publication 2-panel chart (Wrap progression and normal clamping force up to 100 kPa).
+  - `actuator_proper_*_disp_P100.png`: 3D displacement renders showing complete loop closure.
+  - `actuator_proper_*_stress_P100.png`: 3D von Mises stress renders at peak caging.
 
 ### B. Tapered 4-Cavity Model (Canonical $180^\circ$ Solved Model)
 * **Model File**: [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph)

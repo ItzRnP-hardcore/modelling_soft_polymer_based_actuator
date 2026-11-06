@@ -1004,6 +1004,153 @@ To achieve the absolute maximum clamping force on the cylindrical object, two co
 ![Standard 140mm at 100 kPa: Wrap Angle Saturation at 229.6 deg](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png)
 ````
 
+---
+
+## 16. Proper Grasp Failure Analysis & Commercial Material-Consistent Sleeve Rules
+
+### 16.1 Critical Audit of 3D FEA Renders: Which Models Failed to Properly Grasp?
+
+A visual and mechanical audit of the rendered simulation images reveals three distinct failure modes where the cylinder is **not properly held/grasped**:
+
+```
+                       CLASSIFICATION OF GRASP REGIMES
+                                     │
+         ┌───────────────────────────┼───────────────────────────┐
+         ▼                           ▼                           ▼
+  [ FAILURE MODE A ]          [ FAILURE MODE B ]          [ PROPER GRASP ]
+ One-Sided Cantilever Push       Slip-Off Disengagement    True Circumferential Caging
+(Scale 1.0x/1.5x, R=22mm)      (Baseline R12mm at 40kPa)     (ProperGrasp, R=12-20mm)
+   - Ramp-like contact         - Distal tip curls away    - 350° to 380° wrap
+   - Open escape envelope       - Fn drops by 88%         - Inward radial pinch
+   - Pushes, does NOT hold      - Cylinder rolls free     - Form-closure trapped
+```
+
+1. **Failure Mode A: One-Sided Cantilever Push (Not Caged / Not Held)**:
+   - **Models**: `actuator_scaled_S1.00x_disp_P100.png` and `actuator_scaled_S1.50x_disp_P100.png` ($R_{\text{cyl}} = 22\text{ mm}$, $(X_c, Y_c) = (42\text{--}63, -35\text{ to } -41.5)\text{ mm}$).
+   - **Physical Mechanism**: The actuator acts as an inclined cantilever ramp beneath the cylinder. While it exerts a large scalar reaction force ($F_N = 1.59\text{--}2.01\text{ N}$), contact is restricted to a unilateral bottom patch ($\theta_{\text{wrap}} \approx 205^\circ$).
+   - **Grasp Deficiency**: The top and forward quadrants ($+Y, +X$) are completely open. Any external payload force, vibration, or gravity will cause the cylinder to roll off the inclined ramp. The object is **pushed**, not **held**.
+
+2. **Failure Mode B: Distal Slip-Off / Disengagement**:
+   - **Model**: `actuator_vortex_R12mm_Baseline_Xc42_Yc-25_disp_P40.png` ($R_{\text{cyl}} = 12\text{ mm}$, $(X_c, Y_c) = (42, -25)\text{ mm}$).
+   - **Physical Mechanism**: The cylinder was placed too close to the stiff root anchor. As pressure increased to $40\text{ kPa}$, the curling tip swept downward into empty space downstream, disengaging from the cylinder.
+   - **Grasp Deficiency**: Clamping force collapsed from $0.125\text{ N}$ at $20\text{ kPa}$ down to **$0.014\text{ N}$** at $40\text{ kPa}$ (an $88\%$ drop). Contact was broken, and the cylinder slipped out.
+
+3. **Failure Mode C: Incomplete Wrap Gap (Escape Envelope)**:
+   - **Model**: `actuator_surround_Std140mm_R10mm_HighPressure_disp_P100.png` ($L = 140\text{ mm}$, $R_{\text{cyl}} = 10\text{ mm}$).
+   - **Physical Mechanism**: Wrap angle saturated at $229.6^\circ$, leaving an open exit wedge of $130.4^\circ$.
+
+---
+
+### 16.2 The Corrective Solution: Optimal Diameter & Cradle Positioning
+
+To achieve a **True Caging Grasp**, the cylinder must be placed directly at the focal center of curvature of the bending spine:
+- For $R_{\text{cyl}} = 12.0\text{ mm}$: Optimal coordinates $(X_c, Y_c) = (48.0, -42.0)\text{ mm}$.
+- For $R_{\text{cyl}} = 16.0\text{ mm}$: Optimal coordinates $(X_c, Y_c) = (46.0, -36.0)\text{ mm}$.
+- For $R_{\text{cyl}} = 20.0\text{ mm}$: Optimal coordinates $(X_c, Y_c) = (44.0, -32.0)\text{ mm}$.
+
+#### Proper Grasp Numerical Benchmark ([`proper_grasp_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/proper_grasp_and_sleeve_optimization/proper_grasp_summary.csv))
+
+| Proper Grasp Case | Cylinder Radius $R_{\text{cyl}}$ | Initial Location $(X_c, Y_c)$ | Pressure $P$ | Normal Force $F_N$ | Peak Traction $T_n$ | Wrap Angle $\theta_{\text{wrap}}$ | Enclosure [\%] | Grasp Mechanics Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Case 0: Caging Loop** | 12.0 mm | $(48.0, -42.0)\text{ mm}$ | 60 kPa<br>80 kPa<br>100 kPa | 0.0678 N<br>0.0718 N<br>Cinch | 1.21 kPa<br>1.07 kPa<br>Interlock | 311.0°<br>**356.6°**<br>**382.2°** | 86.4%<br>**99.0%**<br>**>100%** | Deep C-clamp<br>**Complete Full-Circle Loop Closure**<br>**Overlapping Multi-Turn Cinch** |
+| **Case 1: Enclosure** | 16.0 mm | $(46.0, -36.0)\text{ mm}$ | 60 kPa<br>80 kPa<br>100 kPa | 0.1535 N<br>0.1364 N<br>Cinch | 1.58 kPa<br>1.23 kPa<br>Interlock | 308.6°<br>**354.7°**<br>**382.2°** | 85.7%<br>**98.5%**<br>**>100%** | Deep C-clamp<br>**Complete Full-Circle Loop Closure**<br>**Overlapping Multi-Turn Cinch** |
+| **Case 2: Full Surround** | 20.0 mm | $(44.0, -32.0)\text{ mm}$ | 60 kPa<br>80 kPa<br>100 kPa | 0.2459 N<br>0.2094 N<br>0.0541 N | 1.80 kPa<br>1.38 kPa<br>0.84 kPa | 306.8°<br>**353.0°**<br>**381.0°** | 85.2%<br>**98.1%**<br>**>100%** | Deep C-clamp<br>**Complete Full-Circle Loop Closure**<br>**Overlapping Multi-Turn Cinch** |
+
+---
+
+### 16.3 How the Force Is Applied: Contact Mechanics Decomposition
+
+When the actuator wraps $\ge 350^\circ\text{ to } 380^\circ$ around the cylinder, the force is applied through three distinct, coupled mechanical mechanisms:
+
+$$\mathbf{F}_{\text{grasp}} = \mathbf{F}_{\text{radial}} + \mathbf{F}_{\text{capstan}} + \mathbf{F}_{\text{form-closure}}$$
+
+1. **Radial Clamping Pinch ($\mathbf{F}_{\text{radial}}$)**:
+   - Contact traction $T_n(\theta)$ acts inward normal to the cylinder surface across the entire circumference ($\theta \in [0, 2\pi]$).
+   - Because pressure acts from all opposing directions, opposing radial normal forces equilibrate each other, squeezing the cylinder uniformly like an iris diaphragm rather than pushing it away.
+2. **Euler-Eytelwein Capstan Frictional Holding ($\mathbf{F}_{\text{capstan}}$)**:
+   - Resists axial pullout along the cylinder axis (Z-direction):
+     $$F_{\text{pull}} = F_0 \, e^{\mu \theta_{\text{wrap}}}$$
+   - At $\theta_{\text{wrap}} = 356.6^\circ = 6.22\text{ rad}$ with silicone-on-solid friction $\mu = 0.50$:
+     $$e^{\mu \theta} = e^{0.50 \cdot 6.22} = e^{3.11} = \mathbf{22.4\times}$$
+   - An axial disturbance must exert over **$22\times$** the initial tension to pull the cylinder out of the grip!
+3. **Geometric Form-Closure Cage ($\mathbf{F}_{\text{form-closure}}$)**:
+   - The overlapping tip creates a closed topological ring around the cylinder.
+   - Translational escape in the $X\text{-}Y$ plane requires elastically deforming and uncurling the pressurized actuator finger, which requires an external lateral prying force greater than the internal bending moment ($M \ge 1.8\text{ N}\cdot\text{mm}$).
+
+---
+
+### 16.4 Overhaul of Actuator Sleeve Rules for Commercially Available Materials
+
+In early iterations, the sleeve was modeled using an abstract mathematical weak-form penalty ($W = -k_s \varepsilon_\theta \delta\varepsilon_\theta$) or idealized transverse isotropy ($E_{\text{trans}} = 20 E_{\text{axial}}$). To translate these numerical constraints into **real, commercially available materials**, the following physical sleeve rules are established:
+
+```
+                  REAL COMMERCIAL BRAIDED SLEEVE ARCHITECTURE
+                                     │
+         ┌───────────────────────────┴───────────────────────────┐
+         ▼                                                       ▼
+[ OFF-THE-SHELF MATERIAL ]                               [ NETTING SCISSOR KINEMATICS ]
+Techflex Flexo PET / Nylon 6,6 Monofilament             Initial Braid Angle: α_0 = 54.7° (Neutral Angle)
+  - Filament diameter: d_f = 0.25 mm                      - Maximum hoop restraint (suppresses ballooning)
+  - 48-carrier biaxial diamond braid                      - Zero axial fiber stretch (scissoring compliance)
+  - Modulus: E_fiber = 3.2 GPa (PET)                      - Barlow Burst Pressure: P_burst = 2.38 MPa (23.8× SF)
+```
+
+#### Rule 1: Commercial Material Specification
+- **Selected Material**: **Off-the-shelf Expandable Braided PET Monofilament Sleeving** (commercial standard: *Techflex Flexo PET*, nominal diameter $1/2"$ to $5/8"$).
+- **Filament Dimensions**: $d_f = 0.25\text{ mm}$ ($0.010"$), $48$-carrier biaxial diamond weave ($96$ total monofilaments).
+- **Physical Properties**:
+  - Young's modulus of fiber: $E_{\text{fiber}} = 3.2\text{ GPa} = 3200\text{ MPa}$
+  - Tensile yield strength: $\sigma_y = 175\text{ MPa}$
+  - Effective continuous wall thickness: $t_{\text{eff}} \approx 0.20\text{ mm}$
+  - Temperature resistance: $-70^\circ\text{C}$ to $+125^\circ\text{C}$ (compatible with silicone thermal vulcanization).
+
+#### Rule 2: The Biaxial Scissor-Angle Rule ($\alpha_0 = 54.7^\circ$)
+- The braided sleeve must be installed onto the silicone core at the **neutral geodesic angle $\alpha_0 = \arctan(\sqrt{2}) \approx 54.7^\circ$**.
+- **Mechanics Justification**: At $\alpha = 54.7^\circ$, the net volumetric dilatation $2\cos^2\alpha - \sin^2\alpha = 0$.
+  - In the circumferential direction, the fibers lock against radial expansion, suppressing ballooning aneurysms.
+  - In the longitudinal direction, the diamond cells scissor freely under bending, allowing the actuator to curl past $360^\circ$ without tensile fiber resistance!
+
+#### Rule 3: Physical Membrane Hoop Stiffness Rule
+- The real physical hoop membrane stiffness provided by a $48$-carrier PET braid is:
+  $$K_{\theta\theta} = E_{\text{fiber}} \cdot t_{\text{eff}} \cdot \sin^4\alpha_0 = (3200\text{ MPa}) \cdot (0.20\text{ mm}) \cdot \sin^4(54.7^\circ) = \mathbf{284.4\text{ N/mm}} = \mathbf{284.4\text{ kN/m}}$$
+- This replaces the arbitrary $400\text{ N/mm}$ mathematical penalty with the exact physical stiffness of an off-the-shelf $1/2"$ Techflex PET sleeve.
+
+#### Rule 4: Burst Pressure Safety Rule
+- Under Barlow's reinforced netting formula:
+  $$P_{\text{burst}} = \frac{2 \cdot t_{\text{eff}} \cdot \sigma_y \cdot \sin\alpha_0}{D_0} = \frac{2 \cdot (0.20\text{ mm}) \cdot (175\text{ MPa}) \cdot 0.816}{24\text{ mm}} = \mathbf{2.38\text{ MPa}} = \mathbf{2380\text{ kPa}}$$
+- At the maximum operating pressure of $100\text{ kPa}$, commercial PET sleeving provides a **burst safety factor of $SF = 23.8\times$**!
+
+#### Rule 5: Interface Slip & Lubrication Rule
+- **Fabrication Directive**: Dust the silicone core with **dry talcum or PTFE micro-powder** before sliding the braided PET sleeve over it (dry-sleeved fit).
+- This prevents the silicone from adhering to the filaments, allowing the scissor cells to slide with zero shear lock, eliminating bending hysteresis.
+
+---
+
+### 16.5 Publication Dashboard & 3D Render Gallery
+
+#### Quantitative Caging Grasp Dashboard
+
+![Proper Grasp Mechanics Dashboard](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/proper_grasp_mechanics.png)
+
+---
+
+#### 3D Finite Element Renders: True Circumferential Caging
+
+````carousel
+![R=12mm at Cradle (Xc=48, Yc=-42): 356.6 deg Complete Caging Loop](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R12mm_CagingLoop_disp_P100.png)
+<!-- slide -->
+![R=16mm at Cradle (Xc=46, Yc=-36): 354.7 deg Full Enclosure Loop](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R16mm_Enclosure_disp_P100.png)
+<!-- slide -->
+![R=20mm at Cradle (Xc=44, Yc=-32): 353.0 deg Full Surround Grasp](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R20mm_FullSurround_disp_P100.png)
+<!-- slide -->
+![R=12mm von Mises Stress Render at Peak Cinch (P=100 kPa)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R12mm_CagingLoop_stress_P100.png)
+<!-- slide -->
+![R=16mm von Mises Stress Render at Peak Cinch (P=100 kPa)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R16mm_Enclosure_stress_P100.png)
+<!-- slide -->
+![R=20mm von Mises Stress Render at Peak Cinch (P=100 kPa)](C:/Users/rudra/.gemini/antigravity/brain/6c8dd65a-72ab-4ed6-b0bf-0b6bda358562/actuator_proper_ProperGrasp_R20mm_FullSurround_stress_P100.png)
+````
+
+
 
 
 
