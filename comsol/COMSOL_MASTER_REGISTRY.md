@@ -104,6 +104,22 @@ comsol/
 │   │       ├── actuator_scaled_S1.50x_stress_P100.png # 3D stress render of 1.50x at 100 kPa
 │   │       ├── actuator_scaled_S1.00x_disp_P100.png # 3D displacement render of 1.00x at 100 kPa
 │   │       └── actuator_scaled_S1.00x_stress_P100.png # 3D stress render of 1.00x at 100 kPa
+│   ├── curling_vortex_grasp/                      # CURLING VORTEX ENCLOSURE GRASP OPTIMIZATION (R = 8, 10, 12 mm)
+│   │   ├── actuator_vortex_R8mm_Vortex_Xc52_Yc-58_solved.mph   # Peak clamping (Fn = 0.1993 N at 40 kPa, +1281%)
+│   │   ├── actuator_vortex_R10mm_Vortex_Xc50_Yc-55_solved.mph  # Optimal vortex cinch (Fn = 0.1924 N at 40 kPa, +1233%)
+│   │   ├── actuator_vortex_R12mm_Vortex_Xc48_Yc-52_solved.mph  # Vortex wrap (Fn = 0.1841 N at 40 kPa, +1175%)
+│   │   ├── actuator_vortex_R12mm_Baseline_Xc42_Yc-25_solved.mph # Baseline proximal underbelly (Fn collapses to 0.0144 N)
+│   │   ├── BuildCurlingVortexGraspStudy.java       # COMSOL 6.4 batch compilation & FEA solver engine
+│   │   ├── compare_geometry.py                     # Kinematic curling trajectory & eyelet center extraction
+│   │   ├── run_vortex_study.py                     # Automated batch runner & publication plotting
+│   │   ├── curling_vortex_grasp_summary.csv        # 20-point parametric force & floating trajectory dataset
+│   │   └── images/
+│   │       ├── curling_vortex_grasp_comparison.png # Publication comparison chart: Normal force & inward draw
+│   │       ├── geometric_curl_comparison.png       # 2D kinematic trajectory vs target cylinder placement
+│   │       ├── actuator_vortex_R8mm_Vortex_Xc52_Yc-58_disp_P40.png # 3D displacement render at 40 kPa
+│   │       ├── actuator_vortex_R10mm_Vortex_Xc50_Yc-55_disp_P40.png # 3D displacement render at 40 kPa
+│   │       ├── actuator_vortex_R12mm_Vortex_Xc48_Yc-52_disp_P40.png # 3D displacement render at 40 kPa
+│   │       └── actuator_vortex_R12mm_Baseline_Xc42_Yc-25_disp_P40.png # 3D render showing slip-off at 40 kPa
 │   └── archive/                                  # Diagnostic API tests & boundary inspectors
 │
 └── benched/                            # Deprecated early prototypes
@@ -176,6 +192,26 @@ When writing reports, referencing findings, or inspecting simulation results, us
   - `actuator_scaled_S1.50x_stress_P100.png`: 3D stress render of Scale 1.50x at $100\text{ kPa}$.
   - `actuator_scaled_S1.00x_disp_P100.png`: 3D displacement render of Scale 1.00x delivering $1.59\text{ N}$ force at $100\text{ kPa}$.
   - `actuator_scaled_S1.00x_stress_P100.png`: 3D stress render of Scale 1.00x at $100\text{ kPa}$.
+
+### A.3 Curling Vortex Grasp Optimization Models (`contact_grasp/curling_vortex_grasp/`)
+* **Solved MPH Models**:
+  - [`contact_grasp/curling_vortex_grasp/actuator_vortex_R8mm_Vortex_Xc52_Yc-58_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/actuator_vortex_R8mm_Vortex_Xc52_Yc-58_solved.mph) (Peak force $F_N = 0.1993\text{ N}$)
+  - [`contact_grasp/curling_vortex_grasp/actuator_vortex_R10mm_Vortex_Xc50_Yc-55_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/actuator_vortex_R10mm_Vortex_Xc50_Yc-55_solved.mph) (Optimal vortex cinch $F_N = 0.1924\text{ N}$)
+  - [`contact_grasp/curling_vortex_grasp/actuator_vortex_R12mm_Vortex_Xc48_Yc-52_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/actuator_vortex_R12mm_Vortex_Xc48_Yc-52_solved.mph) ($F_N = 0.1841\text{ N}$)
+  - [`contact_grasp/curling_vortex_grasp/actuator_vortex_R12mm_Baseline_Xc42_Yc-25_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/actuator_vortex_R12mm_Baseline_Xc42_Yc-25_solved.mph) (Baseline comparison, slips off to $0.0144\text{ N}$)
+* **Generators & Batch Runners**:
+  - [`contact_grasp/curling_vortex_grasp/BuildCurlingVortexGraspStudy.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/BuildCurlingVortexGraspStudy.java) (COMSOL 6.4 batch compilation source)
+  - [`contact_grasp/curling_vortex_grasp/run_vortex_study.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/run_vortex_study.py) (Batch orchestrator & plotter)
+  - [`contact_grasp/curling_vortex_grasp/compare_geometry.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/compare_geometry.py) (Kinematic trajectory extractor)
+* **Dataset**:
+  - [`contact_grasp/curling_vortex_grasp/curling_vortex_grasp_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/curling_vortex_grasp/curling_vortex_grasp_summary.csv) (20 records, 4 cases across $P \in [0, 40]\text{ kPa}$)
+* **Images (`contact_grasp/curling_vortex_grasp/images/`)**:
+  - `curling_vortex_grasp_comparison.png`: Publication 2-panel chart (Normal clamping force & self-centering inward shift vs. pressure).
+  - `geometric_curl_comparison.png`: 2D spatial trajectory of curling midline vs. target cylinder placement.
+  - `actuator_vortex_R8mm_Vortex_Xc52_Yc-58_disp_P40.png`: 3D render at $40\text{ kPa}$ showing $R=8\text{ mm}$ cinch grasp.
+  - `actuator_vortex_R10mm_Vortex_Xc50_Yc-55_disp_P40.png`: 3D render at $40\text{ kPa}$ showing $R=10\text{ mm}$ optimal vortex grasp.
+  - `actuator_vortex_R12mm_Vortex_Xc48_Yc-52_disp_P40.png`: 3D render at $40\text{ kPa}$ showing $R=12\text{ mm}$ vortex wrap.
+  - `actuator_vortex_R12mm_Baseline_Xc42_Yc-25_disp_P40.png`: 3D render showing slip-off at $40\text{ kPa}$ under proximal baseline placement.
 
 ### B. Tapered 4-Cavity Model (Canonical $180^\circ$ Solved Model)
 * **Model File**: [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph)
