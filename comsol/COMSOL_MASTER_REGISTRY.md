@@ -78,6 +78,32 @@ comsol/
 │   │   ├── contact_grasp_R15mm_disp_p.png, _stress.png
 │   │   ├── contact_grasp_R18mm_disp_p.png, _stress.png
 │   │   └── contact_grasp_R22mm_disp_p.png, _stress.png
+│   ├── force_optimization/                        # HIGH-PRESSURE SCALING (100 kPa) & FULL-WRAP (>270°) GRASP
+│   │   ├── actuator_scaled_S1.00x_R22mm_solved.mph # Scale 1.00x up to 100 kPa (Fn = 1.59 N)
+│   │   ├── actuator_scaled_S1.50x_R22mm_solved.mph # Scale 1.50x up to 100 kPa (Fn = 2.01 N)
+│   │   ├── actuator_scaled_S1.00x_R15mm_solved.mph # Scale 1.00x (R=15mm) up to 100 kPa
+│   │   ├── actuator_fullwrap_R20mm_solved.mph      # Full-wrap model (>306° at 60 kPa, 353° at 80 kPa)
+│   │   ├── BuildHighPressureScaleSweep.java        # High-pressure geometric scaling engine
+│   │   ├── BuildFullWrapGraspModel.java            # Slender high-curvature full-wrap model generator
+│   │   ├── ExportAllOptimizationImages.java        # 3D render exporter for scaled & wrap models
+│   │   ├── run_high_pressure_scaling.py            # High-pressure scaling batch runner
+│   │   ├── run_full_wrap_study.py                  # Full-wrap batch runner
+│   │   ├── plot_force_optimization_studies.py      # Publication dashboards plotting script
+│   │   ├── scale_high_pressure_sweep.csv           # 18-point 100 kPa continuation dataset
+│   │   ├── full_wrap_grasp_summary.csv             # 6-point wrap angle & force dataset (0-100 kPa)
+│   │   └── images/
+│   │       ├── scale_force_vs_pressure_100kpa.png  # Force vs pressure up to 100 kPa
+│   │       ├── scale_factor_force_scaling_law.png  # Quadratic force scaling law
+│   │       ├── scale_stress_vs_pressure_safety.png # Peak stress & burst limit safety factors
+│   │       ├── full_wrap_grasp_mechanics.png       # Wrap angle & normal force vs pressure
+│   │       ├── full_wrap_floating_trajectories.png # Floating object self-centering trajectories
+│   │       ├── actuator_fullwrap_R20mm_disp.png    # 3D displacement render of >270° wrap at 60 kPa
+│   │       ├── actuator_fullwrap_R20mm_stress.png  # 3D von Mises stress render at 60 kPa
+│   │       ├── actuator_fullwrap_R20mm_P80_loop.png # 3D displacement render of 353° full loop at 80 kPa
+│   │       ├── actuator_scaled_S1.50x_disp_P100.png # 3D displacement render of 1.50x at 100 kPa
+│   │       ├── actuator_scaled_S1.50x_stress_P100.png # 3D stress render of 1.50x at 100 kPa
+│   │       ├── actuator_scaled_S1.00x_disp_P100.png # 3D displacement render of 1.00x at 100 kPa
+│   │       └── actuator_scaled_S1.00x_stress_P100.png # 3D stress render of 1.00x at 100 kPa
 │   └── archive/                                  # Diagnostic API tests & boundary inspectors
 │
 └── benched/                            # Deprecated early prototypes
@@ -119,6 +145,37 @@ When writing reports, referencing findings, or inspecting simulation results, us
   - `floating_grasp_cylinder_displacements.png`: Floating cylinder 2D kinematic displacement trajectories $(\Delta X_c, \Delta Y_c)$ demonstrating self-centering behavior up to $7.88\text{ mm}$.
   - `floating_grasp_optimal_friction_capacity.png`: Friction force capacity $F_f = \mu F_N$ vs. pressure at optimal locations.
   - `actuator_floating_R*mm_distal_disp.png`, `_stress.png`: 3D deformation and contact stress renders.
+
+### A2. Force Optimization & Full-Wrap (>270°) Grasp Models (`contact_grasp/force_optimization/`)
+* **Solved Model Files**:
+  - [`contact_grasp/force_optimization/actuator_scaled_S1.00x_R22mm_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/actuator_scaled_S1.00x_R22mm_solved.mph) (Scale 1.00x up to 100 kPa, $F_N = 1.5907\text{ N}$)
+  - [`contact_grasp/force_optimization/actuator_scaled_S1.50x_R22mm_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/actuator_scaled_S1.50x_R22mm_solved.mph) (Scale 1.50x up to 100 kPa, $F_N = 2.0101\text{ N}$)
+  - [`contact_grasp/force_optimization/actuator_scaled_S1.00x_R15mm_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/actuator_scaled_S1.00x_R15mm_solved.mph) (Scale 1.00x against $R=15\text{ mm}$ cylinder)
+  - [`contact_grasp/force_optimization/actuator_fullwrap_R20mm_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/actuator_fullwrap_R20mm_solved.mph) (Elongated $L=220\text{ mm}$ model: $306.8^\circ$ wrap at $60\text{ kPa}$, $353.0^\circ$ at $80\text{ kPa}$)
+* **Java Generators**:
+  - [`contact_grasp/force_optimization/BuildHighPressureScaleSweep.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/BuildHighPressureScaleSweep.java)
+  - [`contact_grasp/force_optimization/BuildFullWrapGraspModel.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/BuildFullWrapGraspModel.java)
+  - [`contact_grasp/force_optimization/ExportAllOptimizationImages.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/ExportAllOptimizationImages.java)
+* **Python Scripts**:
+  - [`contact_grasp/force_optimization/run_high_pressure_scaling.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/run_high_pressure_scaling.py)
+  - [`contact_grasp/force_optimization/run_full_wrap_study.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/run_full_wrap_study.py)
+  - [`contact_grasp/force_optimization/plot_force_optimization_studies.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/plot_force_optimization_studies.py)
+* **Numerical Datasets**:
+  - [`contact_grasp/force_optimization/scale_high_pressure_sweep.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/scale_high_pressure_sweep.csv) (18 records, 0 - 100 kPa)
+  - [`contact_grasp/force_optimization/full_wrap_grasp_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/force_optimization/full_wrap_grasp_summary.csv) (6 records, 0 - 100 kPa, wrap angle up to $353.0^\circ$)
+* **Images (`contact_grasp/force_optimization/images/`)**:
+  - `scale_force_vs_pressure_100kpa.png`: Clamping force continuation up to $100\text{ kPa}$ comparing scales and radii.
+  - `scale_factor_force_scaling_law.png`: Empirical verification of $F_N \propto S^2$ quadratic scaling.
+  - `scale_stress_vs_pressure_safety.png`: Von Mises stress continuation proving $>3\times$ factor of safety below rupture.
+  - `full_wrap_grasp_mechanics.png`: Wrap angle, normal force, and contact stress vs. pressure.
+  - `full_wrap_floating_trajectories.png`: Tip locus & floating object inward translation trajectories.
+  - `actuator_fullwrap_R20mm_disp.png`: 3D displacement render showing $306.8^\circ$ wrap ($> 270^\circ$).
+  - `actuator_fullwrap_R20mm_stress.png`: 3D von Mises stress render at $60\text{ kPa}$.
+  - `actuator_fullwrap_R20mm_P80_loop.png`: 3D render of complete $353^\circ$ circle enclosure loop at $80\text{ kPa}$.
+  - `actuator_scaled_S1.50x_disp_P100.png`: 3D displacement render of Scale 1.50x delivering $2.01\text{ N}$ force at $100\text{ kPa}$.
+  - `actuator_scaled_S1.50x_stress_P100.png`: 3D stress render of Scale 1.50x at $100\text{ kPa}$.
+  - `actuator_scaled_S1.00x_disp_P100.png`: 3D displacement render of Scale 1.00x delivering $1.59\text{ N}$ force at $100\text{ kPa}$.
+  - `actuator_scaled_S1.00x_stress_P100.png`: 3D stress render of Scale 1.00x at $100\text{ kPa}$.
 
 ### B. Tapered 4-Cavity Model (Canonical $180^\circ$ Solved Model)
 * **Model File**: [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph)
