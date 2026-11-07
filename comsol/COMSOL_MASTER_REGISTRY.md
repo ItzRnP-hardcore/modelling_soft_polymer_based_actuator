@@ -263,6 +263,26 @@ When writing reports, referencing findings, or inspecting simulation results, us
   - `actuator_proper_*_disp_P100.png`: 3D displacement renders showing complete loop closure.
   - `actuator_proper_*_stress_P100.png`: 3D von Mises stress renders at peak caging.
 
+### A.6 Form-Closure Loop Caging & Clamping Force Optimization (`contact_grasp/loop_caging_optimization/`)
+* **Solved MPH Models**:
+  - [`contact_grasp/loop_caging_optimization/actuator_Caging_L250_FullWrap_Xc32_Yc-52_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/loop_caging_optimization/actuator_Caging_L250_FullWrap_Xc32_Yc-52_solved.mph) (Breakthrough: 376.6° circumferential wrap, 69.8 mN clamping force at 71.1 kPa)
+  - [`contact_grasp/loop_caging_optimization/actuator_Caging_L220_Pos3_FineCont_Xc32_Yc-52_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/loop_caging_optimization/actuator_Caging_L220_Pos3_FineCont_Xc32_Yc-52_solved.mph) (Baseline: 9.4 mN grazing contact)
+  - [`contact_grasp/loop_caging_optimization/actuator_Caging_L220_Tuned_Xc31_Yc-51_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/loop_caging_optimization/actuator_Caging_L220_Tuned_Xc31_Yc-51_solved.mph) (Baseline: 11.5 mN grazing contact)
+* **Generators & Batch Runners**:
+  - [`contact_grasp/BuildMaxClampingForceSweep.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/BuildMaxClampingForceSweep.java) (Java parametric generator & contact solver)
+  - [`contact_grasp/run_max_clamping_force.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/run_max_clamping_force.py) (Batch orchestrator, extractor & chart generator)
+  - [`contact_grasp/TraceL250Centerline.java`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/TraceL250Centerline.java) (51-point 3D neutral axis coordinate extraction)
+  - [`contact_grasp/plot_l250_wrap.py`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/plot_l250_wrap.py) (2D trajectory wrap envelope & angle sweep plotter)
+* **Dataset**:
+  - [`contact_grasp/loop_caging_optimization/max_clamping_force_summary.csv`](file:///c:/Users/rudra/Documents/BTP/comsol/contact_grasp/loop_caging_optimization/max_clamping_force_summary.csv) (Kinematic and force summary up to peak cinch)
+* **Images (`contact_grasp/loop_caging_optimization/images/`)**:
+  - `loop_caging_2d_trajectory_wrap.png`: 2D form-closure loop caging diagram showing 273° circumferential wrap and 98° hook cinch around R=8mm cylinder.
+  - `max_clamping_force_curves.png`: Evolution of clamping force, friction force, displacement, and stress.
+  - `max_clamping_force_verified_panel.png`: Multi-panel FEA render dashboard showing 3D deformation, contact cinch, and stress.
+  - `actuator_Caging_L250_FullWrap_Xc32_Yc-52_disp_P60.png`: 3D render at 60 kPa showing full >360° encirclement.
+  - `actuator_Caging_L250_FullWrap_Xc32_Yc-52_disp_P71.png`: 3D render at 71.1 kPa showing bilateral contact cinch.
+  - `actuator_Caging_L250_FullWrap_Xc32_Yc-52_stress_P71.png`: 3D render showing safe von Mises stress field (385.6 kPa max).
+
 ### B. Tapered 4-Cavity Model (Canonical $180^\circ$ Solved Model)
 * **Model File**: [`tapered_4cavity/actuator_tapered_4cavity_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/actuator_tapered_4cavity_solved.mph)
 * **Java Generator**: [`tapered_4cavity/BuildActuatorTapered4CavityFull.java`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/BuildActuatorTapered4CavityFull.java)
