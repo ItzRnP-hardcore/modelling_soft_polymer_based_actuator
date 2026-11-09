@@ -579,7 +579,9 @@ graphical interface with \texttt{comsolbatch}; a short Python script reads the p
 from which the tables and graphs of Chapter~\ref{ch:results} are made. Each run also saves the solved model
 (\texttt{.mph} file), which can be opened in the COMSOL interface to inspect the solution. Working this way
 makes every model parametric (a different design is a different set of numbers) and every result
-reproducible from its script. The files are listed in Appendix~\ref{app:files}.
+reproducible from its script. All scripts, solved models and data files are kept in the project's GitHub
+repository, \url{https://github.com/ItzRnP-hardcore/modelling_soft_polymer_based_actuator}, and are listed in
+Appendix~\ref{app:files}.
 
 Two models were built:
 \begin{enumerate}
@@ -1190,9 +1192,15 @@ Sweden.
 \appendix
 \titleformat{\chapter}[display]{\normalfont\bfseries\centering}{\large APPENDIX \thechapter}{6pt}{\Large\MakeUppercase}
 \chapter{Software, Data and Reproduction}\label{app:files}
+The scripts, solved COMSOL models (\texttt{.mph} files), data files and the \LaTeX{} source of this report are
+available in the project's GitHub repository:
+\begin{center}
+\url{https://github.com/ItzRnP-hardcore/modelling_soft_polymer_based_actuator}
+\end{center}
+The paths in Table~\ref{tab:files} are relative to the root of that repository.
 \begin{table}[H]
 \centering\small
-\caption[Files behind the results]{Files behind the results of this report (paths relative to the project folder).}
+\caption[Files behind the results]{Files behind the results of this report (paths relative to the root of the GitHub repository).}
 \label{tab:files}
 \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{7.2cm}>{\raggedright\arraybackslash}X@{}}
 \toprule
