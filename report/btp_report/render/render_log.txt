@@ -1,0 +1,374 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Mon Nov 09 10:47:15 IST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: C:\Users\rudra\Documents\BTP\report\btp_report\render\RenderReport.class
+MODEL sc_sleeved PVALS [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0, 100.0, 110.0]
+CHECK sc_sleeved P=0.0 theta=0.000 delta=-0.000
+CHECK sc_sleeved P=10.0 theta=2.426 delta=2.116
+CHECK sc_sleeved P=20.0 theta=5.060 delta=4.444
+CHECK sc_sleeved P=30.0 theta=7.925 delta=7.006
+CHECK sc_sleeved P=40.0 theta=11.044 delta=9.829
+CHECK sc_sleeved P=50.0 theta=14.447 delta=12.939
+CHECK sc_sleeved P=60.0 theta=18.166 delta=16.369
+CHECK sc_sleeved P=70.0 theta=22.239 delta=20.151
+CHECK sc_sleeved P=80.0 theta=26.705 delta=24.318
+CHECK sc_sleeved P=90.0 theta=31.623 delta=28.912
+CHECK sc_sleeved P=100.0 theta=37.040 delta=33.957
+CHECK sc_sleeved P=110.0 theta=43.018 delta=39.474
+           Current Progress:   0 % - Plotting
+Memory: 818/818 857/857
+           Current Progress:   8 % - Evaluating
+Memory: 821/821 857/857
+-          Current Progress:  10 % - Plotting
+Memory: 819/822 855/858
+-----      Current Progress:  50 % - Evaluating
+Memory: 828/828 865/865
+--------   Current Progress:  82 % - Evaluating
+Memory: 841/841 878/878
+---        Current Progress:  30 % - Generating image
+Memory: 869/870 913/913
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_mesh.png
+           Current Progress:   0 % - Plotting
+Memory: 813/925 826/970
+           Current Progress:   8 % - Evaluating
+Memory: 815/925 827/970
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  64 % - Evaluating
+Memory: 826/925 854/970
+--------   Current Progress:  83 % - Evaluating
+Memory: 830/925 854/970
+---------  Current Progress:  90 % - Evaluating
+Memory: 834/925 854/970
+---        Current Progress:  30 % - Generating image
+Memory: 892/925 933/970
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_side_P40.png
+           Current Progress:   0 % - Plotting
+Memory: 827/947 844/994
+           Current Progress:   8 % - Evaluating
+Memory: 830/947 846/994
+-          Current Progress:  10 % - Plotting
+Memory: 830/947 847/994
+------     Current Progress:  64 % - Evaluating
+Memory: 832/947 848/994
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+Memory: 836/947 851/994
+---        Current Progress:  30 % - Generating image
+Memory: 911/947 949/994
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_side_P90.png
+           Current Progress:   0 % - Plotting
+Memory: 844/962 863/1008
+           Current Progress:   8 % - Evaluating
+Memory: 845/962 863/1008
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  64 % - Evaluating
+Memory: 850/962 869/1008
+--------   Current Progress:  83 % - Evaluating
+Memory: 853/962 871/1008
+---------  Current Progress:  90 % - Evaluating
+Memory: 855/962 871/1008
+---        Current Progress:  30 % - Generating image
+Memory: 914/962 952/1008
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_side_P110.png
+           Current Progress:   0 % - Plotting
+Memory: 833/962 856/1009
+           Current Progress:   8 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 837/962 860/1009
+------     Current Progress:  64 % - Evaluating
+Memory: 906/962 948/1009
+--------   Current Progress:  83 % - Evaluating
+Memory: 912/962 979/1009
+---------  Current Progress:  90 % - Evaluating
+Memory: 925/962 990/1009
+---        Current Progress:  30 % - Generating image
+Memory: 1002/1007 1078/1084
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_mises_last.png
+-          Current Progress:  10 % - Plotting
+Memory: 957/1041 1007/1122
+-----      Current Progress:  56 % - Evaluating
+Memory: 1126/1133 1244/1253
+------     Current Progress:  68 % - Evaluating
+Memory: 1144/1148 1239/1253
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1193/1193 1285/1285
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_section_P0.png
+-          Current Progress:  10 % - Plotting
+Memory: 1161/1242 1244/1341
+-----      Current Progress:  56 % - Evaluating
+Memory: 1167/1242 1228/1341
+------     Current Progress:  68 % - Evaluating
+Memory: 1179/1242 1240/1341
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1224/1242 1288/1341
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_sleeved_section_P90.png
+MODEL sc_bare PVALS [0.0, 10.0, 20.0, 30.0, 40.0, 50.0, 60.0, 70.0, 80.0, 90.0]
+CHECK sc_bare P=0.0 theta=0.000 delta=-0.000
+CHECK sc_bare P=10.0 theta=0.263 delta=0.218
+CHECK sc_bare P=20.0 theta=0.761 delta=0.640
+CHECK sc_bare P=30.0 theta=1.565 delta=1.328
+CHECK sc_bare P=40.0 theta=2.778 delta=2.370
+CHECK sc_bare P=50.0 theta=4.550 delta=3.899
+CHECK sc_bare P=60.0 theta=7.117 delta=6.125
+CHECK sc_bare P=70.0 theta=10.876 delta=9.397
+CHECK sc_bare P=80.0 theta=16.585 delta=14.379
+CHECK sc_bare P=90.0 theta=26.002 delta=22.560
+           Current Progress:   0 % - Plotting
+Memory: 1224/1245 1282/1341
+           Current Progress:   8 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 1226/1245 1283/1341
+-----      Current Progress:  50 % - Evaluating
+Memory: 1225/1245 1282/1341
+--------   Current Progress:  82 % - Evaluating
+Memory: 1226/1245 1282/1341
+---        Current Progress:  30 % - Generating image
+Memory: 1291/1295 1357/1361
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_mesh.png
+           Current Progress:   0 % - Plotting
+Memory: 1236/1330 1292/1402
+           Current Progress:   8 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  64 % - Evaluating
+Memory: 1234/1330 1290/1402
+--------   Current Progress:  83 % - Evaluating
+Memory: 1235/1330 1290/1402
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1295/1330 1355/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_side_P40.png
+           Current Progress:   0 % - Plotting
+Memory: 1103/1330 1157/1402
+           Current Progress:   8 % - Evaluating
+Memory: 1104/1330 1158/1402
+-          Current Progress:  10 % - Plotting
+Memory: 1104/1330 1159/1402
+------     Current Progress:  64 % - Evaluating
+Memory: 1107/1330 1162/1402
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+Memory: 1109/1330 1163/1402
+---        Current Progress:  30 % - Generating image
+Memory: 1209/1330 1288/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_side_P90.png
+           Current Progress:   0 % - Plotting
+Memory: 1176/1330 1252/1402
+           Current Progress:   8 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  64 % - Evaluating
+Memory: 1175/1330 1248/1402
+--------   Current Progress:  83 % - Evaluating
+Memory: 1176/1330 1249/1402
+---------  Current Progress:  90 % - Evaluating
+Memory: 1177/1330 1249/1402
+---        Current Progress:  30 % - Generating image
+Memory: 1230/1330 1300/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_mises_last.png
+-          Current Progress:  10 % - Plotting
+Memory: 1129/1330 1180/1402
+-----      Current Progress:  56 % - Evaluating
+Memory: 1145/1330 1186/1402
+------     Current Progress:  68 % - Evaluating
+Memory: 1164/1330 1204/1402
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1217/1330 1280/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_section_P0.png
+-          Current Progress:  10 % - Plotting
+Memory: 1183/1330 1244/1402
+-----      Current Progress:  56 % - Evaluating
+Memory: 1167/1330 1225/1402
+------     Current Progress:  68 % - Evaluating
+Memory: 1185/1330 1242/1402
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+Memory: 1185/1330 1244/1402
+---        Current Progress:  30 % - Generating image
+Memory: 1182/1330 1248/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\sc_bare_section_P90.png
+MODEL fc_sleeved PVALS [0.0, 2000.0, 4000.0, 6000.0, 8000.0, 10000.0, 12500.0, 15000.0, 17500.0, 20000.0]
+FILTER_FAILED: Operation_cannot_be_created_in_this_context
+           Current Progress:   0 % - Plotting
+Memory: 1225/1330 1262/1402
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  61 % - Evaluating
+Memory: 1226/1330 1263/1402
+--------   Current Progress:  82 % - Evaluating
+Memory: 1229/1330 1266/1402
+---        Current Progress:  30 % - Generating image
+Memory: 1274/1330 1314/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_mesh.png
+-          Current Progress:  10 % - Plotting
+Memory: 1235/1330 1272/1402
+-------    Current Progress:  77 % - Evaluating
+Memory: 1249/1330 1267/1402
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1292/1330 1313/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_section_geom_x20.png
+-          Current Progress:  10 % - Plotting
+Memory: 1250/1334 1267/1402
+-------    Current Progress:  71 % - Evaluating
+Memory: 1263/1334 1283/1402
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1309/1334 1332/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_section_geom_x100.png
+           Current Progress:   0 % - Plotting
+Memory: 1178/1348 1198/1402
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 1179/1348 1198/1402
+------     Current Progress:  62 % - Evaluating
+Memory: 1182/1348 1201/1402
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+Memory: 1183/1348 1201/1402
+---        Current Progress:  30 % - Generating image
+Memory: 1238/1348 1282/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_side_P10.png
+           Current Progress:   0 % - Plotting
+Memory: 1219/1348 1260/1402
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  62 % - Evaluating
+Memory: 1220/1348 1260/1402
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1279/1348 1318/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_side_P15.png
+           Current Progress:   0 % - Plotting
+Memory: 1238/1348 1273/1402
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  62 % - Evaluating
+Memory: 1275/1348 1322/1402
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1320/1348 1370/1402
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_mises_P15.png
+-          Current Progress:  10 % - Plotting
+Memory: 1209/1364 1243/1418
+-------    Current Progress:  76 % - Evaluating
+Memory: 1224/1364 1240/1418
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1275/1364 1318/1418
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_section_P10_x40.png
+MODEL fc_bare PVALS [0.0, 2000.0, 4000.0, 6000.0, 8000.0, 10000.0, 11706.581426884008]
+FILTER_FAILED: Operation_cannot_be_created_in_this_context
+           Current Progress:   0 % - Plotting
+Memory: 1326/1364 1341/1418
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 1327/1364 1341/1418
+------     Current Progress:  61 % - Evaluating
+--------   Current Progress:  82 % - Evaluating
+Memory: 1328/1364 1341/1418
+---        Current Progress:  30 % - Generating image
+Memory: 1376/1379 1396/1418
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_bare_mesh.png
+-          Current Progress:  10 % - Plotting
+Memory: 1246/1419 1264/1446
+-------    Current Progress:  77 % - Evaluating
+Memory: 1247/1419 1267/1446
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1300/1419 1343/1446
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_bare_section_geom_x20.png
+-          Current Progress:  10 % - Plotting
+Memory: 1270/1419 1317/1446
+-------    Current Progress:  71 % - Evaluating
+Memory: 1279/1419 1322/1446
+------     Current Progress:  68 % - Evaluating
+Memory: 1280/1419 1322/1446
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1330/1419 1372/1446
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_bare_section_geom_x100.png
+           Current Progress:   0 % - Plotting
+Memory: 1292/1419 1330/1446
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  62 % - Evaluating
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1339/1419 1378/1446
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_bare_side_last.png
+-          Current Progress:  10 % - Plotting
+Memory: 1309/1419 1341/1446
+-------    Current Progress:  76 % - Evaluating
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1353/1419 1387/1446
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_bare_section_P10_x40.png
+MODEL fc_fillet PVALS [0.0, 2000.0, 4000.0, 6000.0, 8000.0, 10000.0, 12500.0, 15000.0, 17500.0, 20000.0, 21000.0]
+FILTER_FAILED: Operation_cannot_be_created_in_this_context
+           Current Progress:   0 % - Plotting
+Memory: 1338/1419 1350/1446
+           Current Progress:   7 % - Evaluating
+Memory: 1339/1419 1352/1446
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  69 % - Evaluating
+Memory: 1355/1419 1368/1446
+--------   Current Progress:  82 % - Evaluating
+Memory: 1388/1419 1402/1446
+---        Current Progress:  30 % - Generating image
+Memory: 1427/1427 1457/1457
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_fillet_mesh.png
+-          Current Progress:  10 % - Plotting
+Memory: 1394/1483 1422/1523
+-------    Current Progress:  79 % - Evaluating
+Memory: 1395/1483 1411/1523
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+Memory: 1396/1483 1411/1523
+---        Current Progress:  30 % - Generating image
+Memory: 1439/1483 1457/1523
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_fillet_section_geom_x20.png
+-          Current Progress:  10 % - Plotting
+Memory: 1294/1483 1305/1523
+-------    Current Progress:  73 % - Evaluating
+Memory: 1303/1483 1331/1523
+------     Current Progress:  68 % - Evaluating
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1354/1483 1411/1523
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_fillet_section_geom_x100.png
+-          Current Progress:  10 % - Plotting
+Memory: 1321/1483 1376/1523
+-------    Current Progress:  78 % - Evaluating
+Memory: 1336/1483 1386/1523
+------     Current Progress:  68 % - Evaluating
+Memory: 1335/1483 1385/1523
+--------   Current Progress:  81 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1380/1483 1432/1523
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_fillet_section_P10_x40.png
+Class run time: 63 s.
+Total time: 63 s.

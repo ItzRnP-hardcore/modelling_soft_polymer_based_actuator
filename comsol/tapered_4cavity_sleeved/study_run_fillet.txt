@@ -1,0 +1,11 @@
+== sleeved_fillet_E0.07
+   CASE sleeved_fillet_E0.07: sleeve=true E=0.070 MPa cav=56.0 deg depth 2.50->1.00 mm, core r 5.00->2.00 mm
+   CLASSIFY base=[1] tip=[46] outer=[2, 3, 4, 5]
+   CLASSIFY cavity1=[33, 34, 35, 36, 37, 38, 39, 40, 41, 45]
+   CLASSIFY cavity2=[18, 19, 20, 22, 24, 26, 28, 30, 32, 44]
+   CLASSIFY cavity3=[6, 7, 8, 9, 10, 11, 12, 13, 14, 42]
+   CLASSIFY cavity4=[15, 16, 17, 21, 23, 25, 27, 29, 31, 43]
+   CONVERGED_STEPS: 11, last P = 21.0 kPa, solve time 3445 s
+   SOLVER_STOPPED: The_following_feature_has_encountered_a_problem
+figure -> C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_sleeved\images\sleeved_study.png
+exit 0

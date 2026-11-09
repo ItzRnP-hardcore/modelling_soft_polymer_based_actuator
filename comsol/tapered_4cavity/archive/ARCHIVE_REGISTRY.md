@@ -1,5 +1,7 @@
 # Tapered 4-Cavity Model & Scratch Script Archive Registry
 
+> **Status (9 Nov 2026):** the "verified 180°–192°" model described below uses a non-physical load (not the cavity pressure) and ν = 0.45; with real pressure the same model bends 12.7° at 40 kPa. The description is kept as a historical record. See `comsol/COMSOL_MASTER_REGISTRY.md` and `comsol/tapered_4cavity_sleeved/`.
+
 This document records the archival history of legacy models, diagnostic scratch scripts, and numerical iterations for future agents and human collaborators.
 
 ---

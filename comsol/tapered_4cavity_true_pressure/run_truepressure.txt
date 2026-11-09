@@ -1,0 +1,524 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Mon Nov 09 04:01:42 IST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_true_pressure\BuildActuatorTapered4CavityTruePressure.class
+---------- Current Progress: 100 % - Updating selections
+Memory: 479/481 517/522
+           Current Progress:   0 % - Cone
+Memory: 485/489 522/527
+           Current Progress:   0 % - Cone 1
+Memory: 491/491 525/527
+           Current Progress:   1 % - Cone 1a
+           Current Progress:   1 % - Difference 1
+           Current Progress:   5 % - Resolving domains and void regions
+Memory: 495/495 538/538
+           Current Progress:   5 % - Block 1
+           Current Progress:   6 % - Rotate 1
+-          Current Progress:  10 % - Block 1a
+-          Current Progress:  11 % - Rotate 1a
+-          Current Progress:  15 % - Intersection 1
+Memory: 496/496 538/538
+-          Current Progress:  19 % - Resolving domains and void regions
+Memory: 497/497 539/539
+-          Current Progress:  19 % - Intersection 1a
+--         Current Progress:  23 % - Resolving domains and void regions
+Memory: 497/497 540/540
+--         Current Progress:  23 % - Cone 2
+--         Current Progress:  24 % - Cone 2a
+Memory: 498/498 541/541
+--         Current Progress:  24 % - Difference 2
+--         Current Progress:  28 % - Resolving domains and void regions
+--         Current Progress:  28 % - Block 2
+--         Current Progress:  29 % - Rotate 2
+---        Current Progress:  33 % - Block 2a
+Memory: 499/499 541/541
+---        Current Progress:  33 % - Rotate 2a
+---        Current Progress:  38 % - Intersection 2
+----       Current Progress:  42 % - Resolving domains and void regions
+----       Current Progress:  42 % - Intersection 2a
+----       Current Progress:  46 % - Resolving domains and void regions
+----       Current Progress:  46 % - Cone 3
+----       Current Progress:  46 % - Cone 3a
+Memory: 482/499 524/541
+----       Current Progress:  47 % - Difference 3
+-----      Current Progress:  51 % - Resolving domains and void regions
+-----      Current Progress:  51 % - Block 3
+Memory: 482/499 525/541
+-----      Current Progress:  51 % - Rotate 3
+-----      Current Progress:  56 % - Block 3a
+-----      Current Progress:  56 % - Rotate 3a
+------     Current Progress:  60 % - Intersection 3
+Memory: 483/499 525/541
+------     Current Progress:  65 % - Resolving domains and void regions
+Memory: 483/499 526/541
+------     Current Progress:  65 % - Intersection 3a
+------     Current Progress:  69 % - Resolving domains and void regions
+Memory: 484/499 526/541
+------     Current Progress:  69 % - Cone 4
+Memory: 485/499 527/541
+------     Current Progress:  69 % - Cone 4a
+-------    Current Progress:  70 % - Difference 4
+-------    Current Progress:  74 % - Resolving domains and void regions
+-------    Current Progress:  74 % - Block 4
+Memory: 485/499 528/541
+-------    Current Progress:  74 % - Rotate 4
+-------    Current Progress:  78 % - Block 4a
+-------    Current Progress:  79 % - Rotate 4a
+Memory: 487/499 530/541
+--------   Current Progress:  83 % - Intersection 4
+Memory: 488/499 530/541
+--------   Current Progress:  87 % - Resolving domains and void regions
+--------   Current Progress:  87 % - Intersection 4a
+---------  Current Progress:  92 % - Resolving domains and void regions
+---------  Current Progress:  92 % - Difference
+Memory: 489/499 530/541
+---------  Current Progress:  96 % - Resolving domains and void regions
+---------  Current Progress:  96 % - Form Union
+---------  Current Progress:  99 % - Handling face intersections
+Memory: 490/499 531/541
+---------- Current Progress: 100 % - Updating selections
+Single-Domain Tapered 4-Cavity Geometry: 1 domain, 38 boundaries.
+           Current Progress:   0 % - Free tetrahedral
+Memory: 501/501 542/542
+Number of vertex elements: 56
+Number of edge elements: 1452
+Number of boundary elements: 4246
+-----      Current Progress:  54 % - Respecting boundaries
+Memory: 518/518 553/554
+Number of elements: 8935
+Minimum element quality: 0.1909
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 522/522 556/556
+           Current Progress:   0 % - Generating equations
+Memory: 531/533 564/565
+---------- Current Progress: 100 % - Evaluating
+Memory: 577/579 612/616
+Cavity 1 Drive (3 bnds): [28, 30, 37]
+Cavity 1 Balloon (5 bnds): [27, 29, 31, 32, 33]
+Cavity 2 Drive (3 bnds): [20, 23, 36]
+Cavity 2 Balloon (5 bnds): [16, 17, 18, 24, 26]
+Cavity 3 Drive (3 bnds): [11, 12, 34]
+Cavity 3 Balloon (5 bnds): [6, 7, 8, 9, 10]
+Cavity 4 Drive (3 bnds): [19, 22, 35]
+Cavity 4 Balloon (5 bnds): [13, 14, 15, 21, 25]
+Cavity 1 wetted faces (8): [28, 30, 37, 27, 29, 31, 32, 33]
+Cavity 2 wetted faces (8): [20, 23, 36, 16, 17, 18, 24, 26]
+Cavity 3 wetted faces (8): [11, 12, 34, 6, 7, 8, 9, 10]
+Cavity 4 wetted faces (8): [19, 22, 35, 13, 14, 15, 21, 25]
+----       Current Progress:  47 % - Generating equations
+Memory: 852/870 887/912
+------     Current Progress:  60 % - Generating equations
+Memory: 867/871 898/912
+---        Current Progress:  39 % - Generating equations
+Memory: 890/896 920/927
+-----      Current Progress:  54 % - Generating equations
+Memory: 887/896 917/927
+------     Current Progress:  60 % - Generating equations
+Memory: 873/896 902/927
+>>> Solving Multiaxial Mode: pitch_down [w1=1.0, w2=0.0] <<<
+           Current Progress:   1 % - Generating equations
+Memory: 873/896 905/927
+           Current Progress:   2 % - Generating equations
+Memory: 893/896 922/927
+           Current Progress:   3 % - Generating equations
+Memory: 893/897 921/927
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Nov 9, 2026, 4:02:08?AM.
+Geometry shape function: Quadratic serendipity
+Running on AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD.
+Using 1 socket with 8 cores in total on Rudra_14.
+Available memory: 15.65 GB.
+           Current Progress:   4 % - Compile Equations: Stationary
+Memory: 917/927 938/951
+Time: 2 s.
+Physical memory: 927 MB
+Virtual memory: 951 MB
+Ended at Nov 9, 2026, 4:02:10?AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Nov 9, 2026, 4:02:10?AM.
+           Current Progress:   4 % - Dependent Variables 1
+Memory: 869/927 890/951
+Solution time: 0 s.
+Physical memory: 887 MB
+Virtual memory: 916 MB
+Ended at Nov 9, 2026, 4:02:10?AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Nov 9, 2026, 4:02:10?AM.
+Continuation solver
+Nonlinear solver
+Number of degrees of freedom solved for: 47553 (plus 1 internal DOFs).
+    
+Continuation parameter P_step = 0.
+Continuation parameter stepsize CMPpcontstep = 0.
+           Current Progress:   5 % - Assembling matrices
+Memory: 1097/1097 1166/1166
+Symmetric matrices found.
+           Current Progress:   5 % - 
+Memory: 1148/1216 1207/1279
+Scales for dependent variables:
+Displacement Field (comp1.u): 1
+Orthonormal null-space function used.
+           Current Progress:   5 % - Matrix factorization
+Memory: 1219/1219 1275/1288
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1           0           0   1.0000000           0    3    1    2        0        0
+           Current Progress:   9 % - Update tangent
+Memory: 1359/1416 1471/1530
+    
+Continuation parameter P_step = 1000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+           Current Progress:   9 % - Assembling matrices
+Memory: 1526/1526 1644/1644
+Nonsymmetric matrix found.
+           Current Progress:   9 % - Matrix factorization
+Memory: 1415/1687 1524/1810
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     0.00049       0.016   1.0000000       0.084    8    2    5  2.1e-10  5.2e-13
+-          Current Progress:  13 % - Update tangent
+Memory: 1757/1871 1916/2046
+    
+Continuation parameter P_step = 2000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+-          Current Progress:  13 % - Assembling matrices
+Memory: 1843/1871 2007/2046
+-          Current Progress:  13 % - Matrix factorization
+Memory: 1969/2007 2125/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     0.00021      0.0075   1.0000000       0.037   13    3    8    1e-10  8.3e-13
+-          Current Progress:  17 % - Update tangent
+Memory: 1811/2007 1964/2170
+    
+Continuation parameter P_step = 3000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+-          Current Progress:  17 % - Assembling matrices
+Memory: 1954/2007 2127/2170
+-          Current Progress:  17 % - Matrix factorization
+Memory: 1922/2007 2086/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     0.00013      0.0058   1.0000000       0.023   18    4   11  5.5e-11  9.2e-13
+    
+Continuation parameter P_step = 4000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+--         Current Progress:  21 % - Assembling residual
+Memory: 1838/2007 1997/2170
+--         Current Progress:  21 % - Assembling matrices
+Memory: 1993/2007 2151/2170
+--         Current Progress:  21 % - Matrix factorization
+Memory: 1941/2007 2095/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--         Current Progress:  21 % - Solving linear system
+   1     9.3e-05      0.0045   1.0000000       0.016   23    5   14  4.1e-11  1.1e-12
+    
+Continuation parameter P_step = 5000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+--         Current Progress:  25 % - Assembling matrices
+Memory: 1851/2007 2002/2170
+--         Current Progress:  25 % - Matrix factorization
+Memory: 1941/2007 2103/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     7.2e-05      0.0036   1.0000000       0.012   28    6   17  4.6e-11  1.3e-12
+    
+Continuation parameter P_step = 6000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+--         Current Progress:  29 % - Assembling residual
+Memory: 1863/2007 2018/2170
+--         Current Progress:  29 % - Matrix factorization
+Memory: 1888/2007 2035/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1       6e-05      0.0032   1.0000000      0.0095   33    7   20    5e-11  1.5e-12
+---        Current Progress:  33 % - Update tangent
+Memory: 1860/2007 2006/2170
+    
+Continuation parameter P_step = 7000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+---        Current Progress:  33 % - Assembling matrices
+Memory: 1984/2007 2140/2170
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1929/2007 2079/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     5.3e-05       0.003   1.0000000      0.0077   38    8   23  5.4e-11  1.8e-12
+    
+Continuation parameter P_step = 8000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+---        Current Progress:  37 % - Assembling matrices
+Memory: 1853/2007 1998/2170
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1946/2007 2099/2170
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  37 % - Assembling residual
+Memory: 1883/2007 2029/2170
+   1     4.8e-05      0.0031   1.0000000      0.0066   43    9   26  1.7e-11  2.3e-12
+    
+Continuation parameter P_step = 9000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+----       Current Progress:  41 % - Assembling matrices
+Memory: 2002/2007 2187/2187
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1951/2007 2122/2187
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     4.6e-05      0.0034   1.0000000      0.0058   48   10   29  5.2e-11  2.8e-12
+----       Current Progress:  45 % - Update tangent
+Memory: 1898/2007 2066/2187
+    
+Continuation parameter P_step = 10000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+----       Current Progress:  45 % - 
+Memory: 1950/2007 2103/2187
+----       Current Progress:  45 % - Matrix factorization
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+----       Current Progress:  45 % - Assembling residual
+Memory: 1945/2007 2095/2187
+   1     4.5e-05      0.0038   1.0000000      0.0051   53   11   32  1.2e-11  3.2e-12
+    
+Continuation parameter P_step = 12000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+----       Current Progress:  48 % - Assembling matrices
+Memory: 1899/2007 2090/2187
+----       Current Progress:  48 % - Matrix factorization
+Memory: 1968/2007 2127/2187
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1     0.00055         0.1   1.0000000       0.015   58   12   35  5.5e-11  3.5e-12
+-----      Current Progress:  52 % - Update tangent
+Memory: 1920/2007 2074/2187
+    
+Continuation parameter P_step = 14000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+-----      Current Progress:  52 % - Assembling matrices
+Memory: 2017/2029 2175/2191
+-----      Current Progress:  52 % - Matrix factorization
+Memory: 1971/2029 2127/2191
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-----      Current Progress:  52 % - Solving linear system
+   1     0.00074        0.23   1.0000000       0.016   63   13   38  7.9e-11  4.2e-12
+    
+Continuation parameter P_step = 16000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+-----      Current Progress:  56 % - Assembling matrices
+Memory: 2006/2029 2179/2191
+-----      Current Progress:  56 % - Matrix factorization
+Memory: 1979/2029 2143/2191
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-----      Current Progress:  56 % - Solving linear system
+   1     0.00086        0.37   1.0000000       0.015   68   14   41  3.2e-11  4.6e-12
+    
+Continuation parameter P_step = 18000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+------     Current Progress:  60 % - Assembling matrices
+Memory: 1938/2029 2114/2191
+------     Current Progress:  60 % - Matrix factorization
+Memory: 1960/2029 2119/2191
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0011         4.2   1.0000000       0.015   72   15   44  2.3e-11  4.7e-12
+------     Current Progress:  61 % - Assembling matrices
+Memory: 1972/2029 2137/2191
+------     Current Progress:  61 % - Matrix factorization
+Memory: 1935/2029 2092/2191
+   2     8.7e-07     4.9e-05   1.0000000      0.0011   74   16   46  3.5e-11  5.5e-13
+    
+Continuation parameter P_step = 20000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+------     Current Progress:  64 % - Assembling matrices
+Memory: 1872/2029 2028/2191
+------     Current Progress:  64 % - Matrix factorization
+Memory: 1939/2029 2097/2191
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+------     Current Progress:  64 % - Solving linear system
+Memory: 1931/2029 2089/2191
+   1     0.00062        0.24   1.0000000      0.0092   79   17   49  4.8e-11  8.6e-12
+    
+Continuation parameter P_step = 22500.
+Continuation parameter stepsize CMPpcontstep = 2500.
+------     Current Progress:  68 % - Assembling matrices
+Memory: 1970/2029 2125/2191
+------     Current Progress:  68 % - Matrix factorization
+Memory: 1948/2029 2097/2191
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0029          11   1.0000000       0.023   83   18   52  1.7e-11  4.4e-12
+------     Current Progress:  69 % - Assembling matrices
+Memory: 1999/2029 2158/2191
+------     Current Progress:  69 % - Matrix factorization
+Memory: 1943/2029 2093/2191
+------     Current Progress:  69 % - Solving linear system
+   2       1e-05      0.0023   1.0000000      0.0034   85   19   54  8.1e-11  5.2e-13
+    
+Continuation parameter P_step = 25000.
+Continuation parameter stepsize CMPpcontstep = 2500.
+-------    Current Progress:  72 % - Assembling matrices
+Memory: 1885/2029 2032/2191
+-------    Current Progress:  72 % - Matrix factorization
+Memory: 1966/2029 2142/2194
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0017         2.5   1.0000000       0.013   89   20   57  9.9e-11  1.2e-11
+-------    Current Progress:  73 % - Assembling matrices
+Memory: 1914/2029 2081/2194
+-------    Current Progress:  73 % - Matrix factorization
+Memory: 1946/2029 2109/2194
+-------    Current Progress:  73 % - Solving linear system
+Memory: 1922/2029 2081/2194
+   2       2e-06     0.00022   1.0000000      0.0021   91   21   59  6.5e-11  1.7e-13
+    
+Continuation parameter P_step = 27500.
+Continuation parameter stepsize CMPpcontstep = 2500.
+-------    Current Progress:  76 % - Assembling matrices
+Memory: 1956/2029 2121/2194
+-------    Current Progress:  76 % - Matrix factorization
+Memory: 1928/2029 2089/2194
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-------    Current Progress:  76 % - Solving linear system
+   1      0.0019         2.4   1.0000000       0.013   95   22   62  7.3e-12  1.4e-11
+-------    Current Progress:  77 % - Assembling matrices
+Memory: 1977/2029 2129/2194
+-------    Current Progress:  77 % - Matrix factorization
+Memory: 1946/2029 2097/2194
+-------    Current Progress:  77 % - 
+Memory: 1941/2029 2089/2194
+   2     2.7e-06     0.00037   1.0000000      0.0024   97   23   64  5.5e-11  1.3e-13
+    
+Continuation parameter P_step = 30000.
+Continuation parameter stepsize CMPpcontstep = 2500.
+--------   Current Progress:  80 % - Assembling matrices
+Memory: 1971/2029 2125/2194
+--------   Current Progress:  80 % - Matrix factorization
+Memory: 1932/2029 2077/2194
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0021         2.3   1.0000000       0.013  101   24   67  2.6e-11  1.6e-11
+--------   Current Progress:  81 % - Assembling matrices
+Memory: 1998/2029 2186/2202
+--------   Current Progress:  81 % - Matrix factorization
+Memory: 1967/2029 2154/2202
+--------   Current Progress:  81 % - Assembling residual
+Memory: 1968/2029 2154/2202
+   2     3.6e-06     0.00057   1.0000000      0.0028  103   25   69  2.9e-11  9.8e-14
+    
+Continuation parameter P_step = 32500.
+Continuation parameter stepsize CMPpcontstep = 2500.
+--------   Current Progress:  84 % - Assembling matrices
+Memory: 1976/2029 2165/2202
+--------   Current Progress:  84 % - Matrix factorization
+Memory: 1958/2029 2138/2202
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--------   Current Progress:  84 % - Solving linear system
+   1      0.0023         2.1   1.0000000       0.014  107   26   72  3.2e-11  1.9e-11
+--------   Current Progress:  85 % - Assembling matrices
+Memory: 1972/2029 2154/2202
+--------   Current Progress:  85 % - Matrix factorization
+--------   Current Progress:  85 % - Solving linear system
+Memory: 1966/2029 2146/2202
+   2     4.7e-06     0.00076   1.0000000      0.0034  109   27   74    6e-11  6.6e-14
+    
+Continuation parameter P_step = 35000.
+Continuation parameter stepsize CMPpcontstep = 2500.
+--------   Current Progress:  88 % - Assembling matrices
+Memory: 1991/2029 2165/2202
+--------   Current Progress:  88 % - Matrix factorization
+Memory: 1955/2029 2129/2202
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--------   Current Progress:  88 % - Assembling residual
+   1      0.0025         1.9   1.0000000       0.015  113   28   77  2.4e-11  2.1e-11
+--------   Current Progress:  88 % - Constraint handling
+Memory: 1980/2029 2138/2202
+--------   Current Progress:  88 % - Matrix factorization
+--------   Current Progress:  88 % - Assembling residual
+Memory: 1912/2029 2065/2202
+   2     5.8e-06      0.0008   1.0000000       0.004  115   29   79  4.7e-11  3.6e-14
+    
+Continuation parameter P_step = 37500.
+Continuation parameter stepsize CMPpcontstep = 2500.
+---------  Current Progress:  92 % - Assembling matrices
+Memory: 1993/2029 2153/2202
+---------  Current Progress:  92 % - Matrix factorization
+Memory: 1962/2029 2117/2202
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---------  Current Progress:  92 % - Solving linear system
+Memory: 1950/2029 2105/2202
+   1      0.0027         1.7   1.0000000       0.016  119   30   82  4.7e-11  2.3e-11
+---------  Current Progress:  92 % - Matrix factorization
+Memory: 1966/2029 2125/2202
+---------  Current Progress:  92 % - 
+Memory: 1954/2029 2113/2202
+   2     6.9e-06     0.00078   1.0000000      0.0047  121   31   84    4e-11  1.2e-14
+    
+Continuation parameter P_step = 40000.
+Continuation parameter stepsize CMPpcontstep = 2500.
+---------  Current Progress:  96 % - Assembling matrices
+Memory: 1946/2029 2105/2202
+---------  Current Progress:  96 % - Matrix factorization
+Memory: 1972/2029 2129/2202
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0028         1.5   1.0000000       0.017  125   32   87    3e-11  2.3e-11
+---------  Current Progress:  96 % - Assembling matrices
+Memory: 1943/2029 2101/2202
+---------  Current Progress:  96 % - Matrix factorization
+Memory: 1987/2029 2143/2202
+   2     7.3e-06      0.0032   1.0000000      0.0055  127   33   89  1.5e-10  2.8e-14
+---------- Current Progress: 100 % - 
+Memory: 1410/2029 1445/2202
+Solution time: 30 s.
+Physical memory: 2.03 GB
+Virtual memory: 2.2 GB
+Ended at Nov 9, 2026, 4:02:40?AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+CONVERGED_STEPS: 24, last P = 40.0 kPa
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,0.00,0.000,0.000,0.000,0.000,0.000,0.00,0.00,0.00,0.00,1.0000,1.0000,1.0000
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,1.00,0.003,-0.072,-0.000,0.072,0.072,0.06,0.03,5.94,10.63,0.9936,1.0025,1.0021
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,2.00,0.006,-0.154,-0.000,0.154,0.154,0.14,0.05,11.81,21.13,0.9872,1.0049,1.0042
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,3.00,0.009,-0.247,-0.000,0.247,0.247,0.22,0.06,17.61,31.46,0.9810,1.0072,1.0063
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,4.00,0.013,-0.350,-0.000,0.350,0.350,0.31,0.07,23.35,41.61,0.9747,1.0095,1.0083
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,5.00,0.017,-0.464,-0.001,0.464,0.464,0.41,0.08,29.04,51.56,0.9686,1.0118,1.0102
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,6.00,0.021,-0.588,-0.001,0.588,0.588,0.53,0.09,34.69,61.30,0.9624,1.0140,1.0122
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,7.00,0.026,-0.723,-0.001,0.723,0.723,0.65,0.10,40.32,70.83,0.9564,1.0162,1.0141
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,8.00,0.031,-0.869,-0.002,0.869,0.869,0.78,0.11,45.92,80.14,0.9503,1.0183,1.0160
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,9.00,0.036,-1.025,-0.002,1.026,1.025,0.92,0.12,51.51,89.25,0.9443,1.0204,1.0179
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,10.00,0.040,-1.193,-0.003,1.194,1.193,1.07,0.12,57.10,98.14,0.9383,1.0225,1.0197
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,12.00,0.050,-1.565,-0.004,1.565,1.565,1.40,0.13,68.30,115.31,0.9264,1.0266,1.0233
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,14.00,0.060,-1.985,-0.005,1.986,1.985,1.78,0.14,79.56,131.69,0.9145,1.0305,1.0269
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,16.00,0.068,-2.457,-0.006,2.458,2.457,2.21,0.15,90.94,147.34,0.9026,1.0344,1.0304
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,18.00,0.075,-2.986,-0.008,2.987,2.986,2.69,0.16,102.48,162.31,0.8907,1.0383,1.0339
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,20.00,0.079,-3.575,-0.010,3.576,3.575,3.21,0.16,114.24,176.66,0.8787,1.0421,1.0373
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,22.50,0.078,-4.404,-0.013,4.405,4.404,3.96,0.16,129.31,193.81,0.8636,1.0469,1.0415
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,25.00,0.068,-5.347,-0.016,5.348,5.347,4.80,0.17,144.90,210.19,0.8482,1.0516,1.0458
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,27.50,0.046,-6.417,-0.019,6.417,6.417,5.76,0.17,161.12,225.90,0.8326,1.0564,1.0500
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,30.00,0.005,-7.630,-0.022,7.630,7.630,6.84,0.17,178.09,241.05,0.8166,1.0612,1.0543
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,32.50,-0.059,-9.004,-0.026,9.005,9.004,8.05,0.17,195.94,256.31,0.8002,1.0660,1.0585
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,35.00,-0.156,-10.561,-0.031,10.562,10.561,9.43,0.17,214.84,273.38,0.7833,1.0710,1.0629
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,37.50,-0.298,-12.325,-0.035,12.328,12.325,10.98,0.16,234.97,290.56,0.7658,1.0760,1.0673
+DOE_ROW: pitch_down,1.0000,0.0000,0.0000,0.0000,40.00,-0.498,-14.326,-0.040,14.334,14.326,12.74,0.16,256.54,308.01,0.7477,1.0812,1.0718
+           Current Progress:   0 % - Plotting
+Memory: 1282/2029 1302/2202
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+Memory: 1283/2029 1302/2202
+------     Current Progress:  62 % - Evaluating
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1343/2029 1343/2202
+           Current Progress:   0 % - Plotting
+Memory: 1326/2029 1321/2202
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  62 % - Evaluating
+Memory: 1322/2029 1316/2202
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1348/2029 1348/2202
+           Current Progress:   0 % - Plotting
+Memory: 1325/2029 1320/2202
+           Current Progress:   2 % - Evaluating
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+-          Current Progress:  19 % - Evaluating
+-----      Current Progress:  59 % - Evaluating
+--------   Current Progress:  83 % - Evaluating
+--------   Current Progress:  86 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1351/2029 1349/2202
+Class run time: 81 s.
+Saving model: C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_true_pressure\BuildActuatorTapered4CavityTruePressure_Model.mph
+Save time: 0 s.
+Total time: 81 s.
