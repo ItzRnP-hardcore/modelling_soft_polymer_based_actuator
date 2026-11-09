@@ -1,0 +1,33 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Tue Nov 10 01:53:16 IST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: C:\Users\rudra\Documents\BTP\report\btp_report\render\Render180.class
+PVALS [0.0, 2000.0, 4000.0, 6000.0, 8000.0, 10000.0, 12500.0, 15000.0, 17500.0, 20000.0]
+-          Current Progress:  10 % - Plotting
+Memory: 778/784 815/816
+---        Current Progress:  36 % - Evaluating
+Memory: 841/842 878/881
+----       Current Progress:  47 % - Evaluating
+-----      Current Progress:  50 % - Evaluating
+Memory: 848/848 883/883
+-----      Current Progress:  55 % - Plotting
+Memory: 844/848 878/883
+-------    Current Progress:  71 % - Evaluating
+Memory: 1172/1172 1266/1269
+-------    Current Progress:  77 % - Evaluating
+Memory: 1174/1176 1267/1270
+--------   Current Progress:  81 % - Evaluating
+Memory: 1176/1178 1268/1271
+--------   Current Progress:  83 % - Evaluating
+--------   Current Progress:  85 % - Evaluating
+---------  Current Progress:  95 % - Evaluating
+---        Current Progress:  30 % - Generating image
+Memory: 1329/1329 1436/1436
+IMAGE_OK C:\Users\rudra\Documents\BTP\report\btp_report\render\raw\fc_sleeved_over_zoom_P20.png
+MAXPOS_FAILED: skip
+Class run time: 21 s.
+Saving model: C:\Users\rudra\Documents\BTP\report\btp_report\render\Render180_m180.mph
+Save time: 2 s.
+Total time: 22 s.

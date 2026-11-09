@@ -1,0 +1,2734 @@
+*******************************************
+***COMSOL 6.4.0.429 progress output file***
+*******************************************
+Mon Nov 09 04:58:00 IST 2026
+COMSOL Multiphysics 6.4 (Build: 429) starting in batch mode
+Running: C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_sleeved\SleevedCase.class
+CASE sleeved_base_E0.07: sleeve=true E=0.070 MPa cav=56.0 deg depth 2.50->1.00 mm, core r 5.00->2.00 mm
+---------- Current Progress: 100 % - Updating selections
+Memory: 416/447 455/487
+           Current Progress:   0 % - Cone
+Memory: 443/447 481/488
+           Current Progress:   0 % - Cone 1
+Memory: 450/452 484/488
+           Current Progress:   1 % - Cone 1a
+           Current Progress:   1 % - Difference 1
+Memory: 450/452 485/488
+           Current Progress:   5 % - Resolving domains and void regions
+Memory: 454/454 497/497
+           Current Progress:   5 % - Block 1
+Memory: 455/455 498/498
+           Current Progress:   6 % - Rotate 1
+Memory: 456/456 499/499
+-          Current Progress:  10 % - Block 1a
+-          Current Progress:  11 % - Rotate 1a
+-          Current Progress:  15 % - Intersection 1
+-          Current Progress:  19 % - Resolving domains and void regions
+Memory: 457/457 500/500
+-          Current Progress:  19 % - Intersection 1a
+Memory: 458/458 500/500
+--         Current Progress:  23 % - Resolving domains and void regions
+Memory: 458/458 501/501
+--         Current Progress:  23 % - Cone 2
+Memory: 459/459 503/503
+--         Current Progress:  24 % - Cone 2a
+Memory: 459/460 502/503
+--         Current Progress:  24 % - Difference 2
+Memory: 460/460 502/503
+--         Current Progress:  28 % - Resolving domains and void regions
+--         Current Progress:  28 % - Block 2
+--         Current Progress:  29 % - Rotate 2
+---        Current Progress:  33 % - Block 2a
+---        Current Progress:  33 % - Rotate 2a
+---        Current Progress:  38 % - Intersection 2
+Memory: 462/462 504/504
+----       Current Progress:  42 % - Resolving domains and void regions
+----       Current Progress:  42 % - Intersection 2a
+----       Current Progress:  46 % - Resolving domains and void regions
+----       Current Progress:  46 % - Cone 3
+----       Current Progress:  46 % - Cone 3a
+----       Current Progress:  47 % - Difference 3
+-----      Current Progress:  51 % - Resolving domains and void regions
+-----      Current Progress:  51 % - Block 3
+-----      Current Progress:  51 % - Rotate 3
+-----      Current Progress:  56 % - Block 3a
+Memory: 439/462 481/504
+-----      Current Progress:  56 % - Rotate 3a
+------     Current Progress:  60 % - Intersection 3
+------     Current Progress:  65 % - Resolving domains and void regions
+Memory: 440/462 481/504
+------     Current Progress:  65 % - Intersection 3a
+------     Current Progress:  69 % - Resolving domains and void regions
+Memory: 441/462 482/504
+------     Current Progress:  69 % - Cone 4
+------     Current Progress:  69 % - Cone 4a
+-------    Current Progress:  70 % - Difference 4
+Memory: 442/462 482/504
+-------    Current Progress:  74 % - Resolving domains and void regions
+Memory: 442/462 483/504
+-------    Current Progress:  74 % - Block 4
+-------    Current Progress:  74 % - Rotate 4
+-------    Current Progress:  78 % - Block 4a
+Memory: 444/462 485/504
+-------    Current Progress:  79 % - Rotate 4a
+Memory: 445/462 486/504
+--------   Current Progress:  83 % - Intersection 4
+--------   Current Progress:  87 % - Resolving domains and void regions
+Memory: 446/462 487/504
+--------   Current Progress:  87 % - Intersection 4a
+Memory: 447/462 487/504
+---------  Current Progress:  92 % - Resolving domains and void regions
+Memory: 448/462 489/504
+---------  Current Progress:  92 % - Difference
+---------  Current Progress:  96 % - Resolving domains and void regions
+Memory: 450/462 491/504
+---------  Current Progress:  96 % - Form Union
+---------  Current Progress:  99 % - Handling face intersections
+Memory: 451/462 491/504
+---------- Current Progress: 100 % - Updating selections
+Memory: 452/462 492/504
+           Current Progress:   0 % - Free tetrahedral
+Memory: 479/479 520/520
+Number of vertex elements: 56
+-          Current Progress:  17 % - Adjusting boundary mesh
+Memory: 475/480 512/520
+Number of edge elements: 1944
+Number of boundary elements: 7944
+-----      Current Progress:  50 % - Creating initial tetrahedra
+Memory: 478/480 513/520
+--------   Current Progress:  86 % - Inserting interior points
+Memory: 491/491 532/532
+Number of elements: 18044
+Minimum element quality: 0.1658
+---------- Current Progress: 100 % - Finalizing mesh
+Memory: 493/493 531/532
+           Current Progress:   0 % - Generating equations
+Memory: 515/517 552/554
+---------- Current Progress: 100 % - Evaluating
+Memory: 569/572 605/609
+FACE 1: A=0.0002763 xm=-0.000 cy=0.002 cz=-0.001 rmsOuter=3.929
+FACE 2: A=0.001458 xm=59.984 cy=-0.637 cz=-0.637 rmsOuter=0.05904
+FACE 3: A=0.001458 xm=59.985 cy=-0.637 cz=0.637 rmsOuter=0.05898
+FACE 4: A=0.001458 xm=59.984 cy=0.637 cz=-0.637 rmsOuter=0.05904
+FACE 5: A=0.001458 xm=59.985 cy=0.637 cz=0.637 rmsOuter=0.05898
+FACE 6: A=1.467e-05 xm=4.000 cy=-0.961 cz=0.000 rmsOuter=3.207
+FACE 7: A=0.0003380 xm=60.571 cy=-0.961 cz=-0.239 rmsOuter=1.514
+FACE 8: A=0.0003380 xm=60.571 cy=-0.961 cz=0.239 rmsOuter=1.514
+FACE 9: A=0.0002310 xm=60.571 cy=-0.883 cz=-0.469 rmsOuter=2.495
+FACE 10: A=0.0002310 xm=60.571 cy=-0.883 cz=0.469 rmsOuter=2.495
+FACE 11: A=0.0002251 xm=60.531 cy=-0.961 cz=-0.239 rmsOuter=3.425
+FACE 12: A=0.0002251 xm=60.531 cy=-0.961 cz=0.239 rmsOuter=3.425
+FACE 13: A=1.467e-05 xm=4.000 cy=-0.000 cz=-0.961 rmsOuter=3.207
+FACE 14: A=0.0002310 xm=60.571 cy=-0.469 cz=-0.883 rmsOuter=2.495
+FACE 15: A=0.0003380 xm=60.571 cy=-0.239 cz=-0.961 rmsOuter=1.514
+FACE 16: A=1.467e-05 xm=4.000 cy=-0.000 cz=0.961 rmsOuter=3.207
+FACE 17: A=0.0002310 xm=60.571 cy=-0.469 cz=0.883 rmsOuter=2.495
+FACE 18: A=0.0003380 xm=60.571 cy=-0.239 cz=0.961 rmsOuter=1.514
+FACE 19: A=0.0002251 xm=60.531 cy=-0.239 cz=-0.961 rmsOuter=3.425
+FACE 20: A=0.0002251 xm=60.531 cy=-0.239 cz=0.961 rmsOuter=3.425
+FACE 21: A=0.0003380 xm=60.571 cy=0.239 cz=-0.961 rmsOuter=1.514
+FACE 22: A=0.0002251 xm=60.531 cy=0.239 cz=-0.961 rmsOuter=3.425
+FACE 23: A=0.0002251 xm=60.531 cy=0.239 cz=0.961 rmsOuter=3.425
+FACE 24: A=0.0003380 xm=60.571 cy=0.239 cz=0.961 rmsOuter=1.514
+FACE 25: A=0.0002310 xm=60.571 cy=0.469 cz=-0.883 rmsOuter=2.495
+FACE 26: A=0.0002310 xm=60.571 cy=0.469 cz=0.883 rmsOuter=2.495
+FACE 27: A=1.467e-05 xm=4.000 cy=0.961 cz=0.000 rmsOuter=3.207
+FACE 28: A=0.0002251 xm=60.531 cy=0.961 cz=-0.239 rmsOuter=3.425
+FACE 29: A=0.0002310 xm=60.571 cy=0.883 cz=-0.469 rmsOuter=2.495
+FACE 30: A=0.0002251 xm=60.531 cy=0.961 cz=0.239 rmsOuter=3.425
+FACE 31: A=0.0002310 xm=60.571 cy=0.883 cz=0.469 rmsOuter=2.495
+FACE 32: A=0.0003380 xm=60.571 cy=0.961 cz=-0.239 rmsOuter=1.514
+FACE 33: A=0.0003380 xm=60.571 cy=0.961 cz=0.239 rmsOuter=1.514
+FACE 34: A=2.347e-06 xm=136.000 cy=-0.961 cz=0.000 rmsOuter=1.506
+FACE 35: A=2.347e-06 xm=136.000 cy=-0.000 cz=-0.961 rmsOuter=1.506
+FACE 36: A=2.347e-06 xm=136.000 cy=-0.000 cz=0.961 rmsOuter=1.506
+FACE 37: A=2.347e-06 xm=136.000 cy=0.961 cz=0.000 rmsOuter=1.506
+FACE 38: A=4.332e-05 xm=140.000 cy=0.000 cz=-0.000 rmsOuter=1.587
+CLASSIFY base=[1] tip=[38] outer=[2, 3, 4, 5]
+CLASSIFY cavity1=[27, 28, 29, 30, 31, 32, 33, 37]
+CLASSIFY cavity2=[16, 17, 18, 20, 23, 24, 26, 36]
+CLASSIFY cavity3=[6, 7, 8, 9, 10, 11, 12, 34]
+CLASSIFY cavity4=[13, 14, 15, 19, 21, 22, 25, 35]
+----       Current Progress:  47 % - Generating equations
+Memory: 864/864 894/895
+------     Current Progress:  60 % - Generating equations
+Memory: 909/909 942/942
+---        Current Progress:  39 % - Generating equations
+Memory: 919/932 951/963
+-----      Current Progress:  54 % - Generating equations
+Memory: 918/932 948/963
+-------    Current Progress:  72 % - Generating equations
+Memory: 921/932 952/963
+           Current Progress:   1 % - Generating equations
+Memory: 902/932 939/963
+           Current Progress:   2 % - Generating equations
+Memory: 909/932 942/963
+           Current Progress:   3 % - Generating equations
+Memory: 916/932 948/963
+<---- Compile Equations: Stationary in Study 1/Solution 1 (sol1) ---------------
+Started at Nov 9, 2026, 4:58:27?AM.
+Geometry shape function: Quadratic serendipity
+Running on AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD.
+Using 1 socket with 8 cores in total on Rudra_14.
+Available memory: 15.65 GB.
+           Current Progress:   4 % - Compile Equations: Stationary
+Memory: 931/962 956/986
+Time: 2 s.
+Physical memory: 967 MB
+Virtual memory: 990 MB
+Ended at Nov 9, 2026, 4:58:29?AM.
+----- Compile Equations: Stationary in Study 1/Solution 1 (sol1) -------------->
+<---- Dependent Variables 1 in Study 1/Solution 1 (sol1) -----------------------
+Started at Nov 9, 2026, 4:58:29?AM.
+           Current Progress:   4 % - Dependent Variables 1
+Memory: 966/971 989/994
+Solution time: 0 s.
+Physical memory: 971 MB
+Virtual memory: 994 MB
+Ended at Nov 9, 2026, 4:58:29?AM.
+----- Dependent Variables 1 in Study 1/Solution 1 (sol1) ---------------------->
+<---- Stationary Solver 1 in Study 1/Solution 1 (sol1) -------------------------
+Started at Nov 9, 2026, 4:58:29?AM.
+Continuation solver
+Nonlinear solver
+Number of degrees of freedom solved for: 99731 (plus 1 internal DOFs).
+    
+Continuation parameter P_step = 0.
+Continuation parameter stepsize CMPpcontstep = 0.
+           Current Progress:   5 % - Assembling sparsity pattern
+Memory: 1136/1146 1194/1205
+           Current Progress:   5 % - Assembling matrices
+Memory: 1419/1419 1482/1482
+           Current Progress:   5 % - 
+Memory: 1384/1427 1450/1490
+Symmetric matrices found.
+Scales for dependent variables:
+Auxiliary Pressure (comp1.solid.hmm1.pw): 1
+Displacement Field (comp1.u): 4.9e-10
+Orthonormal null-space function used.
+           Current Progress:   5 % - Matrix factorization
+Memory: 1379/1427 1437/1490
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+           Current Progress:   5 % - Solving linear system
+Memory: 2069/2069 2245/2245
+   1           0           0   1.0000000           0    3    1    2        0        0
+           Current Progress:   9 % - Update tangent
+Memory: 1956/2069 2121/2245
+    
+Continuation parameter P_step = 2000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+           Current Progress:   9 % - Assembling sparsity pattern
+Memory: 1998/2069 2161/2245
+           Current Progress:   9 % - Assembling matrices
+Memory: 2330/2330 2523/2523
+Nonsymmetric matrix found.
+           Current Progress:   9 % - Matrix factorization
+Memory: 1894/2367 1962/2559
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1       0.072          31   1.0000000        0.28    7    2    5  6.2e-10  1.1e-12
+           Current Progress:   9 % - Assembling sparsity pattern
+Memory: 2847/3048 3117/3341
+           Current Progress:   9 % - Assembling matrices
+Memory: 2871/3048 3149/3341
+           Current Progress:   9 % - Matrix factorization
+Memory: 2505/3118 2643/3408
+           Current Progress:   9 % - Solving linear system
+Memory: 3065/3118 3346/3408
+   2        0.31          57   0.1537048        0.36    8    3    7  1.9e-09  2.3e-11
+           Current Progress:   9 % - Assembling matrices
+Memory: 3130/3130 3422/3422
+           Current Progress:   9 % - 
+Memory: 3114/3147 3406/3442
+           Current Progress:   9 % - Matrix factorization
+Memory: 1886/3147 1944/3442
+           Current Progress:   9 % - Assembling residual
+Memory: 3040/3147 3321/3442
+   3       0.044     1.9e+02   1.0000000         0.2    9    4    9  7.5e-09  5.3e-12
+-          Current Progress:  11 % - Assembling matrices
+Memory: 3131/3147 3427/3442
+-          Current Progress:  11 % - Matrix factorization
+Memory: 1656/3172 1715/3471
+-          Current Progress:  11 % - Assembling residual
+Memory: 3053/3172 3345/3471
+   4       0.009         2.3   1.0000000       0.019   10    5   11  2.7e-09  2.7e-11
+-          Current Progress:  12 % - Assembling matrices
+Memory: 3079/3172 3363/3471
+-          Current Progress:  12 % - Matrix factorization
+Memory: 1679/3172 1802/3471
+-          Current Progress:  12 % - Solving linear system
+Memory: 3042/3172 3326/3471
+   5      0.0014         2.3   0.9261113       0.019   11    6   13  6.7e-09  3.9e-12
+-          Current Progress:  12 % - Assembling matrices
+Memory: 2990/3172 3272/3471
+-          Current Progress:  12 % - Matrix factorization
+Memory: 2010/3172 2175/3471
+-          Current Progress:  12 % - Solving linear system
+Memory: 3094/3172 3376/3471
+   6     9.8e-05      0.0029   1.0000000      0.0022   13    7   15  6.4e-09  1.9e-11
+-          Current Progress:  12 % - Update tangent
+Memory: 2964/3172 3238/3471
+    
+Continuation parameter P_step = 3000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+-          Current Progress:  12 % - Assembling matrices
+Memory: 3022/3172 3314/3471
+-          Current Progress:  12 % - Matrix factorization
+Memory: 2272/3172 2630/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0086          11   1.0000000       0.041   17    8   18  5.9e-10  6.8e-12
+-          Current Progress:  12 % - Assembling matrices
+Memory: 3019/3172 3292/3471
+-          Current Progress:  12 % - Matrix factorization
+Memory: 2436/3172 2654/3471
+-          Current Progress:  12 % - Assembling residual
+Memory: 3052/3172 3334/3471
+   2       0.036          19   0.1973512       0.045   18    9   20  1.2e-09  1.1e-10
+-          Current Progress:  13 % - Assembling matrices
+Memory: 3054/3172 3354/3471
+-          Current Progress:  13 % - Matrix factorization
+Memory: 1734/3172 1790/3471
+-          Current Progress:  13 % - Solving linear system
+Memory: 2980/3172 3261/3471
+   3      0.0052          45   1.0000000       0.037   19   10   22  8.3e-09  3.3e-12
+-          Current Progress:  14 % - Assembling matrices
+Memory: 3072/3172 3373/3471
+-          Current Progress:  14 % - 
+Memory: 3126/3172 3430/3471
+-          Current Progress:  14 % - Matrix factorization
+Memory: 1907/3172 1978/3471
+-          Current Progress:  14 % - Solving linear system
+Memory: 3068/3172 3363/3471
+   4     0.00038       0.067   1.0000000      0.0021   21   11   24  7.9e-09  7.6e-11
+-          Current Progress:  14 % - Update tangent
+Memory: 2947/3172 3233/3471
+    
+Continuation parameter P_step = 4000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+-          Current Progress:  14 % - Assembling matrices
+Memory: 3078/3172 3354/3471
+-          Current Progress:  14 % - Matrix factorization
+Memory: 1653/3172 1709/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0063         9.6   1.0000000       0.034   25   12   27  6.1e-10  1.7e-11
+-          Current Progress:  14 % - Assembling matrices
+Memory: 2984/3172 3257/3471
+-          Current Progress:  14 % - Matrix factorization
+Memory: 2929/3172 3332/3471
+-          Current Progress:  14 % - Solving linear system
+Memory: 3067/3172 3351/3471
+   2       0.088          21   0.1000000       0.098   26   13   29  2.7e-09  3.3e-10
+-          Current Progress:  14 % - Assembling matrices
+Memory: 3037/3172 3322/3471
+-          Current Progress:  14 % - Matrix factorization
+Memory: 2151/3172 2614/3471
+-          Current Progress:  14 % - Solving linear system
+Memory: 3032/3172 3303/3471
+   3       0.062          42   0.2575821       0.087   28   14   32  2.9e-09  6.5e-11
+-          Current Progress:  15 % - Assembling matrices
+Memory: 3011/3172 3284/3471
+-          Current Progress:  15 % - Matrix factorization
+Memory: 2795/3172 3079/3471
+   4        0.04     2.1e+02   1.0000000        0.06   29   15   34  1.3e-08  7.6e-12
+-          Current Progress:  15 % - Assembling matrices
+Memory: 2999/3172 3270/3471
+-          Current Progress:  15 % - Matrix factorization
+Memory: 2297/3172 2623/3471
+-          Current Progress:  15 % - Assembling residual
+Memory: 3034/3172 3322/3471
+   5       0.003         2.3   1.0000000      0.0065   30   16   36  5.2e-09    5e-11
+-          Current Progress:  16 % - Assembling matrices
+Memory: 3106/3172 3394/3471
+-          Current Progress:  16 % - Matrix factorization
+Memory: 1734/3173 1794/3471
+   6     9.7e-05         2.4   0.9844796      0.0062   31   17   38  1.5e-09  1.6e-12
+-          Current Progress:  16 % - 
+Memory: 3025/3173 3353/3471
+-          Current Progress:  16 % - Assembling matrices
+Memory: 3096/3173 3385/3471
+-          Current Progress:  16 % - Matrix factorization
+Memory: 2861/3173 3175/3471
+-          Current Progress:  16 % - Assembling residual
+Memory: 2980/3173 3260/3471
+   7     1.9e-06       4e-05   1.0000000     0.00017   33   18   40  2.3e-09  4.3e-11
+    
+Continuation parameter P_step = 4500.
+Continuation parameter stepsize CMPpcontstep = 500.
+-          Current Progress:  16 % - Assembling matrices
+Memory: 2990/3173 3272/3471
+-          Current Progress:  16 % - Matrix factorization
+Memory: 2715/3173 2983/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0013         3.2   1.0000000       0.011   37   19   43  2.2e-09  2.6e-11
+-          Current Progress:  16 % - Assembling matrices
+Memory: 3006/3173 3286/3471
+-          Current Progress:  16 % - Matrix factorization
+Memory: 3115/3173 3404/3471
+-          Current Progress:  16 % - Solving linear system
+Memory: 3063/3173 3343/3471
+   2      0.0057         5.2   0.2636590      0.0077   38   20   45  1.1e-08  2.4e-10
+-          Current Progress:  16 % - Assembling matrices
+Memory: 3019/3173 3298/3471
+-          Current Progress:  16 % - Matrix factorization
+Memory: 2161/3173 2663/3471
+   3     3.7e-06       0.007   1.0000000      0.0057   40   21   47  1.1e-08  1.1e-13
+-          Current Progress:  17 % - Update tangent
+Memory: 2983/3173 3264/3471
+    
+Continuation parameter P_step = 5500.
+Continuation parameter stepsize CMPpcontstep = 1000.
+-          Current Progress:  17 % - Assembling matrices
+Memory: 2990/3173 3272/3471
+-          Current Progress:  17 % - Matrix factorization
+Memory: 2689/3173 2955/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-          Current Progress:  17 % - Solving linear system
+Memory: 3035/3173 3315/3471
+   1      0.0072          13   1.0000000       0.039   44   22   50  1.3e-09  2.1e-12
+-          Current Progress:  17 % - Assembling matrices
+Memory: 3128/3173 3413/3471
+-          Current Progress:  17 % - Matrix factorization
+Memory: 1786/3180 1932/3471
+   2        0.01          16   0.5961346       0.024   45   23   52  8.2e-09  2.3e-11
+-          Current Progress:  17 % - 
+Memory: 3049/3180 3372/3471
+-          Current Progress:  17 % - Assembling matrices
+Memory: 3081/3180 3368/3471
+-          Current Progress:  17 % - 
+Memory: 3117/3180 3408/3471
+-          Current Progress:  17 % - Matrix factorization
+Memory: 1796/3180 1951/3471
+-          Current Progress:  17 % - Solving linear system
+Memory: 3062/3180 3346/3471
+   3     0.00083        0.92   1.0000000       0.012   47   24   54  4.6e-09  4.2e-12
+-          Current Progress:  19 % - Update tangent
+Memory: 2958/3180 3233/3471
+    
+Continuation parameter P_step = 6000.
+Continuation parameter stepsize CMPpcontstep = 500.
+-          Current Progress:  19 % - Assembling matrices
+Memory: 3079/3180 3361/3471
+-          Current Progress:  19 % - Matrix factorization
+Memory: 1751/3180 1830/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+-          Current Progress:  19 % - Assembling residual
+Memory: 3075/3180 3349/3471
+   1      0.0016         3.6   1.0000000        0.01   51   25   57    2e-09  3.6e-11
+-          Current Progress:  19 % - Assembling matrices
+Memory: 3061/3180 3345/3471
+-          Current Progress:  19 % - Matrix factorization
+Memory: 1761/3180 1820/3471
+   2       0.024         7.8   0.1000000       0.027   52   26   59  8.2e-09  5.3e-10
+-          Current Progress:  19 % - 
+Memory: 2975/3180 3301/3471
+-          Current Progress:  19 % - Assembling matrices
+Memory: 3062/3180 3341/3471
+-          Current Progress:  19 % - Constraint handling
+Memory: 3111/3180 3397/3471
+-          Current Progress:  19 % - Matrix factorization
+Memory: 1883/3180 1938/3471
+   3       0.007     1.4e+02   1.0000000       0.024   53   27   61  7.8e-09  5.6e-12
+-          Current Progress:  19 % - Assembling matrices
+Memory: 2999/3180 3273/3471
+-          Current Progress:  19 % - Matrix factorization
+Memory: 2702/3180 2984/3471
+-          Current Progress:  19 % - Assembling residual
+Memory: 3033/3180 3320/3471
+   4     8.4e-05       0.017   1.0000000     0.00043   55   28   63  9.4e-09  2.3e-09
+--         Current Progress:  20 % - Update tangent
+Memory: 2933/3180 3215/3471
+    
+Continuation parameter P_step = 8000.
+Continuation parameter stepsize CMPpcontstep = 2000.
+--         Current Progress:  20 % - Assembling matrices
+Memory: 3070/3180 3361/3471
+--         Current Progress:  20 % - Matrix factorization
+Memory: 1736/3180 1793/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1       0.015          34   1.0000000       0.076   59   29   66  2.3e-10  6.6e-13
+--         Current Progress:  20 % - Assembling matrices
+Memory: 2983/3180 3261/3471
+--         Current Progress:  20 % - Matrix factorization
+Memory: 2821/3180 3096/3471
+   2       0.086          62   0.1221719       0.098   60   30   68  3.2e-09  2.6e-11
+--         Current Progress:  20 % - 
+Memory: 3044/3180 3325/3471
+--         Current Progress:  20 % - Assembling matrices
+Memory: 3089/3180 3365/3471
+--         Current Progress:  20 % - 
+Memory: 3139/3180 3421/3471
+--         Current Progress:  20 % - Matrix factorization
+Memory: 1902/3180 1951/3471
+--         Current Progress:  20 % - Solving linear system
+Memory: 3064/3180 3338/3471
+   3       0.053          66   0.3981564       0.092   62   31   71  3.6e-09  1.1e-11
+--         Current Progress:  22 % - Assembling matrices
+Memory: 3096/3180 3381/3471
+--         Current Progress:  22 % - Matrix factorization
+Memory: 1637/3180 1752/3471
+--         Current Progress:  22 % - Solving linear system
+Memory: 3068/3180 3351/3471
+   4        0.03     1.2e+02   1.0000000       0.064   63   32   73  2.3e-09    3e-12
+--         Current Progress:  22 % - Assembling matrices
+Memory: 3074/3180 3359/3471
+--         Current Progress:  22 % - Matrix factorization
+Memory: 1749/3182 1796/3471
+--         Current Progress:  22 % - Assembling residual
+Memory: 3096/3182 3370/3471
+   5       0.015          23   1.0000000       0.025   64   33   75  3.1e-09  8.8e-12
+--         Current Progress:  22 % - Assembling matrices
+Memory: 3109/3182 3394/3471
+--         Current Progress:  22 % - Matrix factorization
+Memory: 1807/3182 1865/3471
+   6       0.041          22   0.1985337       0.051   65   34   77  4.8e-09  5.2e-10
+--         Current Progress:  22 % - Assembling matrices
+Memory: 3037/3182 3317/3471
+--         Current Progress:  22 % - Matrix factorization
+Memory: 2950/3182 3349/3471
+--         Current Progress:  22 % - Solving linear system
+Memory: 3060/3182 3346/3471
+   7       0.021          30   0.4635502       0.045   67   35   80  7.5e-10  8.6e-12
+--         Current Progress:  22 % - Assembling matrices
+Memory: 3005/3182 3289/3471
+--         Current Progress:  22 % - 
+Memory: 3112/3182 3402/3471
+--         Current Progress:  22 % - Matrix factorization
+Memory: 1854/3182 1951/3471
+--         Current Progress:  22 % - Assembling residual
+Memory: 3057/3182 3339/3471
+   8      0.0015          34   1.0000000       0.028   68   36   82  5.1e-09  5.8e-13
+--         Current Progress:  23 % - Assembling matrices
+Memory: 3102/3182 3395/3471
+--         Current Progress:  23 % - Matrix factorization
+Memory: 1812/3182 1999/3471
+--         Current Progress:  23 % - Assembling residual
+Memory: 3098/3182 3388/3471
+   9      0.0098          26   0.2432318       0.012   69   37   84  3.8e-09  4.3e-12
+--         Current Progress:  23 % - Assembling matrices
+Memory: 3040/3182 3315/3471
+--         Current Progress:  23 % - Matrix factorization
+Memory: 1981/3182 2167/3471
+  10      0.0044         7.8   0.9201093       0.012   70   38   86  1.2e-09  6.6e-12
+--         Current Progress:  23 % - Assembling matrices
+Memory: 3058/3182 3340/3471
+--         Current Progress:  23 % - Matrix factorization
+Memory: 2620/3182 2859/3471
+  11     0.00092        0.77   1.0000000      0.0083   72   39   88  4.6e-09  3.6e-12
+--         Current Progress:  23 % - Update tangent
+Memory: 2997/3182 3267/3471
+    
+Continuation parameter P_step = 9000.
+Continuation parameter stepsize CMPpcontstep = 1000.
+--         Current Progress:  23 % - Assembling matrices
+Memory: 3026/3182 3299/3471
+--         Current Progress:  23 % - Matrix factorization
+Memory: 2836/3182 3109/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--         Current Progress:  23 % - Assembling residual
+Memory: 3045/3182 3317/3471
+   1      0.0058          16   1.0000000       0.021   76   40   91  8.4e-10  1.6e-12
+--         Current Progress:  23 % - Assembling matrices
+Memory: 3078/3182 3361/3471
+--         Current Progress:  23 % - Matrix factorization
+Memory: 1771/3182 2124/3471
+--         Current Progress:  23 % - Assembling residual
+Memory: 3065/3182 3348/3471
+   2       0.041          32   0.1000000       0.045   77   41   93  6.2e-09    7e-11
+--         Current Progress:  24 % - Assembling matrices
+Memory: 3079/3182 3368/3471
+--         Current Progress:  24 % - Matrix factorization
+Memory: 1707/3182 1794/3471
+--         Current Progress:  24 % - Solving linear system
+Memory: 3036/3182 3318/3471
+   3        0.03          40   0.2680258       0.042   79   42   96  7.5e-09  3.5e-11
+--         Current Progress:  24 % - 
+Memory: 2946/3182 3221/3471
+--         Current Progress:  24 % - Assembling matrices
+Memory: 3076/3182 3373/3471
+--         Current Progress:  24 % - Matrix factorization
+Memory: 3130/3182 3430/3471
+--         Current Progress:  24 % - Solving linear system
+Memory: 3069/3182 3359/3471
+   4       0.024     1.4e+02   1.0000000        0.03   80   43   98  3.5e-09  5.8e-12
+--         Current Progress:  24 % - Assembling matrices
+Memory: 3057/3182 3356/3471
+--         Current Progress:  24 % - Matrix factorization
+Memory: 1660/3182 1768/3471
+--         Current Progress:  24 % - Solving linear system
+Memory: 3087/3182 3362/3471
+   5      0.0035         5.2   1.0000000      0.0057   81   44  100  1.8e-09  4.7e-11
+--         Current Progress:  25 % - Assembling matrices
+Memory: 3050/3182 3325/3471
+--         Current Progress:  25 % - Matrix factorization
+Memory: 2245/3182 2671/3471
+   6      0.0063         5.1   0.3365032      0.0096   82   45  102  6.2e-09  4.2e-11
+--         Current Progress:  25 % - Assembling matrices
+Memory: 3043/3182 3316/3471
+--         Current Progress:  25 % - Matrix factorization
+Memory: 2277/3182 2637/3471
+--         Current Progress:  25 % - Assembling residual
+Memory: 3057/3182 3333/3471
+   7     0.00016        0.36   1.0000000      0.0065   84   46  104  4.9e-09  8.6e-13
+    
+Continuation parameter P_step = 9904.14.
+Continuation parameter stepsize CMPpcontstep = 904.14.
+--         Current Progress:  25 % - Assembling matrices
+Memory: 3036/3182 3308/3471
+--         Current Progress:  25 % - Matrix factorization
+Memory: 2909/3182 3210/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--         Current Progress:  25 % - Solving linear system
+Memory: 3043/3182 3339/3471
+   1      0.0068          22   1.0000000       0.021   88   47  107  4.9e-10  6.2e-13
+--         Current Progress:  25 % - Assembling matrices
+Memory: 3030/3182 3326/3471
+--         Current Progress:  25 % - Matrix factorization
+Memory: 2008/3182 2190/3471
+--         Current Progress:  25 % - Solving linear system
+Memory: 3080/3182 3372/3471
+   2       0.012          31   0.4113542        0.02   89   48  109  2.1e-09  1.7e-11
+--         Current Progress:  25 % - Assembling matrices
+Memory: 3097/3182 3383/3471
+--         Current Progress:  25 % - 
+Memory: 3107/3182 3400/3471
+--         Current Progress:  25 % - Matrix factorization
+Memory: 1869/3182 1929/3471
+   3     0.00087         3.9   1.0000000       0.014   91   49  111  4.7e-09  1.2e-12
+--         Current Progress:  27 % - Update tangent
+Memory: 2991/3182 3272/3471
+    
+Continuation parameter P_step = 10000.
+Continuation parameter stepsize CMPpcontstep = 95.8603.
+--         Current Progress:  27 % - Assembling matrices
+Memory: 3041/3182 3316/3471
+--         Current Progress:  27 % - Matrix factorization
+Memory: 1725/3182 1794/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0026          73   1.0000000      0.0039   95   50  114  3.5e-09  2.8e-11
+--         Current Progress:  27 % - Assembling matrices
+Memory: 3019/3182 3310/3471
+--         Current Progress:  27 % - Matrix factorization
+Memory: 3139/3182 3431/3471
+--         Current Progress:  27 % - Solving linear system
+Memory: 3081/3182 3364/3471
+   2      0.0066     1.2e+02   0.2066334      0.0084   96   51  116  2.9e-09  7.3e-11
+--         Current Progress:  27 % - Assembling sparsity pattern
+Memory: 3013/3182 3286/3471
+--         Current Progress:  27 % - Assembling matrices
+Memory: 3093/3182 3398/3471
+--         Current Progress:  27 % - Matrix factorization
+Memory: 1803/3182 1955/3471
+--         Current Progress:  27 % - Assembling residual
+Memory: 3032/3182 3324/3471
+   3     0.00063          63   1.0000000      0.0067   98   52  118  2.6e-09  2.8e-12
+    
+Continuation parameter P_step = 12500.
+Continuation parameter stepsize CMPpcontstep = 2500.
+--         Current Progress:  27 % - 
+Memory: 2994/3182 3288/3471
+--         Current Progress:  27 % - Assembling matrices
+Memory: 3077/3182 3360/3471
+--         Current Progress:  27 % - Matrix factorization
+Memory: 2932/3182 3326/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+--         Current Progress:  27 % - Solving linear system
+Memory: 3061/3182 3337/3471
+   1       0.042     1.9e+02   1.0000000        0.19  102   53  121  1.6e-10  1.6e-14
+--         Current Progress:  27 % - Assembling matrices
+Memory: 3042/3182 3328/3471
+--         Current Progress:  27 % - Matrix factorization
+Memory: 1750/3182 1834/3471
+   2        0.12     2.5e+02   0.3190257        0.17  103   54  123  8.7e-10  2.9e-13
+--         Current Progress:  28 % - Assembling matrices
+Memory: 3030/3182 3310/3471
+--         Current Progress:  28 % - Matrix factorization
+Memory: 2367/3182 2676/3471
+--         Current Progress:  28 % - Assembling residual
+Memory: 3054/3182 3330/3471
+   3       0.023          23   1.0000000        0.11  104   55  125  1.9e-09  6.9e-12
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3058/3182 3342/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1748/3182 1811/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3042/3182 3330/3471
+   4        0.05          21   0.1178708       0.057  106   56  128  1.3e-09  4.2e-11
+---        Current Progress:  30 % - 
+Memory: 2938/3182 3264/3471
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3080/3182 3353/3471
+---        Current Progress:  30 % - Constraint handling
+Memory: 3087/3182 3366/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1862/3182 1909/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3020/3182 3290/3471
+   5       0.043          17   0.1512410       0.051  108   57  131  3.3e-09  3.6e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3008/3182 3280/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 2949/3182 3236/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3031/3182 3322/3471
+   6       0.035          14   0.2068477       0.045  110   58  134  6.3e-10  2.6e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3007/3182 3291/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1617/3182 1737/3471
+---        Current Progress:  30 % - Assembling residual
+Memory: 2994/3182 3289/3471
+   7       0.025          11   0.3192460       0.037  112   59  137  3.5e-09  1.7e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 2988/3182 3285/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 2629/3182 2801/3471
+   8       0.019          22   1.0000000       0.028  113   60  139  3.6e-09  4.2e-12
+---        Current Progress:  30 % - Assembling matrices
+Memory: 2994/3182 3278/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 2656/3182 2958/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3044/3182 3324/3471
+   9      0.0049         2.4   1.0000000      0.0072  114   61  141    2e-09  1.3e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3014/3182 3300/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1685/3182 1749/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3030/3182 3320/3471
+  10       0.017         2.4   0.1283539       0.019  115   62  143  4.8e-09  3.7e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3079/3182 3365/3471
+---        Current Progress:  30 % - 
+Memory: 3115/3182 3409/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1876/3182 1954/3471
+---        Current Progress:  30 % - Assembling residual
+Memory: 3064/3182 3350/3471
+  11       0.011         3.1   0.3247594       0.018  117   63  146    4e-09  1.8e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 2994/3182 3277/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 2524/3182 2754/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 2992/3182 3261/3471
+  12      0.0056         7.1   1.0000000       0.012  118   64  148  2.3e-09  3.6e-12
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3096/3182 3386/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1863/3182 1989/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3089/3182 3380/3471
+  13      0.0015        0.41   1.0000000      0.0029  119   65  150  1.5e-09  2.2e-11
+---        Current Progress:  30 % - Assembling matrices
+Memory: 3052/3182 3368/3471
+---        Current Progress:  30 % - Matrix factorization
+Memory: 1762/3182 2201/3471
+---        Current Progress:  30 % - Solving linear system
+Memory: 3071/3182 3357/3471
+  14       0.001         0.4   0.7061861      0.0034  120   66  152  4.3e-09  1.2e-11
+---        Current Progress:  31 % - Assembling matrices
+Memory: 3107/3182 3393/3471
+---        Current Progress:  31 % - Matrix factorization
+Memory: 1870/3182 1953/3471
+---        Current Progress:  31 % - Solving linear system
+Memory: 3051/3182 3328/3471
+  15     6.3e-05      0.0072   1.0000000      0.0012  122   67  154  3.8e-09    1e-11
+    
+Continuation parameter P_step = 13750.
+Continuation parameter stepsize CMPpcontstep = 1250.
+---        Current Progress:  31 % - Assembling residual
+Memory: 3009/3182 3284/3471
+---        Current Progress:  31 % - Assembling matrices
+Memory: 3108/3182 3421/3471
+---        Current Progress:  31 % - 
+Memory: 3148/3182 3466/3471
+---        Current Progress:  31 % - Matrix factorization
+Memory: 1884/3182 2005/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  31 % - Solving linear system
+Memory: 3075/3182 3384/3471
+   1       0.016          83   1.0000000       0.058  126   68  157    3e-10    6e-14
+---        Current Progress:  31 % - Assembling matrices
+Memory: 3095/3182 3381/3471
+---        Current Progress:  31 % - Matrix factorization
+Memory: 1859/3182 1964/3471
+---        Current Progress:  31 % - Solving linear system
+Memory: 3061/3182 3347/3471
+   2       0.038     1.1e+02   0.3391306       0.057  127   69  159  9.5e-10  1.8e-12
+---        Current Progress:  31 % - Assembling matrices
+Memory: 3091/3182 3377/3471
+---        Current Progress:  31 % - 
+Memory: 3142/3182 3434/3471
+---        Current Progress:  31 % - Matrix factorization
+Memory: 1914/3182 1973/3471
+---        Current Progress:  31 % - Solving linear system
+Memory: 3064/3182 3348/3471
+   3      0.0044          10   1.0000000       0.038  128   70  161  5.9e-10  1.3e-11
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3098/3182 3371/3471
+---        Current Progress:  32 % - Constraint handling
+Memory: 3141/3182 3423/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 1911/3182 1961/3471
+---        Current Progress:  32 % - Solving linear system
+Memory: 3077/3182 3352/3471
+   4       0.002          23   0.5531330       0.019  129   71  163    3e-09  1.6e-13
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3059/3182 3340/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 1707/3182 1788/3471
+---        Current Progress:  32 % - Solving linear system
+Memory: 3072/3182 3371/3471
+   5      0.0041          14   0.4805914      0.0065  130   72  165  2.4e-09  7.6e-12
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3058/3182 3353/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 2389/3182 2641/3471
+---        Current Progress:  32 % - Solving linear system
+Memory: 3048/3182 3324/3471
+   6      0.0032         8.5   0.6562580      0.0069  131   73  167  2.3e-09  6.4e-12
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3051/3182 3336/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 2180/3182 2659/3471
+   7     0.00066         1.5   1.0000000      0.0056  133   74  169  4.2e-09  2.1e-12
+---        Current Progress:  32 % - Update tangent
+Memory: 2984/3182 3254/3471
+    
+Continuation parameter P_step = 14473.2.
+Continuation parameter stepsize CMPpcontstep = 723.159.
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3040/3182 3311/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 1598/3182 1651/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  32 % - Assembling residual
+Memory: 3029/3182 3309/3471
+   1      0.0039          17   1.0000000      0.0096  137   75  172  4.2e-10  1.5e-12
+---        Current Progress:  32 % - Assembling matrices
+Memory: 3063/3182 3346/3471
+---        Current Progress:  32 % - Matrix factorization
+Memory: 1688/3182 1742/3471
+---        Current Progress:  32 % - Solving linear system
+Memory: 3043/3182 3323/3471
+   2       0.031          41   0.1000000       0.034  138   76  174  4.4e-09  8.5e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3015/3182 3287/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 2593/3182 2737/3471
+---        Current Progress:  33 % - Assembling residual
+Memory: 3026/3182 3308/3471
+   3       0.027          44   0.1000000        0.03  140   77  177  1.6e-09  6.4e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3015/3182 3296/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 2684/3182 2991/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3077/3182 3362/3471
+   4       0.024          46   0.1000000       0.027  142   78  180  3.4e-09  5.3e-11
+---        Current Progress:  33 % - 
+Memory: 3046/3182 3335/3471
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3101/3182 3377/3471
+---        Current Progress:  33 % - 
+Memory: 3116/3182 3397/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1832/3182 1927/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 2980/3182 3251/3471
+   5       0.022          47   0.1011966       0.025  144   79  183  3.9e-09  4.7e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3092/3182 3369/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1849/3182 1981/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3084/3182 3360/3471
+   6       0.021          48   0.1180633       0.023  146   80  186  7.7e-10    4e-11
+---        Current Progress:  33 % - 
+Memory: 2967/3182 3243/3471
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3084/3182 3376/3471
+---        Current Progress:  33 % - 
+Memory: 3088/3182 3385/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1833/3182 1934/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3032/3182 3321/3471
+   7       0.019          50   0.1418991       0.022  148   81  189  4.7e-09  3.3e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3090/3182 3366/3471
+---        Current Progress:  33 % - 
+Memory: 3136/3182 3418/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1897/3182 1963/3471
+---        Current Progress:  33 % - Assembling residual
+Memory: 3077/3182 3351/3471
+   8       0.016          52   0.1784817        0.02  150   82  192  4.3e-09  2.6e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3019/3182 3290/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1771/3182 2138/3471
+---        Current Progress:  33 % - Assembling residual
+Memory: 3038/3182 3313/3471
+   9       0.013          56   0.2429074       0.017  152   83  195  1.8e-09    2e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3021/3182 3297/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 2362/3182 2654/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 2984/3182 3260/3471
+  10      0.0085          65   0.3928623       0.015  154   84  198  1.6e-09  1.1e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3110/3182 3384/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1768/3182 1822/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3044/3182 3318/3471
+  11      0.0042     1.1e+02   1.0000000       0.011  155   85  200  2.8e-09  2.9e-12
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3081/3182 3378/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1762/3182 1951/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3048/3182 3345/3471
+  12      0.0024          17   1.0000000      0.0043  156   86  202  2.8e-09  1.1e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3117/3182 3415/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1818/3182 1989/3471
+---        Current Progress:  33 % - Assembling residual
+Memory: 3051/3182 3346/3471
+  13      0.0041          16   0.3873786      0.0066  157   87  204  8.8e-09  1.8e-11
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3078/3182 3354/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1851/3182 1917/3471
+---        Current Progress:  33 % - Assembling residual
+Memory: 3021/3182 3294/3471
+  14     0.00022         1.8   1.0000000      0.0046  159   88  206    2e-09  8.6e-13
+    
+Continuation parameter P_step = 14973.2.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3007/3182 3278/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 2946/3182 3321/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  33 % - Solving linear system
+Memory: 3031/3182 3311/3471
+   1      0.0031          16   1.0000000      0.0068  163   89  209  6.9e-10  1.1e-12
+---        Current Progress:  33 % - Assembling matrices
+Memory: 3073/3182 3354/3471
+---        Current Progress:  33 % - Matrix factorization
+Memory: 1909/3182 1980/3471
+---        Current Progress:  33 % - Solving linear system
+Memory: 3088/3182 3368/3471
+   2       0.015          32   0.1000000       0.017  164   90  211    5e-09  8.1e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3057/3182 3351/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1750/3182 1822/3471
+---        Current Progress:  34 % - Assembling residual
+Memory: 2997/3182 3275/3471
+   3       0.012          36   0.1879290       0.015  166   91  214  7.1e-09  4.8e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3104/3182 3386/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1697/3182 1743/3471
+---        Current Progress:  34 % - Assembling residual
+Memory: 3006/3182 3273/3471
+   4      0.0085          45   0.3082321       0.013  168   92  217  2.1e-09  2.5e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3085/3182 3382/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1858/3182 1992/3471
+---        Current Progress:  34 % - Solving linear system
+Memory: 3093/3182 3392/3471
+   5      0.0055     1.2e+02   1.0000000      0.0093  169   93  219  7.3e-09  5.4e-12
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3056/3182 3352/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 2394/3182 2702/3471
+   6      0.0013           7   1.0000000      0.0023  170   94  221  3.5e-09  2.1e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3002/3182 3275/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 2719/3182 3031/3471
+---        Current Progress:  34 % - Solving linear system
+Memory: 3041/3182 3332/3471
+   7      0.0019         6.9   0.4394204      0.0034  171   95  223    6e-09  2.8e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3036/3182 3311/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1635/3182 1703/3471
+---        Current Progress:  34 % - Assembling residual
+Memory: 2980/3182 3248/3471
+   8     3.5e-05        0.19   1.0000000       0.002  173   96  225  5.6e-09    7e-13
+    
+Continuation parameter P_step = 15000.
+Continuation parameter stepsize CMPpcontstep = 26.8407.
+---        Current Progress:  34 % - 
+Memory: 2911/3182 3232/3471
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3074/3182 3353/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1847/3182 1956/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  34 % - Assembling residual
+Memory: 3062/3182 3340/3471
+   1     0.00014         4.4   1.0000000     0.00032  178   97  228    3e-09    1e-10
+---        Current Progress:  34 % - Update tangent
+Memory: 2975/3182 3249/3471
+    
+Continuation parameter P_step = 16037.9.
+Continuation parameter stepsize CMPpcontstep = 1037.88.
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3076/3182 3363/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1661/3182 1729/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  34 % - Solving linear system
+Memory: 3023/3182 3303/3471
+   1      0.0061          29   1.0000000       0.017  182   98  231  3.6e-10  9.4e-13
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3078/3182 3352/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1743/3182 1824/3471
+---        Current Progress:  34 % - Solving linear system
+Memory: 3018/3182 3293/3471
+   2       0.034          59   0.1000000       0.038  183   99  233  4.2e-09  5.5e-11
+---        Current Progress:  34 % - Assembling matrices
+Memory: 3091/3182 3377/3471
+---        Current Progress:  34 % - Matrix factorization
+Memory: 1786/3182 1916/3471
+---        Current Progress:  34 % - Solving linear system
+Memory: 3016/3182 3299/3471
+   3       0.031          61   0.1000000       0.035  185  100  236  4.7e-09  4.6e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3083/3182 3366/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1654/3182 1788/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3089/3182 3383/3471
+   4       0.029          61   0.1000000       0.032  187  101  239  3.4e-09  4.1e-11
+---        Current Progress:  35 % - Assembling sparsity pattern
+Memory: 3057/3182 3345/3471
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3129/3182 3417/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 3139/3182 3428/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3055/3182 3336/3471
+   5       0.028          61   0.1000000       0.031  189  102  242  3.1e-09  3.7e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3056/3182 3336/3471
+---        Current Progress:  35 % - 
+Memory: 3138/3182 3432/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1898/3182 1965/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 2974/3182 3252/3471
+   6       0.026          61   0.1000000       0.029  191  103  245  4.8e-09  1.1e-10
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3076/3182 3355/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1817/3182 1930/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3030/3182 3305/3471
+   7       0.025          60   0.1000000       0.028  193  104  248  1.9e-09  3.7e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3046/3182 3333/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 2721/3182 3003/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3067/3182 3353/3471
+   8       0.024          59   0.1027998       0.027  195  105  251  2.5e-09    3e-11
+---        Current Progress:  35 % - 
+Memory: 3017/3182 3299/3471
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3084/3182 3372/3471
+---        Current Progress:  35 % - 
+Memory: 3097/3182 3393/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1871/3182 1934/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3028/3182 3314/3471
+   9       0.023          59   0.1073353       0.026  197  106  254  1.6e-09    3e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3023/3182 3310/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 2822/3182 3151/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3076/3182 3371/3471
+  10       0.022          58   0.1125649       0.025  199  107  257    2e-09  3.1e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3074/3182 3348/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1952/3182 2164/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3014/3182 3281/3471
+  11       0.021          57   0.1186918       0.024  201  108  260  2.8e-09  3.9e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3101/3182 3387/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1755/3182 1837/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3058/3182 3342/3471
+  12        0.02          57   0.1259892       0.023  203  109  263  1.5e-09  2.7e-11
+---        Current Progress:  35 % - 
+Memory: 2999/3182 3313/3471
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3115/3182 3390/3471
+---        Current Progress:  35 % - Constraint handling
+Memory: 3124/3182 3403/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1909/3182 1956/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3082/3182 3354/3471
+  13       0.019          56   0.1348517       0.022  205  110  266  3.4e-09  2.5e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3061/3182 3333/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 2867/3182 3174/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3082/3182 3362/3471
+  14       0.018          55   0.1458738       0.021  207  111  269    4e-09  3.2e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3105/3182 3386/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1795/3182 1955/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3057/3182 3333/3471
+  15       0.017          55   0.1600119        0.02  209  112  272  5.4e-09  2.1e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3067/3182 3364/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1774/3182 2149/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3020/3182 3311/3471
+  16       0.016          54   0.1788925       0.019  211  113  275    2e-09    2e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3101/3182 3392/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1684/3182 1770/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3048/3182 3333/3471
+  17       0.014          54   0.2056053       0.018  213  114  278  2.8e-09  1.8e-11
+---        Current Progress:  35 % - 
+Memory: 2981/3182 3324/3471
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3070/3182 3353/3471
+---        Current Progress:  35 % - 
+Memory: 3126/3182 3421/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1892/3182 1955/3471
+---        Current Progress:  35 % - Assembling residual
+Memory: 3058/3182 3344/3471
+  18       0.013          55   0.2469110       0.017  215  115  281  2.1e-09  1.5e-11
+---        Current Progress:  35 % - Assembling matrices
+Memory: 2999/3182 3279/3471
+---        Current Progress:  35 % - Constraint handling
+Memory: 3090/3182 3372/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1846/3182 1910/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3028/3182 3302/3471
+  19        0.01          56   0.3214871       0.015  217  116  284  4.7e-09  1.2e-11
+---        Current Progress:  35 % - 
+Memory: 3018/3182 3310/3471
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3103/3182 3379/3471
+---        Current Progress:  35 % - 
+Memory: 3138/3182 3424/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1885/3182 1966/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3071/3182 3348/3471
+  20       0.013     1.4e+02   1.0000000       0.013  218  117  286  7.9e-09  5.3e-12
+---        Current Progress:  35 % - Assembling matrices
+Memory: 3084/3182 3379/3471
+---        Current Progress:  35 % - Constraint handling
+Memory: 3112/3182 3411/3471
+---        Current Progress:  35 % - Matrix factorization
+Memory: 1884/3182 1950/3471
+---        Current Progress:  35 % - Solving linear system
+Memory: 3035/3182 3325/3471
+  21      0.0032          15   1.0000000      0.0044  219  118  288  2.2e-09  1.2e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3088/3182 3376/3471
+---        Current Progress:  36 % - 
+Memory: 3141/3182 3437/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1915/3182 1978/3471
+  22       0.012          15   0.1001834       0.014  220  119  290  5.6e-09  4.8e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3054/3182 3338/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 3035/3182 3340/3471
+---        Current Progress:  36 % - Solving linear system
+Memory: 3008/3182 3299/3471
+  23        0.01          17   0.1985102       0.013  222  120  293  4.4e-09  3.4e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3107/3182 3392/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1897/3182 1992/3471
+---        Current Progress:  36 % - 
+Memory: 3081/3182 3365/3471
+  24      0.0069          21   0.3287391       0.011  224  121  296  4.5e-09  1.8e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3021/3182 3300/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2893/3182 3167/3471
+  25       0.004          48   1.0000000      0.0078  225  122  298  7.5e-09  6.4e-12
+    
+Continuation parameter P_step = 15518.9.
+Continuation parameter stepsize CMPpcontstep = 518.941.
+---        Current Progress:  36 % - 
+Memory: 3025/3182 3297/3471
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3086/3182 3361/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 3128/3182 3422/3471
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  36 % - Solving linear system
+Memory: 3046/3182 3319/3471
+   1      0.0015           8   1.0000000      0.0034  227  123  300  4.4e-10  1.1e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3099/3182 3384/3471
+---        Current Progress:  36 % - 
+Memory: 3168/3182 3461/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1958/3182 2019/3471
+   2       0.036          59   0.1000000       0.042  228  124  302  5.3e-09  1.5e-10
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3052/3182 3331/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2796/3182 3101/3471
+---        Current Progress:  36 % - Solving linear system
+Memory: 3093/3182 3379/3471
+   3       0.027          65   0.0703464       0.029  230  125  305  7.9e-09  9.5e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3069/3182 3350/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2594/3188 2831/3471
+---        Current Progress:  36 % - Assembling residual
+Memory: 3068/3188 3338/3471
+   4       0.025          71   0.0774033       0.027  232  126  308  3.9e-09  8.8e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3045/3188 3318/3471
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2836/3188 3114/3475
+---        Current Progress:  36 % - Assembling residual
+Memory: 3056/3188 3342/3475
+   5       0.023          76   0.0861634       0.025  234  127  311  7.2e-09  6.7e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3076/3188 3363/3475
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1764/3188 1818/3475
+---        Current Progress:  36 % - Solving linear system
+Memory: 3044/3188 3322/3475
+   6       0.021          81   0.0945601       0.023  236  128  314  5.1e-09  6.1e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3044/3188 3315/3475
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1841/3188 2206/3475
+---        Current Progress:  36 % - Solving linear system
+Memory: 3094/3188 3383/3475
+   7       0.019          85   0.1045796       0.021  238  129  317  3.8e-09    5e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3082/3188 3369/3475
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1716/3188 1770/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3082/3188 3365/3478
+   8       0.017          88   0.1201396       0.019  240  130  320  1.7e-09  4.3e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3117/3188 3419/3478
+---        Current Progress:  36 % - Constraint handling
+Memory: 3166/3188 3475/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1866/3188 1942/3478
+---        Current Progress:  36 % - Assembling residual
+Memory: 3012/3188 3308/3478
+   9       0.015          93   0.1493168       0.018  242  131  323  2.7e-09  3.5e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3082/3188 3360/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1598/3188 1652/3478
+---        Current Progress:  36 % - Assembling residual
+Memory: 3017/3188 3295/3478
+  10       0.013          99   0.1975136       0.016  244  132  326  1.7e-09  2.8e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3067/3188 3356/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1723/3188 1777/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 2969/3188 3238/3478
+  11      0.0094     1.1e+02   0.2943773       0.014  246  133  329  4.7e-09  2.3e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3064/3188 3348/3478
+---        Current Progress:  36 % - 
+Memory: 3087/3188 3372/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1862/3188 1914/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3007/3188 3281/3478
+  12      0.0089       3e+02   1.0000000       0.011  247  134  331    7e-09  6.5e-12
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3101/3188 3378/3478
+---        Current Progress:  36 % - 
+Memory: 3146/3188 3430/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1924/3188 1976/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3061/3188 3335/3478
+  13      0.0019          21   1.0000000      0.0029  248  135  333  4.6e-09  1.7e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3102/3188 3380/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1840/3188 1973/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3079/3188 3357/3478
+  14      0.0049          21   0.2078858      0.0061  249  136  335  2.1e-09  4.6e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3087/3188 3377/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1715/3188 1801/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3096/3188 3372/3478
+  15      0.0017          68   1.0000000      0.0051  250  137  337  8.2e-09  5.1e-12
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3096/3188 3397/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1755/3188 1865/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3071/3188 3347/3478
+  16     0.00021        0.75   1.0000000     0.00058  252  138  339  3.6e-09  4.6e-11
+    
+Continuation parameter P_step = 16018.9.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  36 % - Assembling residual
+Memory: 3006/3188 3277/3478
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3098/3188 3378/3478
+---        Current Progress:  36 % - 
+Memory: 3090/3188 3373/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1865/3188 1917/3478
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  36 % - Solving linear system
+Memory: 3025/3188 3301/3478
+   1      0.0022          11   1.0000000      0.0048  256  139  342  5.9e-10  3.6e-12
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3118/3188 3394/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1782/3188 1842/3478
+---        Current Progress:  36 % - 
+Memory: 3053/3188 3328/3478
+   2       0.025          36   0.1000000       0.028  257  140  344  2.2e-09  1.4e-10
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3096/3188 3381/3478
+---        Current Progress:  36 % - 
+Memory: 3112/3188 3401/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1856/3188 1939/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3022/3188 3303/3478
+   3        0.02          43   0.1000000       0.022  259  141  347  1.2e-09  9.5e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3030/3188 3312/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1625/3188 1680/3478
+---        Current Progress:  36 % - Assembling residual
+Memory: 3048/3188 3329/3478
+   4       0.018          47   0.1000000        0.02  261  142  350  1.8e-09  7.9e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3049/3188 3326/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1748/3188 1819/3478
+---        Current Progress:  36 % - Assembling residual
+Memory: 3059/3188 3330/3478
+   5       0.016          49   0.1000000       0.018  263  143  353  4.6e-09  5.9e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3074/3188 3346/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1686/3188 1746/3478
+---        Current Progress:  36 % - Solving linear system
+Memory: 3101/3188 3381/3478
+   6       0.015          52   0.1204879       0.017  265  144  356  6.3e-09  4.9e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3102/3188 3390/3478
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1663/3188 1762/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3037/3188 3332/3498
+   7       0.013          55   0.1523793       0.015  267  145  359  6.8e-09  4.3e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3053/3188 3342/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2056/3188 2216/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3067/3188 3363/3498
+   8        0.01          60   0.2072427       0.013  269  146  362  3.8e-09    3e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3034/3188 3325/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1647/3188 1751/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3065/3188 3336/3498
+   9      0.0074          70   0.3264990       0.011  271  147  365    4e-09  1.7e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3042/3188 3317/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 3162/3188 3446/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3054/3188 3330/3498
+  10      0.0052     1.6e+02   1.0000000      0.0086  272  148  367  6.8e-09  4.9e-12
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3087/3188 3377/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1677/3188 1731/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3072/3188 3357/3498
+  11      0.0016          14   1.0000000      0.0026  273  149  369  1.7e-09  1.9e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3116/3188 3397/3498
+---        Current Progress:  36 % - Constraint handling
+Memory: 3153/3188 3438/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1927/3188 1978/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3094/3188 3368/3498
+  12      0.0029          14   0.3282063      0.0043  274  150  371  1.1e-08  3.3e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3073/3188 3364/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 2270/3188 2724/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3116/3188 3415/3498
+  13     0.00024           3   1.0000000      0.0031  276  151  373  3.3e-09  1.8e-12
+---        Current Progress:  36 % - Update tangent
+Memory: 3003/3188 3293/3498
+    
+Continuation parameter P_step = 16518.9.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  36 % - Assembling sparsity pattern
+Memory: 3038/3188 3326/3498
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3063/3188 3362/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1661/3188 2118/3498
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  36 % - Solving linear system
+Memory: 3013/3188 3297/3498
+   1      0.0049          29   1.0000000       0.012  280  152  376    7e-11  4.3e-13
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3051/3188 3338/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1667/3188 1779/3498
+---        Current Progress:  36 % - 
+Memory: 3062/3188 3357/3498
+   2      0.0073          42   0.4571180       0.013  281  153  378  8.6e-09  1.4e-11
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3107/3188 3389/3498
+---        Current Progress:  36 % - 
+Memory: 3125/3188 3413/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 1901/3188 1957/3498
+---        Current Progress:  36 % - Solving linear system
+Memory: 3063/3188 3343/3498
+   3     0.00061         9.1   1.0000000      0.0083  283  154  380  7.9e-09  1.1e-12
+    
+Continuation parameter P_step = 17500.
+Continuation parameter stepsize CMPpcontstep = 981.059.
+---        Current Progress:  36 % - Assembling residual
+Memory: 2982/3188 3257/3498
+---        Current Progress:  36 % - Assembling matrices
+Memory: 3069/3188 3346/3498
+---        Current Progress:  36 % - Matrix factorization
+Memory: 3110/3188 3390/3498
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0077          36   1.0000000       0.023  287  155  383  2.8e-10  3.8e-13
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3022/3188 3296/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 2506/3188 2685/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3078/3188 3361/3498
+   2       0.022          78   0.2324967       0.029  288  156  385    4e-09  1.8e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3024/3188 3302/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1690/3188 1798/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3092/3188 3382/3498
+   3       0.019          77   0.2105469       0.024  290  157  388  2.1e-09  1.6e-11
+---        Current Progress:  37 % - 
+Memory: 3029/3188 3356/3498
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3081/3188 3357/3498
+---        Current Progress:  37 % - Constraint handling
+Memory: 3074/3188 3353/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1855/3188 1902/3498
+---        Current Progress:  37 % - Assembling residual
+Memory: 3011/3188 3286/3498
+   4       0.017          74   0.2110701       0.021  292  158  391  2.9e-09  1.5e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3075/3188 3362/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1768/3188 1846/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3063/3188 3349/3498
+   5       0.016          72   0.2093362        0.02  294  159  394  1.4e-09  1.4e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3047/3188 3348/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1653/3188 1718/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3009/3188 3295/3498
+   6       0.015          70   0.2141819       0.019  296  160  397  1.2e-09  1.3e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3103/3188 3392/3498
+---        Current Progress:  37 % - 
+Memory: 3145/3188 3436/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1921/3188 1979/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 2990/3188 3267/3498
+   7       0.014          68   0.2280136       0.018  298  161  400  2.6e-09  1.2e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3100/3188 3380/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1839/3188 1948/3498
+---        Current Progress:  37 % - Assembling residual
+Memory: 3029/3188 3302/3498
+   8       0.013          67   0.2427748       0.017  300  162  403  3.7e-09  1.2e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3068/3188 3342/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 1715/3188 1822/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3023/3188 3293/3498
+   9       0.012          66   0.2693392       0.016  302  163  406  3.8e-09    1e-11
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3020/3188 3290/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 2309/3188 2630/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3049/3188 3319/3498
+  10       0.011          66   0.3102102       0.016  304  164  409  1.4e-09    9e-10
+---        Current Progress:  37 % - 
+Memory: 3040/3188 3309/3498
+---        Current Progress:  37 % - Assembling matrices
+Memory: 3076/3188 3350/3498
+---        Current Progress:  37 % - Matrix factorization
+Memory: 3112/3188 3391/3498
+---        Current Progress:  37 % - Solving linear system
+Memory: 3051/3188 3322/3498
+  11      0.0085          69   0.3994669       0.014  306  165  412  6.6e-09  7.3e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3093/3188 3366/3498
+---        Current Progress:  38 % - 
+Memory: 3102/3188 3379/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1884/3188 1929/3498
+  12       0.005     1.2e+02   0.8842618       0.013  307  166  414  2.8e-09  4.2e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3036/3188 3307/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 2829/3188 3126/3498
+  13      0.0042          53   0.7259510      0.0067  308  167  416  1.4e-09    4e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3019/3188 3309/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 3163/3188 3458/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3109/3188 3396/3498
+  14       0.009          46   0.2378763       0.012  309  168  418  4.8e-09  1.1e-11
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3068/3188 3359/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1843/3188 2166/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3066/3188 3343/3498
+  15      0.0015          78   0.7610859       0.012  310  169  420  6.3e-09  7.5e-13
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3064/3188 3354/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1686/3188 1774/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3075/3188 3348/3498
+  16      0.0047          58   0.2932631      0.0061  311  170  422  1.8e-09    4e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3089/3188 3371/3498
+---        Current Progress:  38 % - 
+Memory: 3095/3188 3375/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1869/3188 1917/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3013/3188 3285/3498
+  17      0.0047          41   0.4561447      0.0073  312  171  424  4.2e-09    7e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3055/3188 3341/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1798/3188 1861/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3063/3188 3351/3498
+  18      0.0043          35   0.5315458      0.0082  313  172  426  3.7e-09  5.6e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3093/3188 3383/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1868/3188 1966/3498
+  19      0.0016          36   0.7768935      0.0075  314  173  428  2.6e-09  3.2e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3024/3188 3306/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 2779/3188 3058/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3085/3188 3363/3498
+  20      0.0033          24   0.4716930      0.0053  315  174  430  5.3e-09  7.2e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3056/3188 3366/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1796/3188 1852/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3091/3188 3371/3498
+  21      0.0022          19   0.6671487      0.0055  316  175  432  4.2e-09  5.6e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3111/3188 3423/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1706/3188 1759/3498
+---        Current Progress:  38 % - Assembling residual
+Memory: 3063/3188 3343/3498
+  22     0.00077          15   0.9291333      0.0043  317  176  434  2.6e-09  2.8e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3096/3188 3371/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1834/3188 1965/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3082/3188 3357/3498
+  23      0.0012         7.1   0.6867007      0.0025  318  177  436  4.4e-09  8.5e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3062/3188 3332/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1992/3188 2155/3498
+---        Current Progress:  38 % - Assembling residual
+Memory: 3037/3188 3310/3498
+  24     0.00028        0.97   1.0000000      0.0019  320  178  438  4.3e-09  4.1e-12
+    
+Continuation parameter P_step = 18000.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3118/3188 3399/3498
+---        Current Progress:  38 % - 
+Memory: 3152/3188 3435/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1880/3188 1990/3498
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  38 % - Assembling residual
+Memory: 3107/3188 3383/3498
+   1      0.0055          30   1.0000000       0.014  324  179  441  3.8e-10  3.8e-13
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3127/3188 3426/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1766/3188 1865/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3064/3188 3358/3498
+   2      0.0094          56   0.4025085       0.016  325  180  443  4.9e-09  1.4e-11
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3110/3188 3382/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1848/3188 1963/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3066/3188 3338/3498
+   3      0.0044       1e+02   1.0000000        0.01  326  181  445  2.8e-09  3.4e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3109/3188 3382/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1896/3188 1967/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3079/3188 3353/3498
+   4      0.0022          18   1.0000000      0.0035  327  182  447  3.6e-09  9.5e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3082/3188 3361/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 2918/3188 3236/3498
+---        Current Progress:  38 % - Assembling residual
+Memory: 3103/3188 3380/3498
+   5       0.006          18   0.2034065      0.0075  328  183  449  6.7e-09  2.5e-11
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3090/3188 3367/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 3095/3188 3456/3498
+---        Current Progress:  38 % - Solving linear system
+Memory: 3098/3188 3401/3498
+   6      0.0061          63   1.0000000      0.0066  329  184  451  8.2e-09  6.9e-12
+---        Current Progress:  38 % - Assembling matrices
+Memory: 3119/3188 3441/3498
+---        Current Progress:  38 % - Matrix factorization
+Memory: 1859/3188 2245/3502
+---        Current Progress:  38 % - Assembling residual
+Memory: 3041/3188 3353/3502
+   7     0.00083           4   1.0000000      0.0013  331  185  453  6.6e-09  2.6e-11
+    
+Continuation parameter P_step = 18500.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  39 % - 
+Memory: 2920/3188 3255/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3079/3188 3377/3502
+---        Current Progress:  39 % - 
+Memory: 3086/3188 3385/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1784/3188 1902/3502
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  39 % - Assembling residual
+Memory: 3047/3188 3342/3502
+   1      0.0014         9.1   1.0000000      0.0041  335  186  456  1.1e-10  1.3e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3100/3188 3386/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1667/3188 1756/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3072/3188 3349/3502
+   2       0.042     1.7e+02   0.1000000       0.057  336  187  458  2.5e-09  6.2e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3100/3188 3381/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1688/3188 1753/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3061/3188 3338/3502
+   3       0.012     6.5e+02   0.5274545       0.021  337  188  460  1.1e-09  3.9e-12
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3119/3188 3406/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1738/3188 1793/3502
+   4      0.0039     1.6e+02   1.0000000      0.0059  338  189  462  2.2e-09  5.6e-12
+---        Current Progress:  39 % - 
+Memory: 3097/3188 3379/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3129/3188 3431/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 3150/3188 3456/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3056/3188 3353/3502
+   5       0.014     1.6e+02   0.1268135       0.015  339  190  464  3.3e-09  1.9e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3108/3188 3401/3502
+---        Current Progress:  39 % - 
+Memory: 3152/3188 3449/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1936/3188 2001/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3084/3188 3373/3502
+   6       0.013     1.6e+02   0.1334535       0.015  341  191  467  4.3e-09    2e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3069/3188 3353/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1681/3188 2122/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3005/3188 3284/3502
+   7       0.012     1.6e+02   0.1436021       0.014  343  192  470  2.3e-09  1.9e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3072/3188 3356/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 3083/3188 3397/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3049/3188 3336/3502
+   8       0.012     1.5e+02   0.1565816       0.014  345  193  473  4.7e-09  1.7e-11
+---        Current Progress:  39 % - 
+Memory: 2973/3188 3294/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3103/3188 3388/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 3104/3188 3392/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3052/3188 3332/3502
+   9       0.011     1.5e+02   0.1737844       0.013  347  194  476  1.5e-09  1.7e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3079/3188 3371/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1719/3188 1783/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3084/3188 3367/3502
+  10        0.01     1.5e+02   0.1977750       0.012  349  195  479    4e-09  1.5e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3097/3188 3371/3502
+---        Current Progress:  39 % - 
+Memory: 3110/3188 3388/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1868/3188 1923/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3049/3188 3318/3502
+  11      0.0089     1.5e+02   0.2339176       0.012  351  196  482  1.5e-09  2.2e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3038/3188 3310/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 2435/3188 2682/3502
+---        Current Progress:  39 % - Assembling residual
+Memory: 3001/3188 3272/3502
+  12      0.0075     1.5e+02   0.2959416       0.011  353  197  485  4.2e-09  1.2e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3081/3188 3373/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1779/3188 1923/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3012/3188 3301/3502
+  13      0.0051     1.7e+02   0.4345338      0.0095  355  198  488  2.5e-09  6.8e-12
+---        Current Progress:  39 % - 
+Memory: 2992/3188 3280/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3093/3188 3377/3502
+---        Current Progress:  39 % - 
+Memory: 3142/3188 3438/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1926/3188 1988/3502
+  14      0.0033     2.7e+02   1.0000000      0.0076  356  199  490    8e-09  2.4e-12
+---        Current Progress:  39 % - 
+Memory: 3028/3188 3370/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3117/3188 3390/3502
+---        Current Progress:  39 % - Constraint handling
+Memory: 3168/3188 3451/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1942/3188 1992/3502
+  15      0.0021          60   1.0000000      0.0036  357  200  492  2.5e-09  1.1e-11
+---        Current Progress:  39 % - 
+Memory: 3079/3188 3351/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3104/3188 3395/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 2987/3188 3344/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3084/3188 3378/3502
+  16      0.0052          58   0.2397270      0.0068  358  201  494  1.4e-09  1.8e-11
+---        Current Progress:  39 % - Assembling sparsity pattern
+Memory: 3051/3188 3343/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3043/3188 3337/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 3020/3188 3336/3502
+  17      0.0045     1.7e+02   1.0000000       0.006  359  202  496  5.9e-09  5.5e-12
+---        Current Progress:  39 % - 
+Memory: 3039/3188 3334/3502
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3137/3188 3415/3502
+---        Current Progress:  39 % - 
+Memory: 3171/3188 3455/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1931/3188 1983/3502
+  18     0.00087          15   1.0000000      0.0014  361  203  498  4.5e-09    2e-11
+---        Current Progress:  39 % - Update tangent
+Memory: 2958/3188 3225/3502
+    
+Continuation parameter P_step = 19000.
+Continuation parameter stepsize CMPpcontstep = 500.
+---        Current Progress:  39 % - Assembling matrices
+Memory: 2975/3188 3246/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 2580/3188 2764/3502
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+---        Current Progress:  39 % - Assembling residual
+Memory: 2983/3188 3270/3502
+   1      0.0016         9.2   1.0000000      0.0049  365  204  501  4.2e-10  9.2e-12
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3062/3188 3350/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1720/3188 1828/3502
+---        Current Progress:  39 % - Solving linear system
+Memory: 3063/3188 3353/3502
+   2        0.04     1.5e+02   0.1000000       0.054  366  205  503  4.4e-09  5.6e-11
+---        Current Progress:  39 % - Assembling matrices
+Memory: 3129/3188 3412/3502
+---        Current Progress:  39 % - Matrix factorization
+Memory: 1828/3188 1948/3502
+   3       0.011     5.5e+02   0.5297877       0.019  367  206  505  1.9e-09  3.6e-12
+----       Current Progress:  40 % - 
+Memory: 3003/3188 3276/3502
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3120/3188 3409/3502
+----       Current Progress:  40 % - 
+Memory: 3157/3188 3453/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1945/3188 2009/3502
+   4      0.0037     1.4e+02   1.0000000      0.0056  368  207  507  9.5e-10  4.7e-12
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3097/3188 3385/3502
+----       Current Progress:  40 % - Constraint handling
+Memory: 3171/3188 3462/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1934/3188 1990/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3097/3188 3378/3502
+   5       0.013     1.4e+02   0.1259164       0.015  369  208  509  5.8e-09  2.8e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3063/3188 3342/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 2634/3188 2804/3502
+----       Current Progress:  40 % - Assembling residual
+Memory: 3060/3188 3335/3502
+   6       0.013     1.4e+02   0.1284527       0.014  371  209  512    2e-09  1.7e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3078/3188 3356/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 2624/3188 2849/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3086/3188 3369/3502
+   7       0.012     1.4e+02   0.1354013       0.014  373  210  515  2.7e-09  1.6e-11
+----       Current Progress:  40 % - 
+Memory: 3043/3188 3325/3502
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3098/3188 3377/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 3099/3188 3385/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3043/3188 3321/3502
+   8       0.012     1.3e+02   0.1440128       0.014  375  211  518  3.2e-09  1.7e-11
+----       Current Progress:  40 % - 
+Memory: 3060/3188 3344/3502
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3127/3188 3405/3502
+----       Current Progress:  40 % - 
+Memory: 3157/3188 3441/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1921/3188 1986/3502
+----       Current Progress:  40 % - Assembling residual
+Memory: 3012/3188 3281/3502
+   9       0.011     1.3e+02   0.1549005       0.013  377  212  521  3.8e-09  1.7e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3103/3188 3394/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1808/3188 1941/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 2991/3188 3271/3502
+  10        0.01     1.3e+02   0.1690527       0.013  379  213  524  4.5e-09  1.5e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3111/3188 3392/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1666/3188 1776/3502
+----       Current Progress:  40 % - Assembling residual
+Memory: 3071/3188 3349/3502
+  11      0.0097     1.3e+02   0.1881835       0.012  381  214  527  4.3e-09  1.5e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3018/3188 3292/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 2910/3188 3192/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3007/3188 3283/3502
+  12      0.0088     1.3e+02   0.2155834       0.011  383  215  530  3.3e-09  1.3e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3087/3188 3383/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1862/3188 2150/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3055/3188 3338/3502
+  13      0.0078     1.3e+02   0.2585855        0.01  385  216  533  3.5e-09  6.2e-11
+----       Current Progress:  40 % - 
+Memory: 3014/3188 3334/3502
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3137/3188 3418/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1787/3188 1947/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3051/3188 3326/3502
+  14      0.0063     1.3e+02   0.3380637      0.0096  387  217  536  3.6e-09  6.8e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3025/3188 3301/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 3131/3188 3430/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3066/3188 3356/3502
+  15      0.0076     3.1e+02   1.0000000      0.0083  388  218  538  2.2e-09  1.3e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3046/3188 3319/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1899/3188 2188/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3070/3188 3360/3502
+  16      0.0021          38   1.0000000      0.0029  389  219  540  2.6e-09  9.4e-12
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3072/3188 3347/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1987/3188 2202/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3089/3188 3376/3502
+  17      0.0077          37   0.1081896      0.0087  390  220  542  1.9e-09  3.4e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3036/3188 3319/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 2701/3188 2944/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 2948/3188 3219/3502
+  18      0.0064          42   0.2071249      0.0081  392  221  545  1.6e-09  2.8e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3045/3188 3324/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1778/3188 1905/3502
+----       Current Progress:  40 % - Assembling residual
+Memory: 3041/3188 3322/3502
+  19      0.0042          51   0.3448125      0.0068  394  222  548  2.5e-09  4.6e-11
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3008/3188 3286/3502
+----       Current Progress:  40 % - 
+Memory: 3092/3188 3382/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1860/3188 1939/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3050/3188 3331/3502
+  20      0.0023       1e+02   1.0000000      0.0049  395  223  550  3.9e-09  3.7e-12
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3088/3188 3371/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1884/3188 1965/3502
+----       Current Progress:  40 % - Solving linear system
+Memory: 3079/3188 3359/3502
+  21     0.00082          13   1.0000000      0.0015  397  224  552  1.6e-09  1.7e-11
+----       Current Progress:  40 % - Update tangent
+Memory: 2986/3188 3258/3502
+    
+Continuation parameter P_step = 19500.
+Continuation parameter stepsize CMPpcontstep = 500.
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3089/3188 3371/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1685/3188 1731/3502
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0024          12   1.0000000      0.0064  401  225  555  6.9e-11  4.5e-12
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3008/3188 3279/3502
+----       Current Progress:  40 % - 
+Memory: 3120/3188 3412/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 1910/3188 1970/3502
+   2       0.034          85   0.1000000       0.042  402  226  557  2.9e-09  6.3e-11
+----       Current Progress:  40 % - 
+Memory: 3061/3188 3346/3502
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3113/3188 3402/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 3118/3188 3410/3502
+   3       0.017     4.2e+02   0.4984140        0.02  403  227  559  4.2e-09  4.7e-12
+----       Current Progress:  40 % - Assembling matrices
+Memory: 3052/3188 3337/3502
+----       Current Progress:  40 % - Matrix factorization
+Memory: 3122/3188 3406/3502
+----       Current Progress:  40 % - Assembling residual
+Memory: 3047/3188 3319/3502
+   4      0.0035          84   1.0000000      0.0049  404  228  561  1.4e-09  8.9e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3078/3188 3355/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1797/3188 1965/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3049/3188 3326/3502
+   5       0.014          85   0.1000000       0.016  405  229  563  3.3e-09  2.3e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3077/3188 3358/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1800/3188 1914/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3022/3188 3294/3502
+   6       0.014          85   0.1000000       0.015  407  230  566    2e-09    2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3044/3188 3318/3502
+----       Current Progress:  41 % - Constraint handling
+Memory: 3173/3188 3475/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1949/3188 2019/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3106/3188 3400/3502
+   7       0.013          84   0.1000000       0.015  409  231  569  3.3e-09  2.1e-11
+----       Current Progress:  41 % - 
+Memory: 3028/3188 3313/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3111/3188 3386/3502
+----       Current Progress:  41 % - Constraint handling
+Memory: 3105/3188 3382/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1885/3188 1931/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3037/3188 3305/3502
+   8       0.013          83   0.1000000       0.014  411  232  572  2.9e-09    2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3039/3188 3309/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2314/3188 2674/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3079/3188 3360/3502
+   9       0.013          82   0.1017966       0.014  413  233  575  2.9e-09    2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3050/3188 3347/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2380/3188 2660/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3017/3188 3304/3502
+  10       0.012          81   0.1071217       0.014  415  234  578  2.1e-09    2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3123/3188 3409/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1688/3188 1795/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3023/3188 3303/3502
+  11       0.012          80   0.1134381       0.013  417  235  581  1.6e-09  2.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3096/3188 3371/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2302/3188 2623/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3037/3188 3307/3502
+  12       0.011          79   0.1210420       0.013  419  236  584  2.8e-09  1.8e-11
+----       Current Progress:  41 % - 
+Memory: 3065/3188 3351/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3100/3188 3375/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1882/3188 1958/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3057/3188 3333/3502
+  13       0.011          78   0.1303680       0.012  421  237  587  1.8e-09  1.9e-11
+----       Current Progress:  41 % - 
+Memory: 3005/3188 3281/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3098/3188 3390/3502
+----       Current Progress:  41 % - 
+Memory: 3096/3188 3390/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1821/3188 1939/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3032/3188 3317/3502
+  14        0.01          77   0.1420842       0.012  423  238  590    2e-09  1.7e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3024/3188 3308/3502
+----       Current Progress:  41 % - Constraint handling
+Memory: 3148/3188 3434/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1927/3188 1980/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3012/3188 3286/3502
+  15      0.0096          76   0.1572791       0.011  425  239  593  3.1e-09  7.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3105/3188 3390/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1734/3188 1792/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3023/3188 3304/3502
+  16      0.0089          75   0.1778692       0.011  427  240  596  1.8e-09  1.8e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3045/3188 3328/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 3137/3188 3437/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 2943/3188 3234/3502
+  17       0.008          75   0.2076128        0.01  429  241  599  4.2e-09  1.4e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3067/3188 3371/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1793/3188 1914/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3004/3188 3295/3502
+  18       0.007          76   0.2551681      0.0094  431  242  602  2.1e-09  1.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3022/3188 3315/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2982/3188 3337/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 2971/3188 3252/3502
+  19      0.0054          80   0.3466700      0.0084  433  243  605  5.4e-10  8.9e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3073/3188 3352/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1679/3188 1726/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3014/3188 3286/3502
+  20      0.0058     1.8e+02   1.0000000      0.0072  434  244  607  3.8e-09    4e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3095/3188 3374/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1686/3188 1776/3502
+  21      0.0018          23   1.0000000      0.0026  435  245  609  4.9e-10  1.3e-11
+----       Current Progress:  41 % - 
+Memory: 3042/3188 3354/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3135/3188 3411/3502
+----       Current Progress:  41 % - 
+Memory: 3132/3188 3411/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1897/3188 1943/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3060/3188 3330/3502
+  22      0.0059          23   0.1346856      0.0069  436  246  611  2.2e-09  3.2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3066/3188 3338/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2657/3188 2832/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3087/3188 3363/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3022/3188 3291/3502
+  23      0.0042          28   0.3062319      0.0063  438  247  614  2.5e-09  1.8e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3108/3188 3407/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1991/3188 2158/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3055/3188 3345/3502
+  24      0.0028          72   1.0000000      0.0046  439  248  616  1.2e-09  4.6e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3124/3188 3413/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1762/3188 1848/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3045/3188 3325/3502
+  25     0.00065         6.2   1.0000000      0.0011  441  249  618  1.4e-09  1.9e-11
+    
+Continuation parameter P_step = 20000.
+Continuation parameter stepsize CMPpcontstep = 500.
+----       Current Progress:  41 % - Assembling residual
+Memory: 3000/3188 3276/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3114/3188 3413/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1757/3188 1825/3502
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+   1      0.0026          14   1.0000000      0.0074  445  250  621  3.5e-10  2.5e-12
+----       Current Progress:  41 % - 
+Memory: 2961/3188 3243/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3113/3188 3395/3502
+----       Current Progress:  41 % - 
+Memory: 3144/3188 3431/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1853/3188 1969/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3079/3188 3358/3502
+   2       0.033          77   0.1000000        0.04  446  251  623  2.6e-09  5.6e-11
+----       Current Progress:  41 % - Assembling sparsity pattern
+Memory: 3060/3188 3327/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3038/3188 3313/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 3135/3188 3414/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3052/3188 3324/3502
+   3       0.021     4.1e+02   0.5052468       0.021  447  252  625  3.2e-09  5.4e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3149/3188 3437/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1764/3188 1819/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3102/3188 3383/3502
+   4      0.0035          70   1.0000000      0.0051  448  253  627  4.1e-10  8.3e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3134/3188 3415/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1721/3188 1771/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3057/3188 3329/3502
+   5       0.016          73   0.1000000       0.018  449  254  629  1.8e-09  2.4e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3047/3188 3320/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 3165/3188 3477/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3103/3188 3406/3502
+   6       0.015          75   0.1000000       0.017  451  255  632  3.3e-09  2.2e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3116/3188 3406/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2521/3188 2654/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 2991/3188 3265/3502
+   7       0.014          75   0.1000000       0.016  453  256  635  2.7e-09  2.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3115/3188 3410/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1709/3188 1815/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3103/3188 3396/3502
+   8       0.014          75   0.1000000       0.015  455  257  638  2.2e-09  2.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3065/3188 3355/3502
+----       Current Progress:  41 % - Constraint handling
+Memory: 3138/3188 3424/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1919/3188 1973/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 2991/3188 3264/3502
+   9       0.013          75   0.1000000       0.015  457  258  641  8.5e-10  2.3e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3076/3188 3361/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2429/3188 2611/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3062/3188 3338/3502
+  10       0.013          74   0.1000000       0.014  459  259  644    4e-10  1.9e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3009/3188 3317/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2978/3188 3311/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3027/3188 3308/3502
+  11       0.013          73   0.1000000       0.014  461  260  647  4.7e-10    2e-11
+----       Current Progress:  41 % - 
+Memory: 2970/3188 3303/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3101/3188 3400/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1722/3188 1814/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 2988/3188 3273/3502
+  12       0.012          72   0.1029854       0.014  463  261  650  2.7e-09  2.1e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3079/3188 3362/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1682/3188 1732/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 2989/3188 3263/3502
+  13       0.012          71   0.1077848       0.013  465  262  653  2.4e-09  1.9e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3096/3188 3379/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1770/3188 1867/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3007/3188 3284/3502
+  14       0.012          70   0.1134531       0.013  467  263  656  1.6e-09  1.9e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3102/3188 3377/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1740/3188 1821/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3067/3188 3338/3502
+  15       0.011          69   0.1202315       0.013  469  264  659  2.6e-09  1.9e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3045/3188 3317/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 3004/3188 3393/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3120/3188 3415/3502
+  16       0.011          68   0.1284661       0.012  471  265  662  4.3e-10  1.8e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3050/3188 3342/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2512/3198 2690/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3067/3198 3343/3502
+  17        0.01          67   0.1386742       0.012  473  266  665  1.9e-09  1.6e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3065/3198 3346/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1752/3198 1821/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3015/3198 3303/3502
+  18      0.0098          66   0.1516710       0.012  475  267  668  1.8e-09  1.6e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3094/3198 3379/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1794/3198 1960/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3050/3198 3328/3502
+  19      0.0092          65   0.1688234       0.011  477  268  671  2.8e-09    2e-11
+----       Current Progress:  41 % - 
+Memory: 3062/3198 3344/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3131/3198 3421/3502
+----       Current Progress:  41 % - 
+Memory: 3176/3198 3469/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1944/3198 2029/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3130/3198 3415/3502
+  20      0.0085          65   0.1926397        0.01  479  269  674  1.5e-09  1.5e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3047/3198 3330/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2406/3198 2682/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3089/3198 3366/3502
+----       Current Progress:  41 % - 
+Memory: 3022/3198 3293/3502
+  21      0.0076          65   0.2283417      0.0098  481  270  677  8.9e-10  1.4e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3141/3198 3431/3502
+----       Current Progress:  41 % - 
+Memory: 3179/3198 3475/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1953/3198 2015/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3108/3198 3396/3502
+  22      0.0064          66   0.2891705      0.0091  483  271  680  2.5e-10  1.2e-11
+----       Current Progress:  41 % - 
+Memory: 3001/3198 3323/3502
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3136/3198 3432/3502
+----       Current Progress:  41 % - Constraint handling
+Memory: 3150/3198 3444/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1930/3198 1991/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 3045/3198 3328/3502
+  23      0.0045          72   0.4231032      0.0081  485  272  683  2.1e-09  6.7e-12
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3088/3198 3367/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 1696/3198 1806/3502
+  24       0.003     1.2e+02   1.0000000      0.0066  486  273  685  1.3e-09  1.8e-11
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3060/3198 3330/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2709/3198 2881/3502
+----       Current Progress:  41 % - Solving linear system
+Memory: 3082/3198 3354/3502
+  25      0.0018          25   1.0000000       0.003  487  274  687  1.5e-09  7.4e-12
+Predictor modified to Constant
+    
+Continuation parameter P_step = 20000.
+Continuation parameter stepsize CMPpcontstep = 500.
+----       Current Progress:  41 % - Assembling matrices
+Memory: 3044/3198 3314/3502
+----       Current Progress:  41 % - Matrix factorization
+Memory: 2723/3198 2992/3502
+Iter      SolEst      ResEst     Damping    Stepsize #Res #Jac #Sol   LinErr   LinRes
+----       Current Progress:  41 % - Solving linear system
+Memory: 3072/3198 3346/3502
+----       Current Progress:  41 % - Assembling residual
+Memory: 2994/3198 3265/3502
+   1     2.9e+03     1.7e+06   0.0100000         8.9  491  275  691  4.5e-08    2e-08
+---------- Current Progress: 100 % - 
+Memory: 1449/3198 1478/3502
+Solution time: 1152 s. (19 minutes, 12 seconds)
+Physical memory: 3.2 GB
+Virtual memory: 3.5 GB
+Ended at Nov 9, 2026, 5:17:41?AM.
+----- Stationary Solver 1 in Study 1/Solution 1 (sol1) ------------------------>
+SOLVER_STOPPED: The_following_feature_has_encountered_a_problem
+CONVERGED_STEPS: 10, last P = 20.0 kPa, solve time 1156 s
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,0.00,139.800,0.000,0.000,0.000,0.00,1.0000,1.0000
+CL_ROW: sleeved_base_E0.07,0.00,0.0,0.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,5.0,5.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,10.0,10.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,15.0,15.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,20.0,20.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,25.0,25.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,30.0,30.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,35.0,35.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,40.0,40.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,45.0,45.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,50.0,50.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,55.0,55.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,60.0,60.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,65.0,65.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,70.0,70.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,75.0,75.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,80.0,80.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,85.0,85.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,90.0,90.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,95.0,95.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,100.0,100.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,105.0,105.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,110.0,110.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,115.0,115.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,120.0,120.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,125.0,125.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,130.0,130.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,135.0,135.000,0.000,0.000
+CL_ROW: sleeved_base_E0.07,0.00,139.8,139.800,0.000,0.000
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,2.00,140.226,-6.746,0.006,6.063,8.15,0.9163,1.0118
+CL_ROW: sleeved_base_E0.07,2.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,2.00,5.0,5.004,-0.027,0.000
+CL_ROW: sleeved_base_E0.07,2.00,10.0,10.028,-0.066,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,15.0,15.055,-0.098,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,20.0,20.080,-0.139,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,25.0,25.106,-0.196,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,30.0,30.131,-0.270,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,35.0,35.156,-0.360,-0.000
+CL_ROW: sleeved_base_E0.07,2.00,40.0,40.181,-0.467,-0.001
+CL_ROW: sleeved_base_E0.07,2.00,45.0,45.205,-0.591,0.001
+CL_ROW: sleeved_base_E0.07,2.00,50.0,50.228,-0.734,0.000
+CL_ROW: sleeved_base_E0.07,2.00,55.0,55.251,-0.894,0.000
+CL_ROW: sleeved_base_E0.07,2.00,60.0,60.273,-1.072,0.000
+CL_ROW: sleeved_base_E0.07,2.00,65.0,65.295,-1.269,0.000
+CL_ROW: sleeved_base_E0.07,2.00,70.0,70.315,-1.486,0.001
+CL_ROW: sleeved_base_E0.07,2.00,75.0,75.335,-1.721,0.001
+CL_ROW: sleeved_base_E0.07,2.00,80.0,80.354,-1.978,0.001
+CL_ROW: sleeved_base_E0.07,2.00,85.0,85.371,-2.254,0.002
+CL_ROW: sleeved_base_E0.07,2.00,90.0,90.387,-2.552,0.002
+CL_ROW: sleeved_base_E0.07,2.00,95.0,95.401,-2.871,0.002
+CL_ROW: sleeved_base_E0.07,2.00,100.0,100.414,-3.212,0.002
+CL_ROW: sleeved_base_E0.07,2.00,105.0,105.425,-3.575,0.003
+CL_ROW: sleeved_base_E0.07,2.00,110.0,110.434,-3.962,0.003
+CL_ROW: sleeved_base_E0.07,2.00,115.0,115.442,-4.373,0.004
+CL_ROW: sleeved_base_E0.07,2.00,120.0,120.446,-4.807,0.004
+CL_ROW: sleeved_base_E0.07,2.00,125.0,125.449,-5.267,0.005
+CL_ROW: sleeved_base_E0.07,2.00,130.0,130.449,-5.752,0.005
+CL_ROW: sleeved_base_E0.07,2.00,135.0,135.447,-6.254,0.005
+CL_ROW: sleeved_base_E0.07,2.00,139.8,140.226,-6.746,0.006
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,4.00,140.020,-15.191,0.008,13.652,16.82,0.8447,1.0204
+CL_ROW: sleeved_base_E0.07,4.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,4.00,5.0,5.010,-0.054,0.000
+CL_ROW: sleeved_base_E0.07,4.00,10.0,10.059,-0.132,-0.000
+CL_ROW: sleeved_base_E0.07,4.00,15.0,15.115,-0.201,-0.001
+CL_ROW: sleeved_base_E0.07,4.00,20.0,20.168,-0.292,-0.001
+CL_ROW: sleeved_base_E0.07,4.00,25.0,25.221,-0.421,-0.000
+CL_ROW: sleeved_base_E0.07,4.00,30.0,30.272,-0.588,-0.000
+CL_ROW: sleeved_base_E0.07,4.00,35.0,35.323,-0.791,0.000
+CL_ROW: sleeved_base_E0.07,4.00,40.0,40.372,-1.032,-0.002
+CL_ROW: sleeved_base_E0.07,4.00,45.0,45.418,-1.313,0.001
+CL_ROW: sleeved_base_E0.07,4.00,50.0,50.463,-1.634,0.000
+CL_ROW: sleeved_base_E0.07,4.00,55.0,55.503,-1.995,0.000
+CL_ROW: sleeved_base_E0.07,4.00,60.0,60.541,-2.399,0.001
+CL_ROW: sleeved_base_E0.07,4.00,65.0,65.575,-2.844,0.001
+CL_ROW: sleeved_base_E0.07,4.00,70.0,70.605,-3.332,0.002
+CL_ROW: sleeved_base_E0.07,4.00,75.0,75.630,-3.865,0.002
+CL_ROW: sleeved_base_E0.07,4.00,80.0,80.650,-4.443,0.002
+CL_ROW: sleeved_base_E0.07,4.00,85.0,85.664,-5.068,0.002
+CL_ROW: sleeved_base_E0.07,4.00,90.0,90.672,-5.739,0.003
+CL_ROW: sleeved_base_E0.07,4.00,95.0,95.672,-6.460,0.004
+CL_ROW: sleeved_base_E0.07,4.00,100.0,100.665,-7.229,0.004
+CL_ROW: sleeved_base_E0.07,4.00,105.0,105.650,-8.049,0.004
+CL_ROW: sleeved_base_E0.07,4.00,110.0,110.624,-8.922,0.005
+CL_ROW: sleeved_base_E0.07,4.00,115.0,115.590,-9.847,0.006
+CL_ROW: sleeved_base_E0.07,4.00,120.0,120.544,-10.826,0.006
+CL_ROW: sleeved_base_E0.07,4.00,125.0,125.488,-11.862,0.007
+CL_ROW: sleeved_base_E0.07,4.00,130.0,130.417,-12.953,0.007
+CL_ROW: sleeved_base_E0.07,4.00,135.0,135.339,-14.086,0.008
+CL_ROW: sleeved_base_E0.07,4.00,139.8,140.020,-15.191,0.008
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,6.00,138.740,-25.298,0.008,22.832,27.66,0.7594,1.0271
+CL_ROW: sleeved_base_E0.07,6.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,6.00,5.0,5.017,-0.081,0.000
+CL_ROW: sleeved_base_E0.07,6.00,10.0,10.094,-0.200,-0.001
+CL_ROW: sleeved_base_E0.07,6.00,15.0,15.181,-0.312,-0.001
+CL_ROW: sleeved_base_E0.07,6.00,20.0,20.264,-0.464,-0.001
+CL_ROW: sleeved_base_E0.07,6.00,25.0,25.346,-0.680,-0.000
+CL_ROW: sleeved_base_E0.07,6.00,30.0,30.425,-0.959,-0.000
+CL_ROW: sleeved_base_E0.07,6.00,35.0,35.500,-1.300,0.000
+CL_ROW: sleeved_base_E0.07,6.00,40.0,40.571,-1.704,-0.002
+CL_ROW: sleeved_base_E0.07,6.00,45.0,45.635,-2.174,0.002
+CL_ROW: sleeved_base_E0.07,6.00,50.0,50.694,-2.712,0.000
+CL_ROW: sleeved_base_E0.07,6.00,55.0,55.743,-3.318,0.000
+CL_ROW: sleeved_base_E0.07,6.00,60.0,60.784,-3.993,0.001
+CL_ROW: sleeved_base_E0.07,6.00,65.0,65.814,-4.739,0.001
+CL_ROW: sleeved_base_E0.07,6.00,70.0,70.833,-5.557,0.002
+CL_ROW: sleeved_base_E0.07,6.00,75.0,75.839,-6.448,0.002
+CL_ROW: sleeved_base_E0.07,6.00,80.0,80.831,-7.416,0.003
+CL_ROW: sleeved_base_E0.07,6.00,85.0,85.806,-8.461,0.003
+CL_ROW: sleeved_base_E0.07,6.00,90.0,90.765,-9.584,0.003
+CL_ROW: sleeved_base_E0.07,6.00,95.0,95.704,-10.787,0.004
+CL_ROW: sleeved_base_E0.07,6.00,100.0,100.621,-12.071,0.004
+CL_ROW: sleeved_base_E0.07,6.00,105.0,105.517,-13.439,0.004
+CL_ROW: sleeved_base_E0.07,6.00,110.0,110.385,-14.894,0.005
+CL_ROW: sleeved_base_E0.07,6.00,115.0,115.228,-16.433,0.006
+CL_ROW: sleeved_base_E0.07,6.00,120.0,120.039,-18.063,0.007
+CL_ROW: sleeved_base_E0.07,6.00,125.0,124.820,-19.782,0.008
+CL_ROW: sleeved_base_E0.07,6.00,130.0,129.565,-21.593,0.007
+CL_ROW: sleeved_base_E0.07,6.00,135.0,134.284,-23.474,0.007
+CL_ROW: sleeved_base_E0.07,6.00,139.8,138.740,-25.298,0.008
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,8.00,135.784,-37.111,0.005,33.835,41.63,0.6684,1.0326
+CL_ROW: sleeved_base_E0.07,8.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,8.00,5.0,5.025,-0.109,0.000
+CL_ROW: sleeved_base_E0.07,8.00,10.0,10.133,-0.271,-0.001
+CL_ROW: sleeved_base_E0.07,8.00,15.0,15.256,-0.434,-0.001
+CL_ROW: sleeved_base_E0.07,8.00,20.0,20.372,-0.660,-0.001
+CL_ROW: sleeved_base_E0.07,8.00,25.0,25.485,-0.981,-0.000
+CL_ROW: sleeved_base_E0.07,8.00,30.0,30.591,-1.397,-0.000
+CL_ROW: sleeved_base_E0.07,8.00,35.0,35.689,-1.903,0.000
+CL_ROW: sleeved_base_E0.07,8.00,40.0,40.777,-2.504,-0.003
+CL_ROW: sleeved_base_E0.07,8.00,45.0,45.851,-3.204,0.002
+CL_ROW: sleeved_base_E0.07,8.00,50.0,50.912,-4.003,0.000
+CL_ROW: sleeved_base_E0.07,8.00,55.0,55.954,-4.903,0.000
+CL_ROW: sleeved_base_E0.07,8.00,60.0,60.977,-5.905,0.001
+CL_ROW: sleeved_base_E0.07,8.00,65.0,65.977,-7.011,0.001
+CL_ROW: sleeved_base_E0.07,8.00,70.0,70.952,-8.224,0.003
+CL_ROW: sleeved_base_E0.07,8.00,75.0,75.900,-9.544,0.002
+CL_ROW: sleeved_base_E0.07,8.00,80.0,80.816,-10.976,0.003
+CL_ROW: sleeved_base_E0.07,8.00,85.0,85.697,-12.520,0.003
+CL_ROW: sleeved_base_E0.07,8.00,90.0,90.542,-14.178,0.003
+CL_ROW: sleeved_base_E0.07,8.00,95.0,95.343,-15.951,0.004
+CL_ROW: sleeved_base_E0.07,8.00,100.0,100.099,-17.841,0.004
+CL_ROW: sleeved_base_E0.07,8.00,105.0,104.806,-19.851,0.004
+CL_ROW: sleeved_base_E0.07,8.00,110.0,109.455,-21.983,0.004
+CL_ROW: sleeved_base_E0.07,8.00,115.0,114.049,-24.237,0.005
+CL_ROW: sleeved_base_E0.07,8.00,120.0,118.576,-26.615,0.005
+CL_ROW: sleeved_base_E0.07,8.00,125.0,123.036,-29.119,0.006
+CL_ROW: sleeved_base_E0.07,8.00,130.0,127.420,-31.748,0.004
+CL_ROW: sleeved_base_E0.07,8.00,135.0,131.743,-34.479,0.005
+CL_ROW: sleeved_base_E0.07,8.00,139.8,135.784,-37.111,0.005
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,10.00,130.267,-50.639,0.000,47.119,60.88,0.5712,1.0373
+CL_ROW: sleeved_base_E0.07,10.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,10.00,5.0,5.035,-0.139,0.000
+CL_ROW: sleeved_base_E0.07,10.00,10.0,10.179,-0.349,-0.001
+CL_ROW: sleeved_base_E0.07,10.00,15.0,15.341,-0.572,-0.001
+CL_ROW: sleeved_base_E0.07,10.00,20.0,20.494,-0.889,-0.001
+CL_ROW: sleeved_base_E0.07,10.00,25.0,25.639,-1.339,-0.000
+CL_ROW: sleeved_base_E0.07,10.00,30.0,30.772,-1.920,-0.000
+CL_ROW: sleeved_base_E0.07,10.00,35.0,35.888,-2.628,0.000
+CL_ROW: sleeved_base_E0.07,10.00,40.0,40.984,-3.469,-0.003
+CL_ROW: sleeved_base_E0.07,10.00,45.0,46.055,-4.447,0.003
+CL_ROW: sleeved_base_E0.07,10.00,50.0,51.099,-5.562,0.000
+CL_ROW: sleeved_base_E0.07,10.00,55.0,56.107,-6.817,0.001
+CL_ROW: sleeved_base_E0.07,10.00,60.0,61.078,-8.214,0.002
+CL_ROW: sleeved_base_E0.07,10.00,65.0,66.007,-9.753,0.001
+CL_ROW: sleeved_base_E0.07,10.00,70.0,70.886,-11.439,0.003
+CL_ROW: sleeved_base_E0.07,10.00,75.0,75.713,-13.270,0.002
+CL_ROW: sleeved_base_E0.07,10.00,80.0,80.478,-15.252,0.003
+CL_ROW: sleeved_base_E0.07,10.00,85.0,85.177,-17.385,0.003
+CL_ROW: sleeved_base_E0.07,10.00,90.0,89.805,-19.670,0.003
+CL_ROW: sleeved_base_E0.07,10.00,95.0,94.352,-22.108,0.003
+CL_ROW: sleeved_base_E0.07,10.00,100.0,98.811,-24.700,0.003
+CL_ROW: sleeved_base_E0.07,10.00,105.0,103.178,-27.447,0.002
+CL_ROW: sleeved_base_E0.07,10.00,110.0,107.437,-30.351,0.002
+CL_ROW: sleeved_base_E0.07,10.00,115.0,111.588,-33.409,0.003
+CL_ROW: sleeved_base_E0.07,10.00,120.0,115.617,-36.623,0.003
+CL_ROW: sleeved_base_E0.07,10.00,125.0,119.518,-39.992,0.004
+CL_ROW: sleeved_base_E0.07,10.00,130.0,123.278,-43.511,0.001
+CL_ROW: sleeved_base_E0.07,10.00,135.0,126.920,-47.155,0.001
+CL_ROW: sleeved_base_E0.07,10.00,139.8,130.267,-50.639,0.000
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,12.50,117.770,-69.477,-0.004,67.955,110.58,0.4398,1.0422
+CL_ROW: sleeved_base_E0.07,12.50,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,12.50,5.0,5.051,-0.180,0.000
+CL_ROW: sleeved_base_E0.07,12.50,10.0,10.246,-0.460,-0.002
+CL_ROW: sleeved_base_E0.07,12.50,15.0,15.466,-0.777,-0.001
+CL_ROW: sleeved_base_E0.07,12.50,20.0,20.671,-1.240,-0.001
+CL_ROW: sleeved_base_E0.07,12.50,25.0,25.859,-1.894,-0.000
+CL_ROW: sleeved_base_E0.07,12.50,30.0,31.019,-2.738,-0.000
+CL_ROW: sleeved_base_E0.07,12.50,35.0,36.146,-3.767,0.001
+CL_ROW: sleeved_base_E0.07,12.50,40.0,41.230,-4.987,-0.003
+CL_ROW: sleeved_base_E0.07,12.50,45.0,46.262,-6.402,0.003
+CL_ROW: sleeved_base_E0.07,12.50,50.0,51.237,-8.014,0.001
+CL_ROW: sleeved_base_E0.07,12.50,55.0,56.139,-9.824,0.001
+CL_ROW: sleeved_base_E0.07,12.50,60.0,60.964,-11.832,0.002
+CL_ROW: sleeved_base_E0.07,12.50,65.0,65.701,-14.038,0.001
+CL_ROW: sleeved_base_E0.07,12.50,70.0,70.338,-16.446,0.003
+CL_ROW: sleeved_base_E0.07,12.50,75.0,74.866,-19.052,0.003
+CL_ROW: sleeved_base_E0.07,12.50,80.0,79.269,-21.861,0.003
+CL_ROW: sleeved_base_E0.07,12.50,85.0,83.538,-24.869,0.003
+CL_ROW: sleeved_base_E0.07,12.50,90.0,87.662,-28.074,0.002
+CL_ROW: sleeved_base_E0.07,12.50,95.0,91.624,-31.474,0.003
+CL_ROW: sleeved_base_E0.07,12.50,100.0,95.411,-35.064,0.002
+CL_ROW: sleeved_base_E0.07,12.50,105.0,99.013,-38.842,0.000
+CL_ROW: sleeved_base_E0.07,12.50,110.0,102.405,-42.802,0.000
+CL_ROW: sleeved_base_E0.07,12.50,115.0,105.584,-46.937,0.000
+CL_ROW: sleeved_base_E0.07,12.50,120.0,108.527,-51.239,-0.000
+CL_ROW: sleeved_base_E0.07,12.50,125.0,111.224,-55.701,0.000
+CL_ROW: sleeved_base_E0.07,12.50,130.0,113.655,-60.307,-0.003
+CL_ROW: sleeved_base_E0.07,12.50,135.0,115.854,-65.029,-0.004
+CL_ROW: sleeved_base_E0.07,12.50,139.8,117.770,-69.477,-0.004
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,15.00,95.733,-88.227,-0.004,95.347,246.58,0.2954,1.0461
+CL_ROW: sleeved_base_E0.07,15.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,15.00,5.0,5.072,-0.228,-0.000
+CL_ROW: sleeved_base_E0.07,15.00,10.0,10.328,-0.594,-0.002
+CL_ROW: sleeved_base_E0.07,15.00,15.0,15.620,-1.037,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,20.0,20.885,-1.695,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,25.0,26.114,-2.623,0.000
+CL_ROW: sleeved_base_E0.07,15.00,30.0,31.288,-3.819,0.000
+CL_ROW: sleeved_base_E0.07,15.00,35.0,36.394,-5.276,0.001
+CL_ROW: sleeved_base_E0.07,15.00,40.0,41.415,-6.998,-0.003
+CL_ROW: sleeved_base_E0.07,15.00,45.0,46.336,-8.990,0.004
+CL_ROW: sleeved_base_E0.07,15.00,50.0,51.140,-11.249,0.001
+CL_ROW: sleeved_base_E0.07,15.00,55.0,55.807,-13.774,0.002
+CL_ROW: sleeved_base_E0.07,15.00,60.0,60.321,-16.561,0.004
+CL_ROW: sleeved_base_E0.07,15.00,65.0,64.665,-19.607,0.002
+CL_ROW: sleeved_base_E0.07,15.00,70.0,68.815,-22.909,0.005
+CL_ROW: sleeved_base_E0.07,15.00,75.0,72.757,-26.456,0.004
+CL_ROW: sleeved_base_E0.07,15.00,80.0,76.464,-30.247,0.004
+CL_ROW: sleeved_base_E0.07,15.00,85.0,79.918,-34.267,0.004
+CL_ROW: sleeved_base_E0.07,15.00,90.0,83.101,-38.507,0.003
+CL_ROW: sleeved_base_E0.07,15.00,95.0,85.985,-42.951,0.003
+CL_ROW: sleeved_base_E0.07,15.00,100.0,88.553,-47.581,0.003
+CL_ROW: sleeved_base_E0.07,15.00,105.0,90.786,-52.384,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,110.0,92.653,-57.334,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,115.0,94.148,-62.409,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,120.0,95.242,-67.581,-0.001
+CL_ROW: sleeved_base_E0.07,15.00,125.0,95.925,-72.825,0.000
+CL_ROW: sleeved_base_E0.07,15.00,130.0,96.178,-78.100,-0.004
+CL_ROW: sleeved_base_E0.07,15.00,135.0,96.051,-83.378,-0.004
+CL_ROW: sleeved_base_E0.07,15.00,139.8,95.733,-88.227,-0.004
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,17.50,60.064,-100.218,0.009,133.023,1038.88,0.1330,1.0490
+CL_ROW: sleeved_base_E0.07,17.50,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,17.50,5.0,5.097,-0.287,-0.000
+CL_ROW: sleeved_base_E0.07,17.50,10.0,10.432,-0.765,-0.003
+CL_ROW: sleeved_base_E0.07,17.50,15.0,15.813,-1.384,-0.001
+CL_ROW: sleeved_base_E0.07,17.50,20.0,21.146,-2.319,-0.001
+CL_ROW: sleeved_base_E0.07,17.50,25.0,26.405,-3.633,0.001
+CL_ROW: sleeved_base_E0.07,17.50,30.0,31.554,-5.320,0.001
+CL_ROW: sleeved_base_E0.07,17.50,35.0,36.570,-7.370,0.002
+CL_ROW: sleeved_base_E0.07,17.50,40.0,41.419,-9.781,-0.003
+CL_ROW: sleeved_base_E0.07,17.50,45.0,46.072,-12.553,0.005
+CL_ROW: sleeved_base_E0.07,17.50,50.0,50.499,-15.674,0.003
+CL_ROW: sleeved_base_E0.07,17.50,55.0,54.664,-19.130,0.003
+CL_ROW: sleeved_base_E0.07,17.50,60.0,58.539,-22.907,0.007
+CL_ROW: sleeved_base_E0.07,17.50,65.0,62.091,-26.988,0.004
+CL_ROW: sleeved_base_E0.07,17.50,70.0,65.287,-31.351,0.008
+CL_ROW: sleeved_base_E0.07,17.50,75.0,68.100,-35.969,0.007
+CL_ROW: sleeved_base_E0.07,17.50,80.0,70.492,-40.818,0.007
+CL_ROW: sleeved_base_E0.07,17.50,85.0,72.437,-45.860,0.007
+CL_ROW: sleeved_base_E0.07,17.50,90.0,73.912,-51.059,0.007
+CL_ROW: sleeved_base_E0.07,17.50,95.0,74.884,-56.371,0.007
+CL_ROW: sleeved_base_E0.07,17.50,100.0,75.339,-61.748,0.007
+CL_ROW: sleeved_base_E0.07,17.50,105.0,75.258,-67.145,0.002
+CL_ROW: sleeved_base_E0.07,17.50,110.0,74.620,-72.497,0.003
+CL_ROW: sleeved_base_E0.07,17.50,115.0,73.431,-77.754,0.003
+CL_ROW: sleeved_base_E0.07,17.50,120.0,71.680,-82.845,0.005
+CL_ROW: sleeved_base_E0.07,17.50,125.0,69.381,-87.714,0.007
+CL_ROW: sleeved_base_E0.07,17.50,130.0,66.549,-92.283,0.003
+CL_ROW: sleeved_base_E0.07,17.50,135.0,63.267,-96.538,0.006
+CL_ROW: sleeved_base_E0.07,17.50,139.8,60.064,-100.218,0.009
+DOE_ROW: sleeved_base_E0.07,1,0.0700,56.0,2.50,20.00,14.151,-90.487,0.030,184.134,52796.09,0.0136,1.0527
+CL_ROW: sleeved_base_E0.07,20.00,0.0,-0.000,-0.000,0.000
+CL_ROW: sleeved_base_E0.07,20.00,5.0,5.123,-0.348,-0.001
+CL_ROW: sleeved_base_E0.07,20.00,10.0,10.541,-0.967,-0.003
+CL_ROW: sleeved_base_E0.07,20.00,15.0,16.009,-1.830,0.000
+CL_ROW: sleeved_base_E0.07,20.00,20.0,21.392,-3.144,-0.000
+CL_ROW: sleeved_base_E0.07,20.00,25.0,26.624,-4.985,0.002
+CL_ROW: sleeved_base_E0.07,20.00,30.0,31.646,-7.336,0.002
+CL_ROW: sleeved_base_E0.07,20.00,35.0,36.408,-10.176,0.004
+CL_ROW: sleeved_base_E0.07,20.00,40.0,40.850,-13.487,0.000
+CL_ROW: sleeved_base_E0.07,20.00,45.0,44.918,-17.251,0.007
+CL_ROW: sleeved_base_E0.07,20.00,50.0,48.559,-21.433,0.007
+CL_ROW: sleeved_base_E0.07,20.00,55.0,51.715,-25.987,0.009
+CL_ROW: sleeved_base_E0.07,20.00,60.0,54.339,-30.866,0.014
+CL_ROW: sleeved_base_E0.07,20.00,65.0,56.385,-36.016,0.011
+CL_ROW: sleeved_base_E0.07,20.00,70.0,57.808,-41.373,0.017
+CL_ROW: sleeved_base_E0.07,20.00,75.0,58.580,-46.861,0.017
+CL_ROW: sleeved_base_E0.07,20.00,80.0,58.663,-52.406,0.017
+CL_ROW: sleeved_base_E0.07,20.00,85.0,58.043,-57.916,0.018
+CL_ROW: sleeved_base_E0.07,20.00,90.0,56.720,-63.304,0.017
+CL_ROW: sleeved_base_E0.07,20.00,95.0,54.690,-68.468,0.018
+CL_ROW: sleeved_base_E0.07,20.00,100.0,51.982,-73.309,0.018
+CL_ROW: sleeved_base_E0.07,20.00,105.0,48.630,-77.735,0.011
+CL_ROW: sleeved_base_E0.07,20.00,110.0,44.681,-81.631,0.013
+CL_ROW: sleeved_base_E0.07,20.00,115.0,40.215,-84.925,0.015
+CL_ROW: sleeved_base_E0.07,20.00,120.0,35.314,-87.519,0.018
+CL_ROW: sleeved_base_E0.07,20.00,125.0,30.079,-89.357,0.022
+CL_ROW: sleeved_base_E0.07,20.00,130.0,24.634,-90.377,0.019
+CL_ROW: sleeved_base_E0.07,20.00,135.0,19.105,-90.640,0.024
+CL_ROW: sleeved_base_E0.07,20.00,139.8,14.151,-90.487,0.030
+           Current Progress:   0 % - Plotting
+Memory: 1349/3198 1391/3502
+           Current Progress:   7 % - Evaluating
+Memory: 1353/3198 1392/3502
+-          Current Progress:  10 % - Plotting
+Memory: 1361/3198 1397/3502
+------     Current Progress:  62 % - Evaluating
+Memory: 1375/3198 1404/3502
+--------   Current Progress:  83 % - Evaluating
+Memory: 1380/3198 1408/3502
+---------  Current Progress:  90 % - Evaluating
+Memory: 1381/3198 1408/3502
+---        Current Progress:  30 % - Generating image
+Memory: 1451/3198 1459/3502
+           Current Progress:   0 % - Plotting
+Memory: 1432/3198 1434/3502
+           Current Progress:   7 % - Evaluating
+-          Current Progress:  10 % - Plotting
+------     Current Progress:  62 % - Evaluating
+Memory: 1423/3198 1424/3502
+--------   Current Progress:  83 % - Evaluating
+---------  Current Progress:  90 % - Evaluating
+Memory: 1426/3198 1426/3502
+---        Current Progress:  30 % - Generating image
+Memory: 1452/3198 1455/3502
+Class run time: 1194 s.
+Saving model: C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_sleeved\SleevedCase_Model.mph
+Save time: 1 s.
+Total time: 1195 s.

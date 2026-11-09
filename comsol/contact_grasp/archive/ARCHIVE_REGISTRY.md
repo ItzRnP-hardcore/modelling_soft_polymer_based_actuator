@@ -1,5 +1,7 @@
 # Contact Grasp Study Archive Registry
 
+> **Status (9 Nov 2026):** every contact-grasp model in `comsol/contact_grasp/` uses a non-physical load (not the cavity pressure) and a compressible material (ν = 0.45); their force results are withdrawn. The script descriptions below are kept as a historical record. See `comsol/COMSOL_MASTER_REGISTRY.md`.
+
 This registry documents all intermediate diagnostic scripts developed during the formulation and numerical validation of the 3D contact grasp simulation in COMSOL Multiphysics 6.4.
 
 ---
