@@ -63,8 +63,8 @@ It bends because of **ballooning** (a large-deformation, nonlinear effect):
 | **How it's built** | Plain cast silicone alone. | Silicone wrapped with thread/fibres along its circumference. |
 | **How it bends** | Bends purely through the thin wall ballooning out. | The thread stops the walls from bulging sideways, forcing all energy into bending. |
 | **Response curve** | **Highly nonlinear:** Almost zero bending at low pressure, then suddenly curves violently near $100\text{ kPa}$. | **Smooth & linear:** Bends right from the start, proportional to pressure. |
-| **Limit point** | Blows up/destabilizes at $\approx 104.7\text{ kPa}$. | No ballooning limit found within working pressure. |
-| **Does the notes' formula work?** | **No.** (Fails by a factor of 4 to 10 at low pressure). | **Yes!** The original beam formula in the notes matches the sleeved actuator within 5%. |
+| **Limit point** | Blows up/destabilizes at $\approx 104.7\text{ kPa}$. | No ballooning limit found up to $110\text{ kPa}$ (the highest pressure simulated). |
+| **Does the notes' formula work?** | **No.** (Over-predicts by a factor of 4 to 10 at low pressure). | **At low pressure, yes.** Within 5% up to $P/E \approx 0.03$; at higher pressure the FE bends more (25% more at $P/E = 0.1$). |
 
 ---
 
@@ -85,8 +85,8 @@ modelling_soft_polymer_based_actuator/
 ├── actuator_response.png      # Analytical model response curves.
 ├── fea_comparison.png         # Comparison figure: FEA vs. Beam Model.
 │
-├── ansys/                     # ANSYS Mechanical APDL verification scripts (.mac) and exporter.
-├── comsol/                    # COMSOL Multiphysics 6.4 models (bare, sleeved, tapered, tapered_4cavity, benched).
+├── ansys/                     # ANSYS APDL macros and exporter (macros not yet run: no licence).
+├── comsol/                    # COMSOL 6.4 models; status of each folder in comsol/COMSOL_MASTER_REGISTRY.md.
 ├── docs/                      # Original handwritten derivation notes (PDF), scientific guidelines & HTML.
 ├── grasp/                     # Soft continuum arm grasping mechanics, 2D/3D contact models & animations.
 ├── report/                    # LaTeX manuscript, slides, figures, and publication documents.
@@ -95,7 +95,13 @@ modelling_soft_polymer_based_actuator/
 
 ---
 
-## 6. The Main Takeaway for Your BTP
+## 6. Multi-chamber actuator (COMSOL, November 2026)
+
+A tapered actuator with four chambers (so it can bend in any direction) was modelled in COMSOL with the real cavity pressure and nearly incompressible silicone. Bare, it balloons at $P/\mu \approx 0.50$. With a hoop sleeve it bends smoothly, about $95^\circ$ at $15\text{ kPa}$ for $E = 0.07\text{ MPa}$; beyond that the computed stress where the pressurised chamber's roof meets its side walls runs away together with severe local element distortion; whether this is physical or numerical is not yet resolved. An earlier version of this model that reached $180^\circ$ used a load that was not the real pressure; its results, and all grasp-force results built on it, are withdrawn. Details: `docs/tapered_4cavity_mechanics_report.md`.
+
+---
+
+## 7. The Main Takeaway for Your BTP
 1. **The handwritten beam derivation** is mathematically consistent, but physically describes a **reinforced (sleeved) actuator**, not a bare silicone tube.
 2. If you are fabricating this in the lab:
    * **For smooth, predictable, easy-to-control robotic motion:** Wrap the actuator in a thread or fiber sleeve.

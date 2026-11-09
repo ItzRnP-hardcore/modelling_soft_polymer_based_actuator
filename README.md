@@ -20,8 +20,8 @@ Units everywhere: mm, N, MPa (1 MPa = 1000 kPa).
 | `fea_viewer.py` | Builds the interactive viewer for a finished FE run |
 | `fea_compare.py` | Report figure: FE against the beam model |
 | `grasp/` | Soft robotic contact, multi-finger grasping mechanics & animations |
-| `ansys/` | ANSYS Mechanical APDL (.mac) batch models & APDL exporter |
-| `comsol/` | COMSOL Multiphysics 6.4 FEA models, comparison scripts & dashboards |
+| `ansys/` | ANSYS Mechanical APDL (.mac) batch models & APDL exporter (macros not yet run) |
+| `comsol/` | COMSOL Multiphysics 6.4 models. Status of every folder (valid / withdrawn) in `comsol/COMSOL_MASTER_REGISTRY.md`; verified 4-chamber results in `docs/tapered_4cavity_mechanics_report.md` |
 | `report/` | LaTeX report, presentation slides, and animation figures |
 | `results/` | Output databases from FEA sweeps and grasping studies |
 

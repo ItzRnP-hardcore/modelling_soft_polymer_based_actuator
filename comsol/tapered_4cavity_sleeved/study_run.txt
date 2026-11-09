@@ -1,0 +1,29 @@
+== bare_base_E0.07
+   CASE bare_base_E0.07: sleeve=false E=0.070 MPa cav=56.0 deg depth 2.50->1.00 mm, core r 5.00->2.00 mm
+   CLASSIFY base=[1] tip=[38] outer=[2, 3, 4, 5]
+   CLASSIFY cavity1=[27, 28, 29, 30, 31, 32, 33, 37]
+   CLASSIFY cavity2=[16, 17, 18, 20, 23, 24, 26, 36]
+   CLASSIFY cavity3=[6, 7, 8, 9, 10, 11, 12, 34]
+   CLASSIFY cavity4=[13, 14, 15, 19, 21, 22, 25, 35]
+   CONVERGED_STEPS: 7, last P = 11.706581426884007 kPa, solve time 156 s
+   SOLVER_STOPPED: The_following_feature_has_encountered_a_problem
+== sleeved_base_E0.07
+   CASE sleeved_base_E0.07: sleeve=true E=0.070 MPa cav=56.0 deg depth 2.50->1.00 mm, core r 5.00->2.00 mm
+   CLASSIFY base=[1] tip=[38] outer=[2, 3, 4, 5]
+   CLASSIFY cavity1=[27, 28, 29, 30, 31, 32, 33, 37]
+   CLASSIFY cavity2=[16, 17, 18, 20, 23, 24, 26, 36]
+   CLASSIFY cavity3=[6, 7, 8, 9, 10, 11, 12, 34]
+   CLASSIFY cavity4=[13, 14, 15, 19, 21, 22, 25, 35]
+   CONVERGED_STEPS: 10, last P = 20.0 kPa, solve time 1156 s
+   SOLVER_STOPPED: The_following_feature_has_encountered_a_problem
+== sleeved_deep_E0.07
+   CASE sleeved_deep_E0.07: sleeve=true E=0.070 MPa cav=70.0 deg depth 5.00->1.50 mm, core r 2.50->1.50 mm
+   CLASSIFY base=[1] tip=[38] outer=[2, 3, 4, 5]
+   CLASSIFY cavity1=[27, 28, 29, 30, 31, 32, 33, 37]
+   CLASSIFY cavity2=[14, 15, 16, 20, 23, 24, 26, 36]
+   CLASSIFY cavity3=[6, 7, 8, 9, 10, 17, 18, 34]
+   CLASSIFY cavity4=[11, 12, 13, 19, 21, 22, 25, 35]
+   CONVERGED_STEPS: 6, last P = 8.5 kPa, solve time 284 s
+   SOLVER_STOPPED: The_following_feature_has_encountered_a_problem
+figure -> C:\Users\rudra\Documents\BTP\comsol\tapered_4cavity_sleeved\images\sleeved_study.png
+exit 0

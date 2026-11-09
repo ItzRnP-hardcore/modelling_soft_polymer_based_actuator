@@ -55,8 +55,9 @@ graph TD
         subgraph G_COMSOL ["COMSOL Multiphysics 6.4 (comsol/)"]
             C_BARE["comsol/bare/<br/><b>Bare Actuator</b><br/>BuildActuatorBare.java, comsol_bare_summary.csv<br/>comsol_compare.py, comsol_dashboard.png"]
             C_SLEEVE["comsol/sleeved/<br/><b>Sleeved Actuator</b><br/>BuildActuatorSleeve.java, ReexportTrueScale.java<br/>plot_sleeve_comparison.py, sleeve_dashboard.png"]
-            C_TAPER["comsol/tapered/<br/><b>Tapered Actuator (1-Cavity)</b><br/>BuildActuatorTapered.java, ExtractTapered.java<br/>plot_tapered_dashboard.py (215° Curl)"]
-            C_4CAV["comsol/tapered_4cavity/<br/><b>4-Cavity Continuum Arm</b><br/>BuildActuatorTapered4CavityFull.java<br/>VerifyRibGeometry.java, 7 Steering Modes<br/>plot_tapered_4cavity_dashboard.py"]
+            C_TAPER["comsol/tapered/<br/><b>Tapered Actuator (1-Cavity)</b><br/>BuildActuatorTapered.java<br/>(curl claim unsupported, see registry)"]
+            C_4CAV["comsol/tapered_4cavity/<br/><b>4-Cavity Arm (non-physical load, record only)</b><br/>BuildActuatorTapered4CavityFull.java"]
+            C_4SLV["comsol/tapered_4cavity_sleeved/<br/><b>4-Cavity Arm, real pressure, nu=0.4995</b><br/>BuildActuator4CavitySleeved.java<br/>run_sleeved_study.py"]
             C_BENCH["comsol/benched/<br/>multi_cavity/ (Uniform 4-Cavity)<br/>standalone_scripts/ (API Explorations)"]
         end
     end
@@ -118,7 +119,7 @@ graph TD
     G_ANI -->|Publishes media| REP_ANIS
     REP_FIGS -->|Included in manuscript| REP_TEX
     REP_TEX -->|Compiles to| REP_PDF
-    C_4CAV -.->|Informs continuum arm design| REP_TEX
+    C_SLEEVE -->|Validated sleeve formulation| C_4SLV
 ```
 
 ---
@@ -144,12 +145,12 @@ graph TD
 
 ### Worktree C: Multi-Software FEA Verification (COMSOL & ANSYS)
 * **Core Folders**: [`comsol/`](file:///c:/Users/rudra/Documents/BTP/comsol), [`ansys/`](file:///c:/Users/rudra/Documents/BTP/ansys).
-* **Role**: Provides commercial-grade, multi-physics cross-verification of the custom Python FEA code and explores multi-cavity 3D continuum actuators:
-  - [`comsol/bare/`](file:///c:/Users/rudra/Documents/BTP/comsol/bare): Confirms the runaway ballooning limit at $P \approx 104.7\text{ kPa}$ on tetrahedral mixed $u$-$p$ elements.
-  - [`comsol/sleeved/`](file:///c:/Users/rudra/Documents/BTP/comsol/sleeved): Confirms linear response with inextensible hoop constraints.
-  - [`comsol/tapered/`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered): Simulates high-curvature distal curling ($>215^\circ$ cumulative curl at $30\text{ kPa}$).
-  - [`comsol/tapered_4cavity/`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity): Full 3D continuum actuator with 4 radial cavities and internal stiffening ribs, evaluating 7 steering modes (pitch, yaw, diagonal $45^\circ$, and pure axial stiffening).
-  - [`ansys/export_ansys.py`](file:///c:/Users/rudra/Documents/BTP/ansys/export_ansys.py): Automatically converts custom 27-node hex meshes into ANSYS `SOLID186` + `SURF154` macros.
+* **Role**: Cross-verification of the Python FE in COMSOL 6.4 and the tapered 4-chamber design. Status of every folder: [`comsol/COMSOL_MASTER_REGISTRY.md`](file:///c:/Users/rudra/Documents/BTP/comsol/COMSOL_MASTER_REGISTRY.md).
+  - [`comsol/bare/`](file:///c:/Users/rudra/Documents/BTP/comsol/bare): agrees with the Python FE within 3 % from 60 to 90 kPa (not run to the ballooning limit).
+  - [`comsol/sleeved/`](file:///c:/Users/rudra/Documents/BTP/comsol/sleeved): agrees with the Python FE within 0.7 % up to 110 kPa.
+  - [`comsol/tapered_4cavity_sleeved/`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity_sleeved): tapered 4-chamber actuator with real pressure and real silicone; about 95° tip rotation at 15 kPa (E = 0.07 MPa, sleeved).
+  - `comsol/tapered/`, `comsol/tapered_4cavity/`, `comsol/contact_grasp/`, `comsol/large_deflection_4cavity/`: results withdrawn (non-physical load or unsupported), kept as a record.
+  - [`ansys/export_ansys.py`](file:///c:/Users/rudra/Documents/BTP/ansys/export_ansys.py): converts the 27-node hex mesh into ANSYS `SOLID186` + `SURF154` macros. The macros have not been run (no ANSYS licence on this machine).
 
 ---
 
@@ -174,7 +175,7 @@ When an agent is tasked with a specific query or feature request, use this table
 | **"How does the custom 3D FEA work?" / "Element formulation & follower pressure"** | [`actuator_fea.py`](file:///c:/Users/rudra/Documents/BTP/actuator_fea.py) | **Verification**: [`fea_verify.py`](file:///c:/Users/rudra/Documents/BTP/fea_verify.py)<br/>**Outputs**: [`results/bare/`](file:///c:/Users/rudra/Documents/BTP/results/bare), [`results/sleeve/`](file:///c:/Users/rudra/Documents/BTP/results/sleeve)<br/>**ANSYS Export**: [`ansys/export_ansys.py`](file:///c:/Users/rudra/Documents/BTP/ansys/export_ansys.py) |
 | **"How does grasping contact & holding force work?"** | [`grasp/grasp_model.py`](file:///c:/Users/rudra/Documents/BTP/grasp/grasp_model.py) | **Parametric Sweep**: [`grasp/grasp_study.py`](file:///c:/Users/rudra/Documents/BTP/grasp/grasp_study.py)<br/>**Sequencing**: [`grasp/grasp_sequence.py`](file:///c:/Users/rudra/Documents/BTP/grasp/grasp_sequence.py)<br/>**Manuscript**: [`report/grasp_analysis.tex`](file:///c:/Users/rudra/Documents/BTP/report/grasp_analysis.tex) |
 | **"Holding force vs friction or depth results"** | [`results/grasp/sweep.csv`](file:///c:/Users/rudra/Documents/BTP/results/grasp/sweep.csv)<br/>[`grasp/grasp_figures.py`](file:///c:/Users/rudra/Documents/BTP/grasp/grasp_figures.py) | **Visual Figures**: [`report/figures/`](file:///c:/Users/rudra/Documents/BTP/report/figures)<br/>**Manuscript Section**: [`report/grasp_analysis.tex`](file:///c:/Users/rudra/Documents/BTP/report/grasp_analysis.tex) |
-| **"COMSOL cross-verification against Python FEA"** | [`comsol/bare/comsol_compare.py`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/comsol_compare.py)<br/>[`comsol/bare/comsol_dashboard.py`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/comsol_dashboard.py) | **COMSOL Solved Model**: [`comsol/bare/actuator_bare_solved_Model.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/actuator_bare_solved_Model.mph)<br/>**Python FEA Results**: [`results/bare/summary.csv`](file:///c:/Users/rudra/Documents/BTP/results/bare/summary.csv) |
-| **"4-Cavity Continuum Arm & Multi-Axis Steering"** | [`comsol/tapered_4cavity/BuildActuatorTapered4CavityFull.java`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/BuildActuatorTapered4CavityFull.java)<br/>[`comsol/tapered_4cavity/plot_tapered_4cavity_dashboard.py`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/plot_tapered_4cavity_dashboard.py) | **Interactive Web GUI**: [`comsol/tapered_4cavity/tapered_4cavity_interactive.html`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/tapered_4cavity_interactive.html)<br/>**Rib Stiffening**: [`comsol/tapered_4cavity/VerifyRibGeometry.java`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity/VerifyRibGeometry.java) |
+| **"COMSOL cross-verification against Python FEA"** | [`comsol/bare/comsol_compare.py`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/comsol_compare.py)<br/>[`comsol/sleeved/plot_sleeve_comparison.py`](file:///c:/Users/rudra/Documents/BTP/comsol/sleeved/plot_sleeve_comparison.py) | **COMSOL Solved Models**: [`comsol/bare/actuator_bare_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/bare/actuator_bare_solved.mph), [`comsol/sleeved/actuator_sleeve_solved.mph`](file:///c:/Users/rudra/Documents/BTP/comsol/sleeved/actuator_sleeve_solved.mph)<br/>**Python FEA Results**: [`results/bare/summary.csv`](file:///c:/Users/rudra/Documents/BTP/results/bare/summary.csv), [`results/sleeve/summary.csv`](file:///c:/Users/rudra/Documents/BTP/results/sleeve/summary.csv) |
+| **"4-Cavity actuator with real pressure"** | [`comsol/tapered_4cavity_sleeved/BuildActuator4CavitySleeved.java`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity_sleeved/BuildActuator4CavitySleeved.java)<br/>[`comsol/tapered_4cavity_sleeved/run_sleeved_study.py`](file:///c:/Users/rudra/Documents/BTP/comsol/tapered_4cavity_sleeved/run_sleeved_study.py) | **Status and withdrawn results**: [`docs/tapered_4cavity_mechanics_report.md`](file:///c:/Users/rudra/Documents/BTP/docs/tapered_4cavity_mechanics_report.md), [`comsol/COMSOL_MASTER_REGISTRY.md`](file:///c:/Users/rudra/Documents/BTP/comsol/COMSOL_MASTER_REGISTRY.md) |
 | **"ANSYS APDL verification"** | [`ansys/export_ansys.py`](file:///c:/Users/rudra/Documents/BTP/ansys/export_ansys.py) | **Generated Macros**: [`ansys/actuator_bare.mac`](file:///c:/Users/rudra/Documents/BTP/ansys/actuator_bare.mac), [`ansys/actuator_sleeve.mac`](file:///c:/Users/rudra/Documents/BTP/ansys/actuator_sleeve.mac), [`ansys/grasp_2d_verify.mac`](file:///c:/Users/rudra/Documents/BTP/ansys/grasp_2d_verify.mac) |
 | **"Re-compiling the LaTeX paper or presentation slides"** | [`report/grasp_analysis.tex`](file:///c:/Users/rudra/Documents/BTP/report/grasp_analysis.tex)<br/>[`report/render_slides.py`](file:///c:/Users/rudra/Documents/BTP/report/render_slides.py) | **Compiled Output**: [`report/grasp_analysis.pdf`](file:///c:/Users/rudra/Documents/BTP/report/grasp_analysis.pdf)<br/>**Figures**: [`report/figures/`](file:///c:/Users/rudra/Documents/BTP/report/figures)<br/>**Slides**: [`report/slides/`](file:///c:/Users/rudra/Documents/BTP/report/slides) |

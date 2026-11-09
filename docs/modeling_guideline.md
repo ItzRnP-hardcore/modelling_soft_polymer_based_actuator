@@ -142,7 +142,7 @@ Tier 3 closes only part of the gap to the sleeved FE model (the FE angle is 20 %
 
 ### Tier 4 — nonlinear 3-D finite elements (`actuator_fea.py`)
 
-Implemented and verified. No commercial FE package was available on the project machine, so the solver is written in Python:
+Implemented and verified. No commercial FE package was available on the project machine at the time (October 2026), so the solver is written in Python:
 
 - 27-node hexahedra in a mixed pressure–displacement formulation (Q2/P1) for incompressibility; Yeoh or neo-Hookean material; ν = 0.4995 by default.
 - Half model with symmetry about the bending plane, base clamped, solid tip cap, pressure on every wetted cavity face as a follower load derived from the enclosed cavity volume.
@@ -158,7 +158,7 @@ Verification (`fea_verify.py`, log in `results/verification.log`):
 | Small-pressure bending, ν from 0 to 0.4995      | κ = (1 − 2ν) F e / (E I_zz)               | 0.0002 in units of the Tier 1 curvature                                                         |
 | Mesh refinement, δ at P/μ = 0.30 and 0.45       | fine mesh (1664 elements)                 | medium mesh (used for the results here) within 0.5 % of the fine mesh; coarse mesh within 1.7 % |
 
-For the thesis, an independent run of one load case in a commercial code (Abaqus C3D20H or ANSYS SOLID186 with mixed u-P, same geometry and material) would be worth having if the institute provides access. It is a cross-check, not a prerequisite.
+Update, November 2026: COMSOL Multiphysics 6.4 later became available and the cross-check was done with the same geometry, material (ν = 0.4995, mixed u–p) and real follower pressure (`comsol/bare/`, `comsol/sleeved/`). Tip angle and deflection agree with this solver within 0.7 % for the sleeved actuator (10–110 kPa) and within 3 % for the bare actuator from 60 to 90 kPa (up to 11 % at 10 kPa, where the angle is 0.24°). The COMSOL bare run was not taken to the ballooning limit.
 
 ### Tier 5 — experiment
 
